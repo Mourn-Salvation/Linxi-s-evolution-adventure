@@ -1,0 +1,43 @@
+{
+  "source": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\knocked_down_variant_04_blonde_hair\\raw-sheet.png",
+  "source_sha256": "1b55b3df09430228099d873799a6aedcb2faa1653caa42ecf1d07529e6e8bccf",
+  "variant": "appearance_id_04_blonde_hair",
+  "action": "knocked_down",
+  "raw_rows": 2,
+  "raw_cols": 2,
+  "runtime_frames": 1,
+  "selected_cell": 0,
+  "frame_size": 256,
+  "target_visible_width": 190,
+  "baseline_y": 226,
+  "center_x": 128,
+  "frames": [
+    {
+      "index": 0,
+      "source_bbox": [
+        21,
+        304,
+        576,
+        461
+      ],
+      "resized": [
+        190,
+        54
+      ],
+      "placed": [
+        33,
+        172
+      ],
+      "largest_component_only": true
+    }
+  ],
+  "operations": [
+    "magenta_chroma_alpha",
+    "largest_connected_character_component",
+    "top_left_cell",
+    "bbox_crop",
+    "uniform_scale_width_limited",
+    "baseline_align",
+    "horizontal_mirror"
+  ]
+}

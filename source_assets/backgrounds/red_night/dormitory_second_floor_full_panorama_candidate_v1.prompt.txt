@@ -1,0 +1,16 @@
+Use the accepted current hallway plate as the visual reference for style, camera, actor scale, wall height, floor grid, material palette, and lighting. Generate a NEW single continuous panorama candidate for the Dormitory Second Floor hallway in Linxi's Evaluation Adventure.
+
+Asset type: 2D Godot background source panorama for a fake-3D belt-scroller map. This is a candidate full-width source image, not separate plates.
+Primary request: Generate one continuous second-floor dormitory hallway map that already contains the full route in a single image. The result must look like one camera, one room/hallway, one floor plane, one time of day, and one physical location. It must not look like two images put together.
+
+Scene/backdrop: abandoned Chinese school dormitory second-floor hallway during the Red Night outbreak. Concrete ceiling, worn cream-gray upper wall, dark teal lower wall paint, old wooden dorm doors, utility conduit, electrical boxes, bulletin boards, fluorescent ceiling lamps, red emergency lamps, dirty reflective tile floor, scattered papers, small blood smears. The far right side must include a believable stair route or stairwell entrance leading toward the roof route, integrated into the hallway architecture rather than appearing as a separate scene.
+
+Composition/framing: ultra-wide horizontal 21:9 or wider panoramic game background, side-readable brawler/fake-3D stage view. Broad lower foreground floor band for characters to walk; visible depth from foreground floor to wall-side doors. Shallow side-stage perspective, not a deep tunnel or first-person corridor. The hallway should continue naturally from left to right with stable door size, wall height, ceiling height, floor tile size, horizon, and lighting rhythm. Include several door positions along the wall and a continuous floor grid across the whole image.
+
+Continuity rule: this should be one single panorama source image. Do not create a split, seam, hard lighting change, black divider, red seam line, second camera angle, or sudden room transition in the middle. The right-side stair/roof route must grow out of the same hallway geometry.
+
+Style/medium: high-resolution illustrated survival-horror game background, pixel-filter-friendly, dark realistic anime game art direction, close to the current project map style but cleaner and continuous. Not low-resolution pixel art, not a realistic photo.
+
+Lighting/mood: dim late-night/pre-dawn dorm interior, cool fluorescent pools of light, muted red emergency lamps, wet/dirty reflective tile floor, tense but readable.
+
+Gameplay constraints: no characters, no enemies, no UI, no readable text, no labels, no arrows, no glowing transition circle, no teleport portal. Leave the bottom/floor area open enough for combat and movement. Do not place furniture or props that block the playable band. Avoid huge black unused margins.

@@ -1,0 +1,331 @@
+{
+  "target": "asset",
+  "mode": "run",
+  "prompt": "",
+  "role": "",
+  "input": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\run_v3_user_clipboard_female\\raw-sheet.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 120,
+  "rows": 2,
+  "cols": 4,
+  "cell_size": 128,
+  "fit_scale": 0.92,
+  "trim_border": 2,
+  "edge_clean_depth": 6,
+  "align": "feet",
+  "shared_scale": true,
+  "component_mode": "largest",
+  "component_padding": 8,
+  "min_component_area": 1,
+  "edge_touch_margin": 0,
+  "frame_labels": [
+    "run-1",
+    "run-2",
+    "run-3",
+    "run-4",
+    "run-5",
+    "run-6",
+    "run-7",
+    "run-8"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        384,
+        512
+      ],
+      "component_mode": "largest",
+      "component_count": 9,
+      "selected_component_area": 28216,
+      "selected_component_bbox": [
+        129,
+        53,
+        289,
+        471
+      ],
+      "crop_bbox": [
+        121,
+        45,
+        297,
+        479
+      ],
+      "edge_touch": false,
+      "output_size": [
+        47,
+        117
+      ],
+      "paste_position": [
+        40,
+        6
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        384,
+        0,
+        768,
+        512
+      ],
+      "component_mode": "largest",
+      "component_count": 2,
+      "selected_component_area": 31682,
+      "selected_component_bbox": [
+        10,
+        68,
+        282,
+        466
+      ],
+      "crop_bbox": [
+        2,
+        60,
+        290,
+        474
+      ],
+      "edge_touch": false,
+      "output_size": [
+        78,
+        112
+      ],
+      "paste_position": [
+        25,
+        11
+      ]
+    },
+    {
+      "grid": [
+        0,
+        2
+      ],
+      "source_box": [
+        768,
+        0,
+        1152,
+        512
+      ],
+      "component_mode": "largest",
+      "component_count": 15,
+      "selected_component_area": 31988,
+      "selected_component_bbox": [
+        21,
+        67,
+        273,
+        470
+      ],
+      "crop_bbox": [
+        13,
+        59,
+        281,
+        478
+      ],
+      "edge_touch": false,
+      "output_size": [
+        72,
+        113
+      ],
+      "paste_position": [
+        28,
+        10
+      ]
+    },
+    {
+      "grid": [
+        0,
+        3
+      ],
+      "source_box": [
+        1152,
+        0,
+        1536,
+        512
+      ],
+      "component_mode": "largest",
+      "component_count": 9,
+      "selected_component_area": 31012,
+      "selected_component_bbox": [
+        0,
+        59,
+        304,
+        466
+      ],
+      "crop_bbox": [
+        0,
+        51,
+        312,
+        474
+      ],
+      "edge_touch": true,
+      "output_size": [
+        84,
+        114
+      ],
+      "paste_position": [
+        22,
+        9
+      ]
+    },
+    {
+      "grid": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        512,
+        384,
+        1024
+      ],
+      "component_mode": "largest",
+      "component_count": 9,
+      "selected_component_area": 31164,
+      "selected_component_bbox": [
+        39,
+        33,
+        308,
+        416
+      ],
+      "crop_bbox": [
+        31,
+        25,
+        316,
+        424
+      ],
+      "edge_touch": false,
+      "output_size": [
+        77,
+        108
+      ],
+      "paste_position": [
+        25,
+        15
+      ]
+    },
+    {
+      "grid": [
+        1,
+        1
+      ],
+      "source_box": [
+        384,
+        512,
+        768,
+        1024
+      ],
+      "component_mode": "largest",
+      "component_count": 6,
+      "selected_component_area": 30367,
+      "selected_component_bbox": [
+        39,
+        40,
+        265,
+        440
+      ],
+      "crop_bbox": [
+        31,
+        32,
+        273,
+        448
+      ],
+      "edge_touch": false,
+      "output_size": [
+        65,
+        112
+      ],
+      "paste_position": [
+        31,
+        11
+      ]
+    },
+    {
+      "grid": [
+        1,
+        2
+      ],
+      "source_box": [
+        768,
+        512,
+        1152,
+        1024
+      ],
+      "component_mode": "largest",
+      "component_count": 5,
+      "selected_component_area": 31508,
+      "selected_component_bbox": [
+        25,
+        43,
+        268,
+        441
+      ],
+      "crop_bbox": [
+        17,
+        35,
+        276,
+        449
+      ],
+      "edge_touch": false,
+      "output_size": [
+        70,
+        112
+      ],
+      "paste_position": [
+        29,
+        11
+      ]
+    },
+    {
+      "grid": [
+        1,
+        3
+      ],
+      "source_box": [
+        1152,
+        512,
+        1536,
+        1024
+      ],
+      "component_mode": "largest",
+      "component_count": 8,
+      "selected_component_area": 28238,
+      "selected_component_bbox": [
+        60,
+        53,
+        230,
+        447
+      ],
+      "crop_bbox": [
+        52,
+        45,
+        238,
+        455
+      ],
+      "edge_touch": false,
+      "output_size": [
+        50,
+        111
+      ],
+      "paste_position": [
+        39,
+        12
+      ]
+    }
+  ],
+  "edge_touch_frames": [
+    [
+      0,
+      3
+    ]
+  ],
+  "accepted_runtime_source": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\run_v3_user_clipboard_female\\processed",
+  "variant": "female",
+  "runtime_note": "Accepted female human_student candidate variant; selected by appearance_id 1."
+}

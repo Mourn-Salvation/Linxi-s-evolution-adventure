@@ -1,0 +1,1 @@
+Canvas-safe rearrangement of the approved three-strike Bone-Blade Twin special-rush source. Character pixels remain at original scale; each intact silhouette is repositioned into a 768px solid-magenta cell so the blade, hair, limbs, and feet have safe padding. Playback uses the first three cells only.

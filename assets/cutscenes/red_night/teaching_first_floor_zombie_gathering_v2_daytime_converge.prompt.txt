@@ -1,0 +1,10 @@
+Use case: illustration-story
+Asset type: 1280x720 game cutscene still for a Godot fake-3D 2D action horror game
+Primary request: Create a revised daytime teaching-building cutscene plate. It must show that many infected zombie students are gathering because they sense living survivors nearby, not because they are trapped inside the building.
+Scene/backdrop: school teaching building exterior and first-floor entrance in late morning / pale daylight after the Red Night event, wet concrete still reflecting light, three-floor facade, campus courtyard foreground. Keep a side-view / fake-3D map-compatible perspective with straight horizontal architectural lines and broad readable foreground.
+Subject: large groups of infected students converging around the first-floor lobby entrance, stair entrance, and classroom windows; some infected are outside the doors and windows reaching toward survivor noise/scent, some silhouettes are visible deeper inside, and the crowd flow clearly points toward one survivor-hiding area. Include subtle signs of survivors inside: dim shapes behind a barricaded classroom door, scattered school bags, a faint warm light, but no clear survivor faces.
+Style/medium: high-resolution dark anime horror illustration, restrained SIGNALIS-inspired mood, pixel-filter-friendly detail, realistic proportions, production game cutscene plate.
+Lighting/mood: daylight but uneasy, cold gray-blue morning light with soft shadows; no night sky, no heavy darkness, no black nighttime palette.
+Color palette: desaturated concrete gray, faded school green, pale daylight blue, small red emergency lights, limited blood stains.
+Composition/framing: wide 16:9 plate, no player character, infected crowd readable at first glance, teaching-building first floor is the focus.
+Constraints: zombies must not look locked behind glass only; they should look gathered and drawn toward survivor presence. No UI, no text, no watermark, no frame border, no gore spectacle, no deep cinematic perspective, no random monsters, no fantasy glow.

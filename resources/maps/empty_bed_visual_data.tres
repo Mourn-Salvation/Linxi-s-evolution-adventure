@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="MapVisualData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/maps/map_visual_data.gd" id="1_visual"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/red_night/su_ruo_dorm_room_fixed_v1.png" id="2_room"]
+
+[resource]
+script = ExtResource("1_visual")
+fixed_room_clear_color = Color(0.0588235, 0.0509804, 0.0666667, 1)
+themed_clear_color = Color(0.0588235, 0.0509804, 0.0666667, 1)
+background_layers = Array[Texture2D]([ExtResource("2_room")])
+foreground_layers = Array[Texture2D]([])
+fixed_room_background_scale = 0.56

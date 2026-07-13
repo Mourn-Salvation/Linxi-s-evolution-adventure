@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="MapData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/maps/map_data.gd" id="1_map"]
+[ext_resource type="Resource" path="res://resources/maps/red_night_classroom_503_visual_data.tres" id="2_visual"]
+[ext_resource type="Resource" path="res://resources/items/red_night_item_visual_data.tres" id="3_items"]
+
+[resource]
+script = ExtResource("1_map")
+map_id = "red_night_classroom_503"
+display_name = "Classroom 503"
+encounter_id = "red_night_classroom_503_01"
+objective = "Speak with the twin survivors and learn where Su Ruo went."
+story_id = "red_night_classroom_503"
+initial_body_attack_unlocked = true
+environment_theme = "RED_NIGHT"
+camera_mode = "FIXED_ROOM"
+visual_data = ExtResource("2_visual")
+footstep_surface = "CONCRETE"
+length = 1230.0
+depth = 300.0
+player_spawn = Vector2(1050, 175)
+walkable_areas = Array[Dictionary]([{
+"id": "classroom_503_clear_floor",
+"points": Array[Vector2]([Vector2(0, 105), Vector2(0, 300), Vector2(1230, 300), Vector2(1230, 105)])
+}])
+enemy_spawns = Array[Dictionary]([])
+items = Array[Dictionary]([{
+"active": true,
+"avatar_path": "res://assets/ui/dialogue_portraits/classroom_twins_wide.png",
+"dialogue": ["Twin Sisters: Don't open the door too wide... the things downstairs follow sound.", "Linxi: You saw Su Ruo?", "Twin Sisters: A girl with that name ran toward the school gate before dawn. She kept looking back at the teaching building.", "Twin Sisters: The broadcast said the school, hospital, and Black King nightclub were all contamination centers.", "Linxi: So this isn't only the school.", "Twin Sisters: If your friend escaped, she would have followed the emergency route outside the gate.", "Linxi: Then I move on. Before the trail goes cold."],
+"id": "classroom_503_twins_dialogue",
+"name": "Twin Survivors",
+"position": Vector2(650, 175),
+"set_story_flag": "red_night_twins_met",
+"speaker": "Twin Sisters",
+"type": "dialogue"
+}, {
+"active": true,
+"destination_name": "Teaching Building Second Floor",
+"id": "classroom_503_exit",
+"name": "Classroom Door",
+"position": Vector2(1080, 110),
+"show_transition_circle": false,
+"target_scene": "res://scenes/red_night_teaching_building.tscn",
+"target_spawn": Vector2(890, 150),
+"type": "transition"
+}])
+item_visual_data = ExtResource("3_items")

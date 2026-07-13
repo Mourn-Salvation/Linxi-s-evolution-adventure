@@ -1,0 +1,102 @@
+[gd_resource type="Resource" script_class="EnemyVisualLibrary" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_guard/knocked_down/left_00.png" id="1_b38ah"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_guard/knocked_down/right_00.png" id="2_pxaae"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_guard/hit_reaction/left_00.png" id="3_djnl5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_guard/hit_reaction/left_01.png" id="4_vbgrf"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_guard/hit_reaction/left_02.png" id="5_5sbxm"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_guard/hit_reaction/left_03.png" id="6_mhxv7"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_guard/hit_reaction/right_00.png" id="7_n3prr"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_guard/hit_reaction/right_01.png" id="8_ptsvc"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_guard/hit_reaction/right_02.png" id="9_751or"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_guard/hit_reaction/right_03.png" id="10_47oj1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/appearance_left.png" id="11_1lkao"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/appearance_right.png" id="12_pyy1u"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/appearance_left.png" id="13_et385"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/appearance_right.png" id="14_chhp5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/knocked_down_female/left_00.png" id="15_7kq4w"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/knocked_down_female/right_00.png" id="16_8kusx"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/left_00.png" id="17_ik6lu"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/left_01.png" id="18_dg8b3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/left_02.png" id="19_vbw2p"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/left_03.png" id="20_x5roj"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/left_04.png" id="21_4yt3r"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/left_05.png" id="22_g1yxt"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/left_06.png" id="23_jmodx"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/left_07.png" id="24_pcrmd"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/right_00.png" id="25_x2ip6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/right_01.png" id="26_pcyby"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/right_02.png" id="27_l4dqi"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/right_03.png" id="28_7hnia"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/right_04.png" id="29_u2ho6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/right_05.png" id="30_7kxpo"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/right_06.png" id="31_4fhnp"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run_female/right_07.png" id="32_jgfa7"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/knocked_down/left_00.png" id="33_rem36"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/knocked_down/right_00.png" id="34_vkx2y"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/left_00.png" id="35_cqasw"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/left_01.png" id="36_pnkxu"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/left_02.png" id="37_vs51f"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/left_03.png" id="38_d1vn0"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/left_04.png" id="39_cxst3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/left_05.png" id="40_gv2ln"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/left_06.png" id="41_lrrlr"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/left_07.png" id="42_k84wy"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/right_00.png" id="43_cyrs1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/right_01.png" id="44_fdomb"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/right_02.png" id="45_ytn5l"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/right_03.png" id="46_dcwt2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/right_04.png" id="47_8o3ac"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/right_05.png" id="48_xbls2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/right_06.png" id="49_hfsr5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/human_student/run/right_07.png" id="50_d827k"]
+[ext_resource type="Script" path="res://scripts/enemies/enemy_visual_library.gd" id="51_tbh8n"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/hit_reaction/left_00.png" id="52_pwhgk"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/hit_reaction/left_01.png" id="53_ax2y0"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/hit_reaction/left_02.png" id="54_xx6m8"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/hit_reaction/left_03.png" id="55_uem0e"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/hit_reaction/right_00.png" id="56_xxcwi"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/hit_reaction/right_01.png" id="57_e2pjh"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/hit_reaction/right_02.png" id="58_l2154"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/hit_reaction/right_03.png" id="59_266gg"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/appearance_variants/left_00.png" id="60_kpl5r"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/appearance_variants/left_01.png" id="61_jfvbf"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/appearance_variants/left_02.png" id="62_j1fsw"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/appearance_variants/left_03.png" id="63_o16dv"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/appearance_variants/right_00.png" id="64_nc441"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/appearance_variants/right_01.png" id="65_ygbf2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/appearance_variants/right_02.png" id="66_g0u22"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/appearance_variants/right_03.png" id="67_62l7g"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/knocked_down/left_00.png" id="68_jdo0b"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/knocked_down/left_01.png" id="69_5fly5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/knocked_down/left_02.png" id="70_ymhni"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/knocked_down/left_03.png" id="71_38hae"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/knocked_down/right_00.png" id="72_j4ncj"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/knocked_down/right_01.png" id="73_a5gk7"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/knocked_down/right_02.png" id="74_7qv7v"]
+[ext_resource type="Texture2D" path="res://assets/sprites/enemies/zombie_student/knocked_down/right_03.png" id="75_ddmxs"]
+
+[resource]
+script = ExtResource("51_tbh8n")
+human_hit_reaction_left_frames = Array[Texture2D]([ExtResource("3_djnl5"), ExtResource("4_vbgrf"), ExtResource("5_5sbxm"), ExtResource("6_mhxv7")])
+human_hit_reaction_right_frames = Array[Texture2D]([ExtResource("7_n3prr"), ExtResource("8_ptsvc"), ExtResource("9_751or"), ExtResource("10_47oj1")])
+human_guard_knocked_down_left = ExtResource("1_b38ah")
+human_guard_knocked_down_right = ExtResource("2_pxaae")
+human_student_appearance_left = ExtResource("11_1lkao")
+human_student_appearance_right = ExtResource("12_pyy1u")
+human_student_knocked_down_left = ExtResource("33_rem36")
+human_student_knocked_down_right = ExtResource("34_vkx2y")
+human_student_run_left_frames = Array[Texture2D]([ExtResource("35_cqasw"), ExtResource("36_pnkxu"), ExtResource("37_vs51f"), ExtResource("38_d1vn0"), ExtResource("39_cxst3"), ExtResource("40_gv2ln"), ExtResource("41_lrrlr"), ExtResource("42_k84wy")])
+human_student_run_right_frames = Array[Texture2D]([ExtResource("43_cyrs1"), ExtResource("44_fdomb"), ExtResource("45_ytn5l"), ExtResource("46_dcwt2"), ExtResource("47_8o3ac"), ExtResource("48_xbls2"), ExtResource("49_hfsr5"), ExtResource("50_d827k")])
+human_student_female_appearance_left = ExtResource("13_et385")
+human_student_female_appearance_right = ExtResource("14_chhp5")
+human_student_female_knocked_down_left = ExtResource("15_7kq4w")
+human_student_female_knocked_down_right = ExtResource("16_8kusx")
+human_student_female_run_left_frames = Array[Texture2D]([ExtResource("17_ik6lu"), ExtResource("18_dg8b3"), ExtResource("19_vbw2p"), ExtResource("20_x5roj"), ExtResource("21_4yt3r"), ExtResource("22_g1yxt"), ExtResource("23_jmodx"), ExtResource("24_pcrmd")])
+human_student_female_run_right_frames = Array[Texture2D]([ExtResource("25_x2ip6"), ExtResource("26_pcyby"), ExtResource("27_l4dqi"), ExtResource("28_7hnia"), ExtResource("29_u2ho6"), ExtResource("30_7kxpo"), ExtResource("31_4fhnp"), ExtResource("32_jgfa7")])
+zombie_hit_reaction_left_frames = Array[Texture2D]([ExtResource("52_pwhgk"), ExtResource("53_ax2y0"), ExtResource("54_xx6m8"), ExtResource("55_uem0e")])
+zombie_hit_reaction_right_frames = Array[Texture2D]([ExtResource("56_xxcwi"), ExtResource("57_e2pjh"), ExtResource("58_l2154"), ExtResource("59_266gg")])
+zombie_student_appearance_left_frames = Array[Texture2D]([ExtResource("60_kpl5r"), ExtResource("61_jfvbf"), ExtResource("62_j1fsw"), ExtResource("63_o16dv")])
+zombie_student_appearance_right_frames = Array[Texture2D]([ExtResource("64_nc441"), ExtResource("65_ygbf2"), ExtResource("66_g0u22"), ExtResource("67_62l7g")])
+zombie_student_knocked_down_left_frames = Array[Texture2D]([ExtResource("68_jdo0b"), ExtResource("69_5fly5"), ExtResource("70_ymhni"), ExtResource("71_38hae")])
+zombie_student_knocked_down_right_frames = Array[Texture2D]([ExtResource("72_j4ncj"), ExtResource("73_a5gk7"), ExtResource("74_7qv7v"), ExtResource("75_ddmxs")])

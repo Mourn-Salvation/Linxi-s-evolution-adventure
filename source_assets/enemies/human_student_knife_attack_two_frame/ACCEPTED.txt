@@ -1,0 +1,12 @@
+Accepted runtime knife-student two-frame attack sheets.
+
+Raw sources:
+- variant_06_two_frame_knife_attack_raw.png
+- variant_07_two_frame_knife_attack_raw.png
+
+Runtime outputs:
+- assets/sprites/enemies/human_student/attack_knife_male_variants/variant_06/{left,right}_00..01.png
+- assets/sprites/enemies/human_student/attack_knife_male_variants/variant_07/{left,right}_00..01.png
+
+Notes:
+Frame 00 is wind-up with knife arm aside. Frame 01 is forward knife swing. Left-facing frames are deterministic mirrors of the accepted right-facing generated poses.

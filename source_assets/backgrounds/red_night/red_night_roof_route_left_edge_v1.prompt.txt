@@ -1,0 +1,8 @@
+Use case: stylized-concept
+Asset type: 2D Godot background plate for a fake-3D belt-scroller rooftop map, LEFT plate of a two-image stitched map.
+Primary request: Generate the left half of a rooftop route map for Linxi's Evaluation Adventure.
+Scene/backdrop: roof of a contemporary Chinese school dormitory or teaching building during the Red Night outbreak, rain-wet concrete rooftop, low parapet walls, roof vents, pipes, safety rails, small utility structures, distant school buildings and city silhouettes.
+Time requirement: the last few minutes before dawn, around 4:50-5:10 AM. The sky is deep blue-black lifting toward pale cyan with a very thin rose-orange glow at the far horizon. Wet surfaces catch faint dawn reflections and a few red emergency lights. It must not look like midnight, sunset, or daytime.
+Style/medium: high-resolution painterly 2D game background, pixel-filter-friendly, dark survival horror mood, sharp readable forms, not chunky pixel art.
+Composition/framing: ultra-wide 21:9 side-readable brawler stage with fake-3D depth; broad lower rooftop floor band where characters can walk; camera mostly side-on with slight top-down floor visibility. The far LEFT side must clearly show the left edge/corner of the building roof and a visible drop/side-wall silhouette beyond the parapet. The center opens into rooftop walkway. The far RIGHT edge should continue naturally into open rooftop, ready to stitch with the next plate.
+Constraints: no characters, no enemies, no UI, no text, no labels, no arrows, no signage with readable words, no foreground props that block the walkable band. Keep the bottom third readable for gameplay. Avoid strong perspective tunnels; keep the map side-stage readable for fake-3D movement.

@@ -1,0 +1,140 @@
+[gd_resource type="Resource" script_class="MapData" load_steps=4 format=3]
+
+[ext_resource path="res://scripts/maps/map_data.gd" type="Script" id="1"]
+[ext_resource path="res://resources/maps/red_night_roof_route_visual_data.tres" type="Resource" id="2_visual"]
+[ext_resource path="res://resources/items/red_night_item_visual_data.tres" type="Resource" id="3_item_visual"]
+
+[resource]
+script = ExtResource("1")
+map_id = "red_night_roof_route"
+display_name = "Roof Route"
+encounter_id = "red_night_roof_01"
+objective = "Reach the roof, survive the rooftop fight, and find a route back across the playground."
+story_id = "red_night_roof"
+initial_body_attack_unlocked = true
+environment_theme = "RED_NIGHT"
+camera_mode = "SCROLLING"
+visual_data = ExtResource("2_visual")
+footstep_surface = "CONCRETE"
+length = 1635.0
+depth = 350.0
+player_spawn = Vector2(89, 120)
+enemy_spawns = Array[Dictionary]([{
+"archetype": "human_student",
+"family": "HUMAN",
+"id": "roof_knife_student_01",
+"ai_profile": "STANDARD",
+"ai_frozen": true,
+"appearance_id": 6,
+"facing": 1.0,
+"health": 10,
+"initial_state": "NEUTRAL",
+"position": Vector2(260, 82),
+"story_group": "roof_knife_students",
+"weapon_id": "knife"
+}, {
+"archetype": "human_student",
+"family": "HUMAN",
+"id": "roof_knife_student_02",
+"ai_profile": "STANDARD",
+"ai_frozen": true,
+"appearance_id": 7,
+"facing": 1.0,
+"health": 10,
+"initial_state": "NEUTRAL",
+"position": Vector2(296, 155),
+"story_group": "roof_knife_students",
+"weapon_id": "knife"
+}, {
+"archetype": "human_student",
+"family": "HUMAN",
+"id": "roof_female_student_01",
+"ai_profile": "NON_COMBAT_WANDER",
+"ai_frozen": true,
+"appearance_id": 1,
+"facing": -1.0,
+"health": 10,
+"initial_state": "NEUTRAL",
+"neutral_direction": 1.0,
+"position": Vector2(430, 65),
+"story_group": "roof_civilians"
+}, {
+"archetype": "human_student",
+"family": "HUMAN",
+"id": "roof_female_student_02",
+"ai_profile": "NON_COMBAT_WANDER",
+"ai_frozen": true,
+"appearance_id": 2,
+"facing": -1.0,
+"health": 10,
+"initial_state": "NEUTRAL",
+"neutral_direction": 1.0,
+"position": Vector2(495, 125),
+"story_group": "roof_civilians"
+}, {
+"archetype": "human_student",
+"family": "HUMAN",
+"id": "roof_female_student_03",
+"ai_profile": "NON_COMBAT_WANDER",
+"ai_frozen": true,
+"appearance_id": 3,
+"facing": -1.0,
+"health": 10,
+"initial_state": "NEUTRAL",
+"neutral_direction": 1.0,
+"position": Vector2(560, 185),
+"story_group": "roof_civilians"
+}])
+items = Array[Dictionary]([{
+"active": true,
+"destination_name": "Dormitory Second Floor",
+"id": "roof_return_to_dormitory_second_floor",
+"name": "Roof Stairwell Down",
+"position": Vector2(89, 120),
+"target_scene": "res://scenes/dormitory_second_floor.tscn",
+"target_spawn": Vector2(1475, 20),
+"type": "transition"
+}, {
+"active": true,
+"auto_trigger": true,
+"auto_trigger_once": true,
+"avatar_path": "res://assets/ui/dialogue_portraits/knife_student.png",
+"choice": {
+"body": "Three students are trapped behind the armed boys. Linxi can still choose what kind of monster she becomes.",
+"deactivate_item_id": "roof_student_confrontation",
+"no_flag": "red_night_roof_chose_consume",
+"no_group_states": {
+"roof_civilians": "NEUTRAL",
+"roof_knife_students": "APPROACH"
+},
+"no_message": "The girls scatter in panic. The knife students rush Linxi.",
+"no_text": "CONSUME",
+"prompt_message": "The rooftop choice begins.",
+"title": "ROOFTOP CHOICE",
+"yes_flag": "red_night_roof_chose_save",
+"yes_group_states": {
+"roof_civilians": "NEUTRAL",
+"roof_knife_students": "APPROACH"
+},
+"yes_message": "Linxi steps between them. The girls run, and the knife students turn on her.",
+"yes_text": "SAVE"
+},
+"dialogue": ["Knife Student: Stop right there. You're infected too.", "Female Student: Please... don't let them leave us here.", "Linxi: Put the knives down. I don't want to hurt anyone who can still talk.", "Knife Student: Look at her eyes. She's worse than the things downstairs.", "Linxi: Maybe. But I still get to choose what I do next."],
+"id": "roof_student_confrontation",
+"name": "Rooftop Standoff",
+"position": Vector2(205, 120),
+"speaker": "Knife Student",
+"trigger_range_depth": 110.0,
+"trigger_range_x": 115.0,
+"type": "dialogue"
+}, {
+"active": true,
+"destination_name": "Playground Return",
+"id": "route_to_playground_return",
+"name": "Playground Return Route",
+"position": Vector2(1275, 0),
+"target_scene": "res://scenes/red_night_playground_return.tscn",
+"target_spawn": Vector2(1422, 0),
+"type": "transition"
+}])
+item_visual_data = ExtResource("3_item_visual")

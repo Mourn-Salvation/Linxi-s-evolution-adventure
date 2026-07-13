@@ -1,0 +1,95 @@
+[gd_resource type="Resource" script_class="MapData" load_steps=5 format=3]
+
+[ext_resource path="res://scripts/maps/map_data.gd" type="Script" id="1_map_data"]
+[ext_resource path="res://resources/maps/dormitory_second_floor_visual_data.tres" type="Resource" id="2_visual"]
+[ext_resource path="res://resources/items/red_night_item_visual_data.tres" type="Resource" id="3_item_visual"]
+
+[resource]
+script = ExtResource("1_map_data")
+map_id = "dormitory_second_floor"
+display_name = "Dormitory Second Floor"
+encounter_id = "dormitory_second_floor_01"
+objective = "Move along the second-floor hallway and find Su Ruo's room."
+story_id = "red_night_dormitory"
+initial_body_attack_unlocked = true
+environment_theme = "RED_NIGHT"
+camera_mode = "SCROLLING"
+visual_data = ExtResource("2_visual")
+footstep_surface = "CONCRETE"
+length = 1714.0
+depth = 345.0
+player_spawn = Vector2(86, 280)
+walkable_areas = Array[Dictionary]([{
+"id": "second_floor_hallway",
+"position": Vector2(0, 0),
+"size": Vector2(1714, 345)
+}])
+enemy_spawns = Array[Dictionary]([{
+"family": "ZOMBIE",
+"id": "second_floor_zombie_01",
+"ai_profile": "STANDARD",
+"appearance_id": 1,
+"facing": -1.0,
+"health": 10,
+"initial_state": "APPROACH",
+"position": Vector2(385, 20)
+}, {
+"family": "ZOMBIE",
+"id": "second_floor_zombie_02",
+"ai_profile": "STANDARD",
+"appearance_id": 2,
+"facing": -1.0,
+"health": 10,
+"initial_state": "APPROACH",
+"position": Vector2(707, 133)
+}, {
+"family": "ZOMBIE",
+"id": "second_floor_zombie_03",
+"ai_profile": "STANDARD",
+"appearance_id": 3,
+"facing": 1.0,
+"health": 10,
+"initial_state": "APPROACH",
+"position": Vector2(1082, 254)
+}, {
+"family": "ZOMBIE",
+"id": "second_floor_zombie_04",
+"ai_profile": "STANDARD",
+"appearance_id": 0,
+"facing": 1.0,
+"health": 10,
+"initial_state": "APPROACH",
+"position": Vector2(1456, 73)
+}])
+items = Array[Dictionary]([{
+"active": true,
+"destination_name": "Dormitory Lobby",
+"id": "second_floor_staircase_down",
+"name": "Staircase Down",
+"position": Vector2(86, 280),
+"target_scene": "res://scenes/dormitory_lobby.tscn",
+"type": "transition"
+}, {
+"active": true,
+"background_anchor": Vector2(1070, 430),
+"background_prop": true,
+"destination_name": "Dormitory: Su Ruo's Room",
+"id": "su_ruo_room_door",
+"name": "Su Ruo's Room Door",
+"position": Vector2(970, 5),
+"show_transition_circle": true,
+"target_scene": "res://scenes/empty_bed.tscn",
+"type": "transition"
+}, {
+"active": true,
+"destination_name": "Roof Route",
+"id": "second_floor_roof_stairs",
+"locked_message": "The roof stairs are exposed. Linxi needs to search Su Ruo's room first.",
+"locked_prompt": "F: Search Su Ruo's room first",
+"name": "Roof Stairwell",
+"position": Vector2(1525, 20),
+"required_story_flag": "red_night_su_ruo_clue",
+"target_scene": "res://scenes/red_night_roof_route.tscn",
+"type": "transition"
+}])
+item_visual_data = ExtResource("3_item_visual")

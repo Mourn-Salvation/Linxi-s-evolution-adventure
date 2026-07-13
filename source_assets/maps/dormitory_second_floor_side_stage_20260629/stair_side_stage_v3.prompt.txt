@@ -1,0 +1,5 @@
+Asset id: dormitory_second_floor_stair_side_stage_v3
+Purpose: scrolling map background panel A for Dormitory Second Floor; side-readable fake-3D stair entrance on right; no foreground bars over actors.
+Reference handoff: generated after viewing current dormitory_second_floor_hallway_21x9_v1.png in-context.
+Prompt summary: preserve the previous map image's side-stage camera, shallow fake-3D floor deck, wall/door rhythm, Red Night palette, and playable belt; remove foreground rails/fence bars; reject deep one-point corridor/tunnel view.
+Runtime destination: assets/backgrounds/red_night/dormitory_second_floor_stair_side_stage_v3.png

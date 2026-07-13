@@ -1,0 +1,1 @@
+Replacement 8-frame, 2x4 right-facing compact heavy walk cycle for Bone-Blade Twin. The full fused adult-student zombie body occupies the central 55% of every solid #FF00FF cell, with at least 18% clear padding, a short stride, a near-vertical bone cleaver, and a shared feet anchor.

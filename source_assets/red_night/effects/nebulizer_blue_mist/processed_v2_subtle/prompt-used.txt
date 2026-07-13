@@ -1,0 +1,1 @@
+﻿Create a 2x2 sprite sheet with exactly 4 equal cells on solid #FF00FF. Each frame is a very thin, subtle, low-opacity cyan-blue aerosol haze around a dropped nebulizer, low wide ellipse on the ground, stable spread range, no device, no character, no floor, no text. The effect must indicate virus range without blocking gameplay visibility.

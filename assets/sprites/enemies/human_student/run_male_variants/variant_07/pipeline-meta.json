@@ -1,0 +1,79 @@
+{
+  "pipeline": "knife_male_variant_reclassified_from_legacy_misnamed_folder",
+  "generated_at": "2026-07-10 01:16:17",
+  "note": "Variants 06 and 07 are knife-armed male students. Runtime uses this male folder; legacy female-named copies are retained until cleanup approval.",
+  "files": [
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\appearance_left.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\appearance_left.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\appearance_right.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\appearance_right.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\left_00.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\left_00.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\left_01.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\left_01.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\left_02.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\left_02.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\left_03.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\left_03.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\left_04.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\left_04.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\left_05.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\left_05.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\left_06.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\left_06.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\left_07.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\left_07.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\right_00.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\right_00.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\right_01.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\right_01.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\right_02.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\right_02.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\right_03.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\right_03.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\right_04.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\right_04.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\right_05.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\right_05.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\right_06.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\right_06.png"
+    },
+    {
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07\\right_07.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_male_variants\\variant_07\\right_07.png"
+    }
+  ]
+}

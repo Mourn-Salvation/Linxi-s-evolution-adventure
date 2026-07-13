@@ -1,0 +1,1 @@
+Idle frame for adult male knife human_student variant_06: tense standing pose, facing right, same hoodie/backpack/knife identity, solid #FF00FF background. Processed into appearance_right/left and idle_female_variants/variant_06.

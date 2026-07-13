@@ -1,0 +1,5 @@
+Use the visible image immediately above as the strict visual reference for a Godot fake-3D brawler scrolling map. Generate ONLY the missing left-side continuation of that same scene, as if extending the panorama further to the left. The right edge of the new image must connect naturally to the current image's left edge: same horizon height, same wet pavement tile scale, same running track curve and railing height, same morning-after-rain lighting, same distant school buildings, same camera height and shallow side-readable fake-3D game-map view.
+
+Scene: contemporary Chinese school campus playground at morning after the Red Night outbreak, wet reflective pavement in foreground, sports field and red running track to the left, chain-link fence and distant teaching buildings, pale sunrise behind clouds, quiet empty campus.
+
+Keep a broad playable foreground band for actors, no characters, no UI, no labels, no text, no arrows, no route markers, no enemies. High-resolution illustrated survival-horror game background, compatible with pixel-filter treatment, not low-res pixel art. Output a wide 21:9-ish continuation plate matching the reference style and scale.

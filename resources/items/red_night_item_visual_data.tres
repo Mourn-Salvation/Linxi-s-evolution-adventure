@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="ItemVisualData" load_steps=14 format=3]
+
+[ext_resource type="Script" path="res://scripts/items/item_visual_data.gd" id="1_visual"]
+[ext_resource type="Texture2D" path="res://assets/props/red_night/chopper_nebulizer/dropped_nebulizer.png" id="2_nebulizer"]
+[ext_resource type="Texture2D" path="res://assets/ui/navigation/stage_transition_circle/frame_00.png" id="8_transition_00"]
+[ext_resource type="Texture2D" path="res://assets/ui/navigation/stage_transition_circle/frame_01.png" id="9_transition_01"]
+[ext_resource type="Texture2D" path="res://assets/ui/navigation/stage_transition_circle/frame_02.png" id="10_transition_02"]
+[ext_resource type="Texture2D" path="res://assets/ui/navigation/stage_transition_circle/frame_03.png" id="11_transition_03"]
+[ext_resource type="Texture2D" path="res://assets/ui/navigation/stage_transition_circle/frame_04.png" id="12_transition_04"]
+[ext_resource type="Texture2D" path="res://assets/ui/navigation/stage_transition_circle/frame_05.png" id="13_transition_05"]
+[ext_resource type="Texture2D" path="res://assets/ui/navigation/stage_transition_circle/frame_06.png" id="14_transition_06"]
+[ext_resource type="Texture2D" path="res://assets/ui/navigation/stage_transition_circle/frame_07.png" id="15_transition_07"]
+[ext_resource type="Texture2D" path="res://assets/props/red_night/story_items/su_ruo_student_id.png" id="16_student_id"]
+[ext_resource type="Texture2D" path="res://assets/props/red_night/story_items/su_ruo_room_door_marker.png" id="17_su_ruo_door"]
+[ext_resource type="Texture2D" path="res://assets/props/red_night/weapons/dropped_knife.png" id="18_dropped_knife"]
+[ext_resource type="Texture2D" path="res://assets/props/red_night/weapons/dropped_handgun.png" id="19_dropped_handgun"]
+
+[resource]
+script = ExtResource("1_visual")
+nebulizer_texture = ExtResource("2_nebulizer")
+nebulizer_size = Vector2(116, 77)
+nebulizer_offset = Vector2(-58, -82)
+prop_ids = Array[String](["su_ruo_student_id", "su_ruo_room_door", "dropped_knife", "dropped_handgun", "classroom_503_twins_dialogue"])
+prop_textures = Array[Texture2D]([ExtResource("16_student_id"), ExtResource("17_su_ruo_door"), ExtResource("18_dropped_knife"), ExtResource("19_dropped_handgun"), null])
+prop_paths = Array[String](["", "", "", "", "res://assets/sprites/npcs/classroom_twins/idle_right.png"])
+prop_sizes = Array[Vector2]([Vector2(22, 16), Vector2(150, 265), Vector2(58, 34), Vector2(62, 34), Vector2(157.5, 157.5)])
+prop_y_offsets = Array[float]([0.0, 0.0, 0.0, 0.0, 0.0])
+transition_circle_frames = Array[Texture2D]([ExtResource("8_transition_00"), ExtResource("9_transition_01"), ExtResource("10_transition_02"), ExtResource("11_transition_03"), ExtResource("12_transition_04"), ExtResource("13_transition_05"), ExtResource("14_transition_06"), ExtResource("15_transition_07")])
+transition_frame_ms = 110.0

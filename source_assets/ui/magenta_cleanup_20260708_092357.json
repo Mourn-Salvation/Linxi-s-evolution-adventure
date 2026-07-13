@@ -1,0 +1,205 @@
+[
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\achievements\\whats_inside_the_vial.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\dialogue_portraits\\li_yingying.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\hud\\achievement_panel.png",
+    "changed": true,
+    "transparent_removed": 0,
+    "defringed": 2626,
+    "recolored": 300
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\hud\\biomass_bar_frame.png",
+    "changed": true,
+    "transparent_removed": 0,
+    "defringed": 9,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\hud\\digestion_bar_frame.png",
+    "changed": true,
+    "transparent_removed": 0,
+    "defringed": 9,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\hud\\dodge_ready_icon.png",
+    "changed": true,
+    "transparent_removed": 0,
+    "defringed": 794,
+    "recolored": 150
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\hud\\linxi_hp_frame.png",
+    "changed": true,
+    "transparent_removed": 0,
+    "defringed": 1679,
+    "recolored": 883
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\hud\\prey_capacity_icon.png",
+    "changed": true,
+    "transparent_removed": 0,
+    "defringed": 4,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\direction_arrows\\arrow_down.png",
+    "changed": true,
+    "transparent_removed": 3,
+    "defringed": 1,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\direction_arrows\\arrow_left.png",
+    "changed": true,
+    "transparent_removed": 2,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\direction_arrows\\arrow_right.png",
+    "changed": true,
+    "transparent_removed": 2,
+    "defringed": 3,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\direction_arrows\\arrow_up.png",
+    "changed": true,
+    "transparent_removed": 0,
+    "defringed": 1,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\direction_arrows\\direction_arrows_sheet.png",
+    "changed": true,
+    "transparent_removed": 7,
+    "defringed": 5,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\stage_transition_circle\\frame_00.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\stage_transition_circle\\frame_01.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\stage_transition_circle\\frame_02.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\stage_transition_circle\\frame_03.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\stage_transition_circle\\frame_04.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\stage_transition_circle\\frame_05.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\stage_transition_circle\\frame_06.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\stage_transition_circle\\frame_07.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\stage_transition_circle\\stage_transition_circle_sheet.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\transition_hud\\button_cancel.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\transition_hud\\button_confirm.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\transition_hud\\node_available.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\transition_hud\\node_current.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\transition_hud\\node_locked.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\transition_hud\\route_confirm_panel.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  },
+  {
+    "path": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\transition_hud\\route_connector.png",
+    "changed": false,
+    "transparent_removed": 0,
+    "defringed": 0,
+    "recolored": 0
+  }
+]

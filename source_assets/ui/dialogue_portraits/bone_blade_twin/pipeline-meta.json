@@ -1,0 +1,59 @@
+{
+  "target": "creature",
+  "mode": "single",
+  "prompt": "Approved Bone-Blade Twin idle source prepared for portrait crop.",
+  "role": "elite",
+  "input": "source_assets\\enemies\\bone_blade_twin\\bone_blade_twin_approved_idle_reference_southwest.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 200,
+  "rows": 1,
+  "cols": 1,
+  "cell_size": 128,
+  "fit_scale": 0.85,
+  "trim_border": 4,
+  "edge_clean_depth": 6,
+  "align": "feet",
+  "shared_scale": false,
+  "component_mode": "all",
+  "component_padding": 8,
+  "min_component_area": 1,
+  "edge_touch_margin": 0,
+  "frame_labels": [
+    "single-1"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "component_mode": "all",
+      "component_count": 49,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        181,
+        38,
+        512,
+        569
+      ],
+      "edge_touch": false,
+      "output_size": [
+        67,
+        108
+      ],
+      "paste_position": [
+        30,
+        11
+      ]
+    }
+  ],
+  "edge_touch_frames": []
+}

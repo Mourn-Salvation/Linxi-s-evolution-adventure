@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/stages/level_data.gd" id="1_level"]
+[ext_resource type="Resource" path="res://resources/maps/dormitory_lobby.tres" id="2_map"]
+
+[resource]
+script = ExtResource("1_level")
+stage_id = "stage_01_red_night"
+level_id = "stage_01_level_01_dormitory_lobby"
+level_index = 1
+display_name = "Dormitory Lobby"
+summary = "Linxi enters the dormitory through the main gate. The first floor is a compact fixed-room lobby with the switchback staircase as the route upward."
+map_data = ExtResource("2_map")

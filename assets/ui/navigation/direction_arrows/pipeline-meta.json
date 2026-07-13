@@ -1,0 +1,75 @@
+{
+  "source": "E:\\Linxi's evaluation adventure\\source_assets\\ui\\navigation\\direction_arrows\\raw-sheet.png",
+  "source_sha256": "fce6e01c1e6f3b40d4c8f03d472c5678f7db278c4c1cb3a14a575c19abfa2f5d",
+  "layout": "2x2 up/down/left/right",
+  "runtime_dir": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\direction_arrows",
+  "frames": [
+    {
+      "name": "up",
+      "source_cell": 0,
+      "source_bbox": [
+        196,
+        112,
+        501,
+        516
+      ],
+      "resized": [
+        72,
+        96
+      ],
+      "output": "arrow_up.png"
+    },
+    {
+      "name": "down",
+      "source_cell": 1,
+      "source_bbox": [
+        116,
+        123,
+        426,
+        526
+      ],
+      "resized": [
+        74,
+        96
+      ],
+      "output": "arrow_down.png"
+    },
+    {
+      "name": "left",
+      "source_cell": 2,
+      "source_bbox": [
+        151,
+        140,
+        536,
+        425
+      ],
+      "resized": [
+        96,
+        71
+      ],
+      "output": "arrow_left.png"
+    },
+    {
+      "name": "right",
+      "source_cell": 3,
+      "source_bbox": [
+        93,
+        140,
+        478,
+        426
+      ],
+      "resized": [
+        96,
+        71
+      ],
+      "output": "arrow_right.png"
+    }
+  ],
+  "operations": [
+    "magenta_unblend_alpha_threshold_55",
+    "tiny_component_cleanup",
+    "cell_crop",
+    "fit_128x128",
+    "transparent_export"
+  ]
+}

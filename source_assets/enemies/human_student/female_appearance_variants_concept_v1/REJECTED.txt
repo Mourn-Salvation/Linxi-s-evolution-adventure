@@ -1,0 +1,10 @@
+Rejected.
+
+Reason:
+The saved image is a stale G-mode Linxi concept from the generated-image cache, not the requested female human-student variant concept sheet.
+
+Do not use:
+- female_human_student_variants_concept_v1.png
+
+Correct next step:
+Generate a new base character design sheet from the prompt in `prompt-used.txt`, then approve it before creating movement/hurt/knocked-down assets.

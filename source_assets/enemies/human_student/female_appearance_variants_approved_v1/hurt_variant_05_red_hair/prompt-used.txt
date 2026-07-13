@@ -1,0 +1,1 @@
+Variant appearance_id 5, red hair. Hurt sheet 2x2; runtime exports first two frames.

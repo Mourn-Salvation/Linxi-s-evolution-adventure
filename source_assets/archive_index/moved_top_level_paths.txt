@@ -1,0 +1,13 @@
+﻿characters
+enemies
+backups
+cinematics
+effects
+runtime_boundary_cleanup_20260618
+safe_house
+opening_human
+fiction
+red_night\backgrounds
+red_night\characters
+red_night\cutscenes
+red_night\props

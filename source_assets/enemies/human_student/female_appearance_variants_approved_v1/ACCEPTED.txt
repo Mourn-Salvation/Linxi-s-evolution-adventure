@@ -1,0 +1,1 @@
+Accepted base design sheet for female human_student appearance variants. User approved this sheet on 2026-06-21. Use these transparent variant references to generate movement, hurt, and knocked-down runtime sheets. Do not use the rejected edited-runtime pass.

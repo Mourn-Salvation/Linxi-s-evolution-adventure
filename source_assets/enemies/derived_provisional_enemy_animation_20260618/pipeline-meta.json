@@ -1,0 +1,171 @@
+{
+  "status": "provisional",
+  "reason": "Image generation output folder returned stale unrelated art, so this pass derives runtime frames from verified accepted enemy sprites. Replace with true generated sheets after approval.",
+  "assets": [
+    {
+      "enemy": "human_guard",
+      "action": "move",
+      "frames": 8,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_guard\\hit_reaction\\right_03.png",
+      "source_sha256": "b08c541a3eb08f09a074b82e5d68f8ebd21d6d5b45441742dc378754ae71d072",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_guard\\move",
+      "method": "derived provisional from verified accepted sprite"
+    },
+    {
+      "enemy": "human_guard",
+      "action": "attack",
+      "frames": 4,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_guard\\hit_reaction\\right_03.png",
+      "source_sha256": "b08c541a3eb08f09a074b82e5d68f8ebd21d6d5b45441742dc378754ae71d072",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_guard\\attack",
+      "method": "derived provisional from verified accepted sprite"
+    },
+    {
+      "enemy": "human_guard",
+      "action": "hurt",
+      "frames": 2,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_guard\\hit_reaction\\right_03.png",
+      "source_sha256": "b08c541a3eb08f09a074b82e5d68f8ebd21d6d5b45441742dc378754ae71d072",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_guard\\hurt",
+      "method": "derived provisional from verified accepted sprite"
+    },
+    {
+      "enemy": "zombie_student",
+      "variant": 0,
+      "action": "move",
+      "frames": 8,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\right_00.png",
+      "source_sha256": "3fbebb7cf3403e5e25bb5aa92494354b2d9f87f3f095a5c2c8092ded7175b14a",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\move\\variant_00",
+      "method": "derived provisional variant-preserving transform"
+    },
+    {
+      "enemy": "zombie_student",
+      "variant": 0,
+      "action": "attack",
+      "frames": 4,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\right_00.png",
+      "source_sha256": "3fbebb7cf3403e5e25bb5aa92494354b2d9f87f3f095a5c2c8092ded7175b14a",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_00",
+      "method": "derived provisional variant-preserving transform"
+    },
+    {
+      "enemy": "zombie_student",
+      "variant": 0,
+      "action": "hurt",
+      "frames": 2,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\right_00.png",
+      "source_sha256": "3fbebb7cf3403e5e25bb5aa92494354b2d9f87f3f095a5c2c8092ded7175b14a",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\hurt\\variant_00",
+      "method": "derived provisional variant-preserving transform"
+    },
+    {
+      "enemy": "zombie_student",
+      "variant": 1,
+      "action": "move",
+      "frames": 8,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\right_01.png",
+      "source_sha256": "36819af219d9ade00021e6d6ca2f004770d814698ad59b99d45d03e5c88244f3",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\move\\variant_01",
+      "method": "derived provisional variant-preserving transform"
+    },
+    {
+      "enemy": "zombie_student",
+      "variant": 1,
+      "action": "attack",
+      "frames": 4,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\right_01.png",
+      "source_sha256": "36819af219d9ade00021e6d6ca2f004770d814698ad59b99d45d03e5c88244f3",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_01",
+      "method": "derived provisional variant-preserving transform"
+    },
+    {
+      "enemy": "zombie_student",
+      "variant": 1,
+      "action": "hurt",
+      "frames": 2,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\right_01.png",
+      "source_sha256": "36819af219d9ade00021e6d6ca2f004770d814698ad59b99d45d03e5c88244f3",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\hurt\\variant_01",
+      "method": "derived provisional variant-preserving transform"
+    },
+    {
+      "enemy": "zombie_student",
+      "variant": 2,
+      "action": "move",
+      "frames": 8,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\right_02.png",
+      "source_sha256": "5b1a5df600f93a39ceaae01e4ea090fa37365db0203c4cc6e313c5a613029af2",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\move\\variant_02",
+      "method": "derived provisional variant-preserving transform"
+    },
+    {
+      "enemy": "zombie_student",
+      "variant": 2,
+      "action": "attack",
+      "frames": 4,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\right_02.png",
+      "source_sha256": "5b1a5df600f93a39ceaae01e4ea090fa37365db0203c4cc6e313c5a613029af2",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_02",
+      "method": "derived provisional variant-preserving transform"
+    },
+    {
+      "enemy": "zombie_student",
+      "variant": 2,
+      "action": "hurt",
+      "frames": 2,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\right_02.png",
+      "source_sha256": "5b1a5df600f93a39ceaae01e4ea090fa37365db0203c4cc6e313c5a613029af2",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\hurt\\variant_02",
+      "method": "derived provisional variant-preserving transform"
+    },
+    {
+      "enemy": "zombie_student",
+      "variant": 3,
+      "action": "move",
+      "frames": 8,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\right_03.png",
+      "source_sha256": "7a41fa6c1114bbb3436413d7dc7ccc005441e1a2aa578953bcc7e457b14199ba",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\move\\variant_03",
+      "method": "derived provisional variant-preserving transform"
+    },
+    {
+      "enemy": "zombie_student",
+      "variant": 3,
+      "action": "attack",
+      "frames": 4,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\right_03.png",
+      "source_sha256": "7a41fa6c1114bbb3436413d7dc7ccc005441e1a2aa578953bcc7e457b14199ba",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_03",
+      "method": "derived provisional variant-preserving transform"
+    },
+    {
+      "enemy": "zombie_student",
+      "variant": 3,
+      "action": "hurt",
+      "frames": 2,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\right_03.png",
+      "source_sha256": "7a41fa6c1114bbb3436413d7dc7ccc005441e1a2aa578953bcc7e457b14199ba",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\hurt\\variant_03",
+      "method": "derived provisional variant-preserving transform"
+    },
+    {
+      "enemy": "human_student_male",
+      "action": "hurt",
+      "frames": 2,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run\\appearance_right.png",
+      "source_sha256": "81515e19c14949366f6b3d9973ab7c8227b4d8c11c5049c374f1c857af1e931a",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\hurt",
+      "method": "derived provisional recoil frames; non-combat archetype intentionally has no attack"
+    },
+    {
+      "enemy": "human_student_female",
+      "action": "hurt",
+      "frames": 2,
+      "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female\\appearance_right.png",
+      "source_sha256": "728b8a7fc5f90fee772276ddfff3e9d04da1ec6ddfe3f49c6f32e0ec8f11bf0b",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\hurt_female",
+      "method": "derived provisional recoil frames; non-combat archetype intentionally has no attack"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+Approved Red Night story item prop pack extracted from user-provided magenta sheet.
+Source: C:\Users\13948\AppData\Local\Temp\codex-clipboard-7f1bb4c3-7ea5-480c-b032-3a10168377e0.png
+SHA-256: 45803e35428fe2d68865f5aec84530df85c36232fbd6b413e7da5c9d5fd0f5c6
+Runtime destination: assets/props/red_night/story_items/
+Notes: extracted by fixed 3x2 cells, magenta keyed transparent, 10 px crop padding.

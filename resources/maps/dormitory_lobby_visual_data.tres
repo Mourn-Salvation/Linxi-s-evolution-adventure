@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MapVisualData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/maps/map_visual_data.gd" id="1_visual"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/red_night/dormitory_lobby_switchback_21x9_v1.png" id="2_lobby"]
+
+[resource]
+script = ExtResource("1_visual")
+fixed_room_clear_color = Color(0.0705882, 0.0588235, 0.0784314, 1)
+themed_clear_color = Color(0.0705882, 0.0588235, 0.0784314, 1)
+background_layers = Array[Texture2D]([ExtResource("2_lobby")])

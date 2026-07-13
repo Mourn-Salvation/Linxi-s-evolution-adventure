@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="MapData" load_steps=2 format=3]
+
+[ext_resource path="res://scripts/maps/map_data.gd" type="Script" id="1_map_data"]
+
+[resource]
+script = ExtResource("1_map_data")
+map_id = "opening_scene"
+display_name = "Evolution Room"
+encounter_id = "evaluation_guards_01"
+objective = "Survive the evolution trial and defeat ten guards."
+footstep_surface = "CONCRETE"
+length = 1800.0
+depth = 280.0
+player_spawn = Vector2(130, 155)
+enemy_spawns = Array[Dictionary]([{
+"family": "HUMAN",
+"id": "guard_01",
+"position": Vector2(680, 97)
+}, {
+"family": "HUMAN",
+"id": "guard_02",
+"position": Vector2(800, 155)
+}, {
+"family": "HUMAN",
+"id": "guard_03",
+"position": Vector2(920, 213)
+}, {
+"family": "HUMAN",
+"id": "guard_04",
+"position": Vector2(1040, 97)
+}, {
+"family": "HUMAN",
+"id": "guard_05",
+"position": Vector2(1160, 155)
+}, {
+"family": "HUMAN",
+"id": "guard_06",
+"position": Vector2(1280, 213)
+}, {
+"family": "HUMAN",
+"id": "guard_07",
+"position": Vector2(1400, 97)
+}, {
+"family": "HUMAN",
+"id": "guard_08",
+"position": Vector2(1520, 155)
+}, {
+"family": "HUMAN",
+"id": "guard_09",
+"position": Vector2(1640, 213)
+}, {
+"attack_type": "HEAVY",
+"family": "HUMAN",
+"id": "guard_10",
+"position": Vector2(1760, 155)
+}])
+items = Array[Dictionary]([{
+"active": true,
+"ammo": 6,
+"id": "test_handgun",
+"name": "Service Handgun",
+"position": Vector2(320, 110),
+"type": "weapon",
+"weapon_id": "handgun"
+}, {
+"active": true,
+"ammo": 1,
+"id": "test_knife",
+"name": "Kitchen Knife",
+"position": Vector2(390, 150),
+"type": "weapon",
+"weapon_id": "knife"
+}, {
+"active": true,
+"dialogue": ["Linxi, this room is monitoring your movement and combat response.", "Human weapons are disposable. The handgun has six shots; the knife can be thrown once.", "Approach an object and press F whenever the interaction marker appears."],
+"id": "evaluation_operator",
+"name": "Evolution Operator",
+"position": Vector2(470, 200),
+"speaker": "Operator",
+"allow_letter_avatar": true,
+"type": "dialogue"
+}])

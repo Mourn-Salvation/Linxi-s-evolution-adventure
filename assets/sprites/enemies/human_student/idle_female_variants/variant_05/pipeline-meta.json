@@ -1,0 +1,50 @@
+{
+  "pipeline": "female_student_idle_from_approved_appearance",
+  "generated_at": "2026-07-10 01:09:51",
+  "note": "Explicit idle frame generated from approved female-student appearance art to preserve identity and scale.",
+  "entry": {
+    "name": "variant_05",
+    "source": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_05",
+    "dest": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\idle_female_variants\\variant_05",
+    "files": [
+      {
+        "direction": "left",
+        "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_05\\appearance_left.png",
+        "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\idle_female_variants\\variant_05\\left_00.png",
+        "image_size": [
+          256,
+          256
+        ],
+        "visible_bbox": [
+          103,
+          120,
+          152,
+          242
+        ],
+        "visible_size": [
+          49,
+          122
+        ]
+      },
+      {
+        "direction": "right",
+        "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_05\\appearance_right.png",
+        "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\idle_female_variants\\variant_05\\right_00.png",
+        "image_size": [
+          256,
+          256
+        ],
+        "visible_bbox": [
+          104,
+          120,
+          153,
+          242
+        ],
+        "visible_size": [
+          49,
+          122
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+[gd_resource type="Resource" script_class="MapData" load_steps=4 format=3]
+
+[ext_resource path="res://scripts/maps/map_data.gd" type="Script" id="1_map_data"]
+[ext_resource path="res://resources/maps/red_night_teaching_building_visual_data.tres" type="Resource" id="2_visual"]
+[ext_resource path="res://resources/items/red_night_item_visual_data.tres" type="Resource" id="3_item_visual"]
+
+[resource]
+script = ExtResource("1_map_data")
+map_id = "red_night_teaching_second_floor"
+display_name = "Teaching Building Second Floor"
+encounter_id = "red_night_teaching_building_01"
+objective = "Search the second-floor hallway and enter Classroom 503."
+story_id = "red_night_teaching_second_floor"
+initial_body_attack_unlocked = true
+environment_theme = "RED_NIGHT"
+camera_mode = "FIXED_ROOM"
+visual_data = ExtResource("2_visual")
+footstep_surface = "CONCRETE"
+length = 1330.0
+depth = 350.0
+player_spawn = Vector2(120, 178)
+walkable_areas = Array[Dictionary]([{
+"id": "teaching_second_floor_full_floor",
+"points": Array[Vector2]([Vector2(0, 75), Vector2(0, 350), Vector2(1330, 350), Vector2(1330, 75)])
+}])
+enemy_spawns = Array[Dictionary]([])
+items = Array[Dictionary]([{
+"active": true,
+"destination_name": "Teaching Building Lobby",
+"id": "teaching_second_floor_stairs_down",
+"name": "Staircase Down",
+"position": Vector2(120, 130),
+"target_scene": "res://scenes/red_night_teaching_lobby.tscn",
+"target_spawn": Vector2(880, 235),
+"type": "transition"
+}, {
+"active": true,
+"destination_name": "Classroom 503",
+"id": "teaching_second_floor_classroom_503",
+"name": "Classroom 503 Door",
+"position": Vector2(890, 120),
+"show_transition_circle": false,
+"target_scene": "res://scenes/red_night_classroom_503.tscn",
+"target_spawn": Vector2(1050, 175),
+"type": "transition"
+}])
+item_visual_data = ExtResource("3_item_visual")

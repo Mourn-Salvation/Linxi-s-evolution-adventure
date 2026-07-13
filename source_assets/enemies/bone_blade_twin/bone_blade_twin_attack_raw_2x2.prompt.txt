@@ -1,0 +1,1 @@
+Two-frame right-facing bone-blade attack for Bone-Blade Twin, repeated in a 2x2 layout. Compact wind-up then downward-forward diagonal cut; preserve the approved identity and keep the blade inside each solid #FF00FF cell without detached effects.

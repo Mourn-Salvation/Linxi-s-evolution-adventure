@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: 2D Godot background plate for a fake-3D belt-scroller dormitory second-floor hallway.
+Input image: use the accepted hallway image as the strict visual reference for camera angle, wall height, floor grid perspective, lighting, color palette, texture density, rain-night horror mood, and side-readable fake-3D brawler-stage composition.
+Primary request: create the next right-side continuation plate for the same dormitory second-floor hallway. It must look like it physically connects to the right edge of the reference image, not like a new cinematic shot.
+Scene/backdrop: abandoned school dormitory second-floor corridor at night, wet reflective tiled floor, aged concrete wall with dark green lower paint band, exposed pipes and electrical boxes, ceiling fluorescent lights, red emergency lamps, a few dark room doors and bulletin boards.
+Required composition: ultra-wide traversal background, same 1672x941 aspect ratio, side-on stage view, stable horizon, broad open walkable floor band. The left edge should continue the same flat wall/corridor rhythm from the reference image. Place a stairwell or stair entrance only toward the far right edge, integrated into the wall, not dominating the middle. No large window corner at the seam.
+Style/medium: high-resolution dark pixel-filter-friendly painterly game background, Signalis-inspired mood only, not retro chunky pixels.
+Lighting/mood: dim, cold, rainy, red emergency accent lights, horror atmosphere, consistent with the reference.
+Constraints: no characters, no UI, no labels, no arrows, no glowing route circles, no foreground rail/fence layer, no dramatic perspective tunnel, no first-person hallway depth, no abrupt window wall at the left seam, no hand-drawn placeholder look. Keep floors and wall scale consistent with the reference.

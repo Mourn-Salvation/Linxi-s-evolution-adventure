@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/stages/level_data.gd" id="1_level"]
+[ext_resource type="Resource" path="res://resources/maps/dormitory_second_floor.tres" id="2_map"]
+
+[resource]
+script = ExtResource("1_level")
+stage_id = "stage_01_red_night"
+level_id = "stage_01_level_02_dormitory_second_floor"
+level_index = 2
+display_name = "Dormitory Second Floor"
+summary = "A scrolling dormitory hallway with multiple room doors. This layer connects the first-floor lobby to Su Ruo's room and later dorm encounters."
+map_data = ExtResource("2_map")

@@ -1,0 +1,49 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Linxi's Evolution Adventure"
+run/main_scene="res://scenes/opening_intro.tscn"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Linxi's Evaluation Adventure"
+config/features=PackedStringArray("4.6")
+
+[autoload]
+
+DebugCore="*uid://ctmkncwpk2qma"
+CommandRegistry="*uid://ce5ap1y1kwavq"
+DebugConsole="*uid://d010a0e3yyovw"
+GameConsoleManager="*uid://dsr8e7vkd3scc"
+PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
+
+[debug]
+
+file_logging/max_log_files=1
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/size/min_width=1280
+window/size/min_height=720
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/debug_console/plugin.cfg", "res://addons/phantom_camera/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

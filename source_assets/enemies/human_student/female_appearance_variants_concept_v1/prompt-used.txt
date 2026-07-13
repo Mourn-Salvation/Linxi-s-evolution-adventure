@@ -1,0 +1,33 @@
+Use case: game character concept art
+Asset type: base enemy character design sheet for a Godot 2D fake-3D action game
+
+Primary request:
+Create a 2x2 character design lineup of four distinct ADULT female human student civilians for the Red Night dorm chase scene. They are non-combat human students, frightened and running from zombies.
+
+Shared outfit:
+- damaged white shirt
+- black short pleated skirt
+- dark stockings/tights
+- black shoes
+- slight dirt and blood stains from a school outbreak
+
+Variants:
+1. black ponytail
+2. long straight black hair
+3. blonde hair
+4. red hair
+
+Age:
+All characters are adults, young college-age, not minors.
+
+Style:
+Project-native illustration, anime-inspired survival horror sprite concept, SIGNAlIS-inspired mood but not a copy, high resolution with crisp silhouette, muted colors, pixel-filter-friendly details, dark outline, readable at game sprite scale.
+
+Composition:
+Exact 2 rows x 2 columns, one full-body character per cell, side-view facing RIGHT, running/fleeing posture but full body visible, stable feet/bottom baseline, generous padding around each character.
+
+Background:
+Perfectly flat solid #FF00FF magenta chroma-key background, no ground plane.
+
+Constraints:
+No text, no labels, no borders, no shadows, no UI, no weapons, no zombies, no extra characters. Keep outfit consistent across all four; only hair style/color and small facial silhouette differences vary. Avoid sexualized posing or revealing outfit; they are ordinary frightened adult students.

@@ -1,0 +1,15 @@
+Edit/generation target: `playground_return_morning_extension_canvas_right_locked_v1.png`, a wider source canvas with the approved right-side dormitory exterior candidate locked on the right and an unfilled left side.
+
+Fill the UNFILLED LEFT SIDE of the wide canvas with a natural continuation of the approved morning playground map. Preserve the approved RIGHT SIDE with the dormitory building unchanged in content, scale, lighting, and perspective.
+
+Primary request: Complete the missing left half of the wide image so the entire result becomes one continuous morning playground return panorama. The right half already contains the approved dormitory exterior anchor and must remain visually consistent. The left half should extend the playground/courtyard naturally away from the dormitory.
+
+What to generate on the left side: continuation of the same wet schoolyard pavement and running track, low railings, campus fence, distant teaching buildings, trees, morning haze after rain, scattered papers/leaves, broad playable lower floor band. The left side may show more of the sports field/running track and distant school buildings, but it must connect smoothly into the existing right-side pavement and horizon.
+
+Continuity requirements: match the right side's morning time, cool gray-blue sky, pale yellow sunlight, wet reflection direction, floor tile/pavement scale, horizon height, fake-3D perspective, actor scale, camera angle, and material palette. The seam between generated left and preserved right should not look like two images placed together.
+
+Approved-candidate extension rule: this is a map extension pass. Treat the approved right side as locked. Fill only the missing left side. Remove the temporary gray blank and any annotation text. Do not add a divider, seam line, label, UI, character, enemy, transition circle, arrow, or readable sign.
+
+Style: high-resolution illustrated survival-horror game background, pixel-filter-friendly, realistic anime game art direction, morning-lit but still tense. Not low-resolution pixel art, not a photorealistic photograph.
+
+Gameplay constraints: broad open lower foreground playable band, no blocking props in the walkable lane, no huge empty black margins, no first-person tunnel perspective.

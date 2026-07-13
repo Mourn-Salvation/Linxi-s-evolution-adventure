@@ -1,0 +1,30 @@
+{
+  "target_height": 126,
+  "bottom_y": 242,
+  "variants": {
+    "06": {
+      "raw": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student_knife_attack_two_frame\\variant_06_two_frame_knife_attack_raw.png",
+      "outputs": [
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\attack_knife_male_variants\\variant_06\\right_00.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\attack_knife_male_variants\\variant_06\\left_00.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\attack_knife_male_variants\\variant_06\\right_01.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\attack_knife_male_variants\\variant_06\\left_01.png"
+      ]
+    },
+    "07": {
+      "raw": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student_knife_attack_two_frame\\variant_07_two_frame_knife_attack_raw.png",
+      "outputs": [
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\attack_knife_male_variants\\variant_07\\right_00.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\attack_knife_male_variants\\variant_07\\left_00.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\attack_knife_male_variants\\variant_07\\right_01.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\attack_knife_male_variants\\variant_07\\left_01.png"
+      ]
+    }
+  },
+  "raw_hashes": {
+    "variant_06_two_frame_knife_attack_raw.png": "122a6c9b4d450f22895bd6fa681ba108487bcbb364d4729fd521c8f389efcc96",
+    "variant_07_two_frame_knife_attack_raw.png": "9b87e50faaae40c6eb05f0a35dafd622f3c72b9fc898b7e120964f3ef05aa296"
+  },
+  "runtime_root": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\attack_knife_male_variants",
+  "accepted_contract": "Two-frame knife attack: frame 00 wind-up/arm aside during cast, frame 01 forward knife swing during release/recovery. Right-facing cells sourced from approved generated raw sheet; left-facing frames mirrored deterministically."
+}

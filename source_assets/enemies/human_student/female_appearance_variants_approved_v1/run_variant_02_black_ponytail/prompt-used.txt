@@ -1,0 +1,4 @@
+﻿Generated with Codex image pipeline from the approved human-student female appearance sheet.
+Variant: appearance_id 2, black ponytail.
+Sheet: 8-frame run/flee cycle, 2 rows x 4 columns, facing right, solid magenta background.
+Runtime processing may only remove background, crop, align, scale, mirror, and export transparent frames.

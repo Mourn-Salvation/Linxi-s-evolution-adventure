@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="MapVisualData" load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/maps/map_visual_data.gd" id="1_visual"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/red_night/red_night_roof_route_full_panorama_left_v1.png" id="2_left"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/red_night/red_night_roof_route_full_panorama_right_v1.png" id="3_right"]
+
+[resource]
+script = ExtResource("1_visual")
+scrolling_clear_color = Color(0.0588235, 0.0509804, 0.0666667, 1)
+themed_clear_color = Color(0.0588235, 0.0509804, 0.0666667, 1)
+background_layers = Array[Texture2D]([ExtResource("2_left"), ExtResource("3_right")])
+foreground_layers = Array[Texture2D]([])
+stitch_background_layers = true
+layer_fade_in_start = PackedFloat32Array()
+layer_fade_in_end = PackedFloat32Array()
+layer_fade_out_start = PackedFloat32Array()
+layer_fade_out_end = PackedFloat32Array()
+scrolling_background_scale = 1.0

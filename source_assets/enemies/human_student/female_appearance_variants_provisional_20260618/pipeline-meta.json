@@ -1,0 +1,38 @@
+{
+  "status": "provisional",
+  "reason": "Derived from accepted female human_student run sheet to add immediate crowd variety. Hair silhouettes/colors are not final generated art; replace with approved generated sheets later.",
+  "variants": [
+    {
+      "appearance_id": 1,
+      "name": "black short hair current",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_01",
+      "source_base": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female",
+      "source_sha256_frame0": "728b8a7fc5f90fee772276ddfff3e9d04da1ec6ddfe3f49c6f32e0ec8f11bf0b",
+      "status": "provisional derived variant"
+    },
+    {
+      "appearance_id": 2,
+      "name": "black ponytail",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_02",
+      "source_base": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female",
+      "source_sha256_frame0": "728b8a7fc5f90fee772276ddfff3e9d04da1ec6ddfe3f49c6f32e0ec8f11bf0b",
+      "status": "provisional derived variant"
+    },
+    {
+      "appearance_id": 3,
+      "name": "blonde long straight hair",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_03",
+      "source_base": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female",
+      "source_sha256_frame0": "728b8a7fc5f90fee772276ddfff3e9d04da1ec6ddfe3f49c6f32e0ec8f11bf0b",
+      "status": "provisional derived variant"
+    },
+    {
+      "appearance_id": 4,
+      "name": "red hair",
+      "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_04",
+      "source_base": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female",
+      "source_sha256_frame0": "728b8a7fc5f90fee772276ddfff3e9d04da1ec6ddfe3f49c6f32e0ec8f11bf0b",
+      "status": "provisional derived variant"
+    }
+  ]
+}

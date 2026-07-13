@@ -1,0 +1,1 @@
+Two-frame right-facing hurt reaction for Bone-Blade Twin, repeated in a 2x2 layout. Recoil then defensive recovery; preserve the approved fused zombie identity and bottom anchor on solid #FF00FF.

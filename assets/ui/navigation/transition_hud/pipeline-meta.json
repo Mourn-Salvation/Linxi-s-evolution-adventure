@@ -1,0 +1,119 @@
+{
+  "source_panel_sha256": "2ca25b8c4275e4d4bc0db794bacf530932fe0baa8d0d5586493cc83a3fbf9713",
+  "source_elements_sha256": "5c007ead978484a5a32f0214b525bfbb4d5927bb5b64ee9ee2ea3287420e6bed",
+  "assets": {
+    "panel": {
+      "source": "E:\\Linxi's evaluation adventure\\source_assets\\ui\\navigation\\transition_hud\\transition_panel_raw.png",
+      "source_bbox": [
+        79,
+        88,
+        1977,
+        667
+      ],
+      "resized": [
+        640,
+        195
+      ],
+      "output": "route_confirm_panel.png"
+    },
+    "elements": [
+      {
+        "name": "button_confirm",
+        "source_cell": 0,
+        "source_bbox": [
+          38,
+          148,
+          507,
+          434
+        ],
+        "resized": [
+          115,
+          70
+        ],
+        "output": "button_confirm.png"
+      },
+      {
+        "name": "button_cancel",
+        "source_cell": 1,
+        "source_bbox": [
+          50,
+          146,
+          512,
+          434
+        ],
+        "resized": [
+          112,
+          70
+        ],
+        "output": "button_cancel.png"
+      },
+      {
+        "name": "node_current",
+        "source_cell": 2,
+        "source_bbox": [
+          75,
+          121,
+          433,
+          466
+        ],
+        "resized": [
+          96,
+          93
+        ],
+        "output": "node_current.png"
+      },
+      {
+        "name": "node_available",
+        "source_cell": 3,
+        "source_bbox": [
+          100,
+          42,
+          455,
+          385
+        ],
+        "resized": [
+          96,
+          93
+        ],
+        "output": "node_available.png"
+      },
+      {
+        "name": "node_locked",
+        "source_cell": 4,
+        "source_bbox": [
+          65,
+          44,
+          411,
+          388
+        ],
+        "resized": [
+          96,
+          95
+        ],
+        "output": "node_locked.png"
+      },
+      {
+        "name": "route_connector",
+        "source_cell": 5,
+        "source_bbox": [
+          0,
+          183,
+          463,
+          258
+        ],
+        "resized": [
+          180,
+          29
+        ],
+        "output": "route_connector.png"
+      }
+    ]
+  },
+  "operations": [
+    "magenta_unblend_alpha",
+    "tiny_component_cleanup",
+    "crop",
+    "fit_to_runtime_canvas",
+    "transparent_export"
+  ]
+}

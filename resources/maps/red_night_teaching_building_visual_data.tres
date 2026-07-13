@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MapVisualData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/maps/map_visual_data.gd" id="1_visual"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/red_night/teaching_building_second_floor_unified_v1.png" id="2_second_floor"]
+
+[resource]
+script = ExtResource("1_visual")
+scrolling_clear_color = Color(0.0666667, 0.0823529, 0.137255, 1)
+fixed_room_clear_color = Color(0.0470588, 0.0431373, 0.0588235, 1)
+themed_clear_color = Color(0.0745098, 0.0313726, 0.0509804, 1)
+background_layers = Array[Texture2D]([ExtResource("2_second_floor")])
+stitch_background_layers = false
+fill_viewport_with_scaled_backing = true
+viewport_backing_tint = Color(0.08, 0.08, 0.1, 0.85)
+fixed_room_background_scale = 1.0

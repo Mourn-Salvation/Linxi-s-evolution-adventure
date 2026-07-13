@@ -1,0 +1,27 @@
+{
+  "asset": "human_student_male_blazer_knife",
+  "variant_id": 7,
+  "updated_at": "2026-07-07T09:41:55",
+  "raw_run_sheet": "C:\\Users\\13948\\.codex\\generated_images\\019eb097-b4aa-7322-93e0-fc4c214a63a7\\ig_0ba15271aad6e5cc016a4c57ee89a8819499c6960f7e90e810.png",
+  "raw_idle_frame": "C:\\Users\\13948\\.codex\\generated_images\\019eb097-b4aa-7322-93e0-fc4c214a63a7\\ig_0ba15271aad6e5cc016a4c584c4e408194b4f821e48fc703eb.png",
+  "raw_reaction_sheet": "C:\\Users\\13948\\.codex\\generated_images\\019eb097-b4aa-7322-93e0-fc4c214a63a7\\ig_0ba15271aad6e5cc016a4c589ae16c819491c5d57bfd51cc6a.png",
+  "runtime_dirs": {
+    "run": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_07",
+    "idle": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\idle_female_variants\\variant_07",
+    "hurt": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\hurt_female_variants\\variant_07",
+    "knocked_down": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\knocked_down_female_variants\\variant_07"
+  },
+  "processing": {
+    "canvas": [
+      256,
+      256
+    ],
+    "run_target_height_px": 124,
+    "idle_target_height_px": 126,
+    "hurt_target_height_px": 124,
+    "knocked_target_width_px": 210,
+    "bottom_anchor_run_idle_hurt": 242,
+    "bottom_anchor_knocked": 232,
+    "chroma_key": "edge-connected magenta flood cleanup plus enclosed magenta removal"
+  }
+}

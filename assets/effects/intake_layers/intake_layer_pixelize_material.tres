@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3]
+
+[ext_resource type="Shader" path="res://assets/effects/intake_layers/intake_layer_pixelize.gdshader" id="1_shader"]
+
+[resource]
+shader = ExtResource("1_shader")
+shader_parameter/pixel_size = 2.0
+shader_parameter/palette_steps = 7.0
+shader_parameter/edge_strength = 0.26
+shader_parameter/edge_tint = Color(0.035, 0.045, 0.055, 1)

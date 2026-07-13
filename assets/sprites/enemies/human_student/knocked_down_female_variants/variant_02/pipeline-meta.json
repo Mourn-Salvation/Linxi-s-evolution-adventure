@@ -1,0 +1,43 @@
+{
+  "source": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\knocked_down_variant_02_black_ponytail\\raw-sheet.png",
+  "source_sha256": "4308ff035129c737d0060368b21e58906ac21b5801005934732108c321563a9b",
+  "variant": "appearance_id_02_black_ponytail",
+  "action": "knocked_down",
+  "raw_rows": 2,
+  "raw_cols": 2,
+  "runtime_frames": 1,
+  "selected_cell": 0,
+  "frame_size": 256,
+  "target_visible_width": 190,
+  "baseline_y": 226,
+  "center_x": 128,
+  "frames": [
+    {
+      "index": 0,
+      "source_bbox": [
+        26,
+        249,
+        574,
+        435
+      ],
+      "resized": [
+        190,
+        64
+      ],
+      "placed": [
+        33,
+        162
+      ],
+      "largest_component_only": true
+    }
+  ],
+  "operations": [
+    "magenta_chroma_alpha",
+    "largest_connected_character_component",
+    "top_left_cell",
+    "bbox_crop",
+    "uniform_scale_width_limited",
+    "baseline_align",
+    "horizontal_mirror"
+  ]
+}

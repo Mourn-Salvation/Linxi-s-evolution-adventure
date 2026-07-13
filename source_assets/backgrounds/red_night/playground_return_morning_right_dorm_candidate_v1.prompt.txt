@@ -1,0 +1,16 @@
+Use the current school-to-dorm connector image only as broad project style context for a Chinese school campus, wet ground, side-readable fake-3D traversal composition, and survival-horror mood. Generate a NEW candidate image for the second-time playground return map in Linxi's Evaluation Adventure.
+
+Asset type: 2D Godot background candidate for a two-image fake-3D belt-scroller map, RIGHT-SIDE anchor candidate only. This image will later become the locked right side of a wider unfilled canvas; do not generate the left-side continuation yet.
+Primary request: Generate the first candidate image for the morning playground return. The dormitory building exterior must appear on the MOST RIGHT side of the image, clearly readable as the destination/anchor. The left side should remain an open playground/courtyard continuation so we can later generate the missing left-side image from this approved candidate.
+
+Scene/backdrop: Chinese school playground and dormitory exterior after the Red Night outbreak, second time Linxi reaches the playground. Wet schoolyard pavement, running track edge, low campus fence/railings, scattered papers/leaves, distant teaching buildings, morning haze after rain. The dormitory building exterior is on the far right edge: multi-story student dorm block, concrete facade, rows of windows, entrance canopy or front door area, side wall visible, realistic scale for 160-190 cm characters. The dorm must feel like a real exterior building in the same campus, not a teleport marker.
+
+Time requirement: morning after the night incident, around early morning 6:30-7:30 AM. Cool gray-blue morning light with pale yellow sunlight beginning to hit wet surfaces. The scene should clearly feel like morning, not midnight, not sunset, not pre-dawn roof lighting. Red emergency lights may still exist but should be weaker than the morning light.
+
+Composition/framing: ultra-wide horizontal 21:9 or wider game background, side-readable brawler/fake-3D stage view. Broad lower foreground playable band, visible fake-3D floor depth, stable horizon, stable floor perspective. The far right dorm exterior should occupy the rightmost portion and establish the anchor. The left edge must remain visually open and extendable: continue the playground pavement/track/fence naturally to the left with no hard ending, no building edge, no major landmark that blocks continuation.
+
+Approved-candidate extension rule: this image is the right-side candidate of a future two-image map. It must be usable as the locked filled RIGHT side of a wider unfilled canvas. Preserve an open, extendable left edge. Do not create a complete closed composition that cannot be extended left.
+
+Style/medium: high-resolution illustrated survival-horror game background, pixel-filter-friendly, dark realistic anime game art direction, consistent with project maps but morning-lit. Not low-resolution pixel art, not a realistic photo.
+
+Gameplay constraints: no characters, no enemies, no UI, no readable text, no labels, no arrows, no glowing transition circle, no teleport portal. Leave the bottom/floor area open enough for combat and movement. Avoid huge black unused margins, fisheye perspective, deep tunnel perspective, and objects blocking the playable lane.

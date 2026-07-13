@@ -1,0 +1,9 @@
+{
+  "asset": "human_student_male_blazer_knife",
+  "variant_id": 7,
+  "updated_at": "2026-07-07T09:44:21",
+  "processing_update": "largest connected component filter added to remove cross-cell fragments",
+  "raw_run_sheet": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student_male_blazer_v1\\raw_run_sheet_with_knife.png",
+  "raw_idle_frame": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student_male_blazer_v1\\raw_idle_frame_with_knife.png",
+  "raw_reaction_sheet": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student_male_blazer_v1\\raw_reaction_sheet_with_knife.png"
+}

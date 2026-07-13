@@ -1,0 +1,60 @@
+{
+  "source": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\hurt_variant_04_blonde_hair\\raw-sheet.png",
+  "source_sha256": "672561343072d5ba1b6a2b225331315f2aabf119488be72fc6f4fe03147e97f9",
+  "variant": "appearance_id_04_blonde_hair",
+  "action": "hurt",
+  "raw_rows": 2,
+  "raw_cols": 2,
+  "runtime_frames": 2,
+  "frame_size": 256,
+  "target_visible_height": 122,
+  "baseline_y": 242,
+  "center_x": 128,
+  "frames": [
+    {
+      "index": 0,
+      "source_bbox": [
+        173,
+        73,
+        580,
+        554
+      ],
+      "resized": [
+        103,
+        122
+      ],
+      "placed": [
+        76,
+        120
+      ],
+      "largest_component_only": true
+    },
+    {
+      "index": 1,
+      "source_bbox": [
+        95,
+        96,
+        389,
+        555
+      ],
+      "resized": [
+        78,
+        122
+      ],
+      "placed": [
+        89,
+        120
+      ],
+      "largest_component_only": true
+    }
+  ],
+  "operations": [
+    "magenta_chroma_alpha",
+    "largest_connected_character_component",
+    "first_two_cells",
+    "bbox_crop",
+    "uniform_scale",
+    "baseline_align",
+    "horizontal_mirror"
+  ]
+}

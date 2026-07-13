@@ -1,0 +1,159 @@
+{
+  "source": "C:\\Users\\13948\\AppData\\Local\\Temp\\codex-clipboard-7f1bb4c3-7ea5-480c-b032-3a10168377e0.png",
+  "source_copy": "E:\\Linxi's evaluation adventure\\source_assets\\red_night\\story_items\\approved_prop_pack_20260623\\story_item_prop_pack_raw.png",
+  "source_sha256": "45803e35428fe2d68865f5aec84530df85c36232fbd6b413e7da5c9d5fd0f5c6",
+  "layout": "3 columns x 2 rows, row-major",
+  "background_key": "#FF00FF with threshold r>=220 g<=80 b>=180",
+  "outputs": [
+    {
+      "item_id": "emergency_case",
+      "asset_name": "security_panel_claw_marked",
+      "runtime_path": "res://assets/props/red_night/story_items/security_panel_claw_marked.png",
+      "source_extract": "E:\\Linxi's evaluation adventure\\source_assets\\red_night\\story_items\\approved_prop_pack_20260623\\security_panel_claw_marked.png",
+      "source_cell": {
+        "row": 0,
+        "column": 0,
+        "x": 0,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "crop_bbox_in_cell": [
+        138,
+        61,
+        416,
+        512
+      ],
+      "output_size": [
+        278,
+        451
+      ],
+      "sha256": "ec27a716f69b48ba1a93917500c73540c479edcf259d50dadb6f559c3df16b25"
+    },
+    {
+      "item_id": "dormitory_door",
+      "asset_name": "dormitory_entrance_marker",
+      "runtime_path": "res://assets/props/red_night/story_items/dormitory_entrance_marker.png",
+      "source_extract": "E:\\Linxi's evaluation adventure\\source_assets\\red_night\\story_items\\approved_prop_pack_20260623\\dormitory_entrance_marker.png",
+      "source_cell": {
+        "row": 0,
+        "column": 1,
+        "x": 512,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "crop_bbox_in_cell": [
+        62,
+        64,
+        420,
+        512
+      ],
+      "output_size": [
+        358,
+        448
+      ],
+      "sha256": "98ad34680e51103b33c1ea1e042c38ca0f78ffb4cecaa7e7323aadb9edae2273"
+    },
+    {
+      "item_id": "su_ruo_room",
+      "asset_name": "su_ruo_room_door_marker",
+      "runtime_path": "res://assets/props/red_night/story_items/su_ruo_room_door_marker.png",
+      "source_extract": "E:\\Linxi's evaluation adventure\\source_assets\\red_night\\story_items\\approved_prop_pack_20260623\\su_ruo_room_door_marker.png",
+      "source_cell": {
+        "row": 0,
+        "column": 2,
+        "x": 1024,
+        "y": 0,
+        "w": 512,
+        "h": 512
+      },
+      "crop_bbox_in_cell": [
+        74,
+        51,
+        354,
+        512
+      ],
+      "output_size": [
+        280,
+        461
+      ],
+      "sha256": "4bc37ac155e313d178c32628e9494613edd019d6361dd02ab4a3b4635614f479"
+    },
+    {
+      "item_id": "roof_stairs",
+      "asset_name": "roof_stairwell_marker",
+      "runtime_path": "res://assets/props/red_night/story_items/roof_stairwell_marker.png",
+      "source_extract": "E:\\Linxi's evaluation adventure\\source_assets\\red_night\\story_items\\approved_prop_pack_20260623\\roof_stairwell_marker.png",
+      "source_cell": {
+        "row": 1,
+        "column": 0,
+        "x": 0,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "crop_bbox_in_cell": [
+        133,
+        0,
+        430,
+        446
+      ],
+      "output_size": [
+        297,
+        446
+      ],
+      "sha256": "d488aef3acaed5925a39be4f46292a5371d9fba7e9a75c5893b6a391d6257688"
+    },
+    {
+      "item_id": "su_ruo_id",
+      "asset_name": "su_ruo_student_id",
+      "runtime_path": "res://assets/props/red_night/story_items/su_ruo_student_id.png",
+      "source_extract": "E:\\Linxi's evaluation adventure\\source_assets\\red_night\\story_items\\approved_prop_pack_20260623\\su_ruo_student_id.png",
+      "source_cell": {
+        "row": 1,
+        "column": 1,
+        "x": 512,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "crop_bbox_in_cell": [
+        59,
+        125,
+        460,
+        416
+      ],
+      "output_size": [
+        401,
+        291
+      ],
+      "sha256": "b4677df4b3583d828937ee64c56586a38d33a93bdcf4b164d6d06f5da769cfe2"
+    },
+    {
+      "item_id": "biomass_shell_fragment",
+      "asset_name": "biomass_shell_fragment",
+      "runtime_path": "res://assets/props/red_night/story_items/biomass_shell_fragment.png",
+      "source_extract": "E:\\Linxi's evaluation adventure\\source_assets\\red_night\\story_items\\approved_prop_pack_20260623\\biomass_shell_fragment.png",
+      "source_cell": {
+        "row": 1,
+        "column": 2,
+        "x": 1024,
+        "y": 512,
+        "w": 512,
+        "h": 512
+      },
+      "crop_bbox_in_cell": [
+        41,
+        0,
+        358,
+        426
+      ],
+      "output_size": [
+        317,
+        426
+      ],
+      "sha256": "4658623160379be87871f30b7d6d58c33c519045072a588a8403c3b93eed18bf"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+.godot/
+exports/
+builds/
+package/
+android/
+Android test/
+work_backup/
+
+# Raw production material is archived separately. Keep its lightweight recipes
+# and metadata searchable without duplicating the large binary candidates.
+source_assets/**
+!source_assets/**/
+!source_assets/**/*.md
+!source_assets/**/*.txt
+!source_assets/**/*.json
+!source_assets/**/*.csv
+!source_assets/**/*.gd
+!source_assets/**/*.py
+!source_assets/**/*.html
+
+*.apk
+*.aab
+*.exe
+*.pck
+*.tmp
+*.log
+.DS_Store
+Thumbs.db

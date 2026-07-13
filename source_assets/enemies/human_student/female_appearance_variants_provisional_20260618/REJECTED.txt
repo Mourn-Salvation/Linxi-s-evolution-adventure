@@ -1,0 +1,13 @@
+Rejected by direction review.
+
+Reason:
+This pass derived new female human-student variants by editing the accepted runtime frames directly. That violates the current character pipeline. Human-student variants must begin from generated/approved character design images, then proceed to movement, hurt, and knocked-down assets after approval.
+
+Do not integrate:
+- assets/sprites/enemies/human_student/run_female_variants/
+
+Replacement plan:
+1. Generate base character design image(s) for each female human-student variant.
+2. Get visual approval.
+3. Generate/produce runtime animation sheets from the approved designs.
+4. Process, QC, then integrate via appearance_id.

@@ -1,0 +1,1456 @@
+{
+  "created_at": "2026-07-02T13:15:30",
+  "backup": "E:\\Linxi's evaluation adventure\\work_backup\\intake_layers_before_tier3_4_replace_20260702-131530",
+  "note": "Tier 3 and tier 4 belly layers replaced from Desktop candidates. Larger transparent canvases preserve complete visible silhouettes.",
+  "tiers": {
+    "3": {
+      "desktop_source": "C:\\Users\\13948\\Desktop\\belly layer 3 candidate.png",
+      "archived_source": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\originals\\tier_3_candidate.png",
+      "source_size": [
+        701,
+        779
+      ],
+      "source_alpha_bbox": [
+        42,
+        229,
+        624,
+        768
+      ],
+      "source_sha256": "32ccfd2b936e027cc59420405ff1fbce2fbc545abc69e6f2af13472141ab9bca",
+      "runtime_canvas": [
+        512,
+        512
+      ],
+      "runtime_preview": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\processed\\tier_3_idle_00_processed.png",
+      "runtime_files": [
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_3\\idle_00.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_3\\idle_01.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_3\\idle_02.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_3\\idle_03.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_3\\walk_left_00.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_3\\walk_left_01.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_3\\walk_left_02.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_3\\walk_left_03.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_3\\walk_right_00.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_3\\walk_right_01.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_3\\walk_right_02.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_3\\walk_right_03.png"
+      ],
+      "runtime_bboxes": {
+        "idle_00.png": [
+          208,
+          219,
+          314,
+          326
+        ],
+        "idle_01.png": [
+          208,
+          220,
+          314,
+          327
+        ],
+        "idle_02.png": [
+          208,
+          219,
+          314,
+          326
+        ],
+        "idle_03.png": [
+          208,
+          218,
+          314,
+          325
+        ],
+        "walk_left_00.png": [
+          207,
+          219,
+          313,
+          326
+        ],
+        "walk_left_01.png": [
+          208,
+          220,
+          314,
+          327
+        ],
+        "walk_left_02.png": [
+          209,
+          219,
+          315,
+          326
+        ],
+        "walk_left_03.png": [
+          208,
+          218,
+          314,
+          325
+        ],
+        "walk_right_00.png": [
+          209,
+          219,
+          315,
+          326
+        ],
+        "walk_right_01.png": [
+          208,
+          220,
+          314,
+          327
+        ],
+        "walk_right_02.png": [
+          207,
+          219,
+          313,
+          326
+        ],
+        "walk_right_03.png": [
+          208,
+          218,
+          314,
+          325
+        ]
+      },
+      "plan": {
+        "source_crop": [
+          118,
+          250,
+          660,
+          779
+        ],
+        "canvas": [
+          512,
+          512
+        ],
+        "target_visible_width": 90,
+        "anchor_top_y": 220,
+        "x_offset": 0,
+        "y_offset": 0
+      }
+    },
+    "4": {
+      "desktop_source": "C:\\Users\\13948\\Desktop\\belly layer 4  candidate.png",
+      "archived_source": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\originals\\tier_4_candidate.png",
+      "source_size": [
+        1024,
+        1024
+      ],
+      "source_alpha_bbox": [
+        273,
+        247,
+        879,
+        927
+      ],
+      "source_sha256": "985e7147c3fc8ef9523a6f0d7d282caced4d8e61fb86aec381095e52204f9785",
+      "runtime_canvas": [
+        640,
+        640
+      ],
+      "runtime_preview": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\processed\\tier_4_idle_00_processed.png",
+      "runtime_files": [
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_4\\idle_00.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_4\\idle_01.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_4\\idle_02.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_4\\idle_03.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_4\\walk_left_00.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_4\\walk_left_01.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_4\\walk_left_02.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_4\\walk_left_03.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_4\\walk_right_00.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_4\\walk_right_01.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_4\\walk_right_02.png",
+        "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\intake_layers\\belly\\tier_4\\walk_right_03.png"
+      ],
+      "runtime_bboxes": {
+        "idle_00.png": [
+          265,
+          283,
+          383,
+          411
+        ],
+        "idle_01.png": [
+          265,
+          284,
+          383,
+          412
+        ],
+        "idle_02.png": [
+          265,
+          283,
+          383,
+          411
+        ],
+        "idle_03.png": [
+          265,
+          282,
+          383,
+          410
+        ],
+        "walk_left_00.png": [
+          265,
+          283,
+          383,
+          411
+        ],
+        "walk_left_01.png": [
+          265,
+          284,
+          383,
+          412
+        ],
+        "walk_left_02.png": [
+          267,
+          283,
+          385,
+          411
+        ],
+        "walk_left_03.png": [
+          265,
+          282,
+          383,
+          410
+        ],
+        "walk_right_00.png": [
+          267,
+          283,
+          385,
+          411
+        ],
+        "walk_right_01.png": [
+          265,
+          284,
+          383,
+          412
+        ],
+        "walk_right_02.png": [
+          265,
+          283,
+          383,
+          411
+        ],
+        "walk_right_03.png": [
+          265,
+          282,
+          383,
+          410
+        ]
+      },
+      "plan": {
+        "source_crop": [
+          250,
+          245,
+          930,
+          980
+        ],
+        "canvas": [
+          640,
+          640
+        ],
+        "target_visible_width": 99,
+        "anchor_top_y": 285,
+        "x_offset": 0,
+        "y_offset": 0
+      }
+    }
+  },
+  "preview": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\previews\\belly_tier_3_4_replacement_preview.png",
+  "anchor_correction": {
+    "updated_at": "2026-07-02T13:18:35",
+    "plans": {
+      "3": {
+        "source_crop": [
+          118,
+          250,
+          660,
+          779
+        ],
+        "canvas": [
+          512,
+          512
+        ],
+        "target_visible_width": 152,
+        "anchor_top_y": 216,
+        "x_offset": 0,
+        "y_offset": 0
+      },
+      "4": {
+        "source_crop": [
+          250,
+          245,
+          930,
+          980
+        ],
+        "canvas": [
+          640,
+          640
+        ],
+        "target_visible_width": 214,
+        "anchor_top_y": 283,
+        "x_offset": 0,
+        "y_offset": 0
+      }
+    },
+    "runtime_bboxes": {
+      "3": {
+        "idle_00.png": [
+          184,
+          220,
+          329,
+          368
+        ],
+        "idle_01.png": [
+          184,
+          221,
+          329,
+          369
+        ],
+        "idle_02.png": [
+          184,
+          220,
+          329,
+          368
+        ],
+        "idle_03.png": [
+          184,
+          219,
+          329,
+          367
+        ],
+        "walk_left_00.png": [
+          183,
+          220,
+          328,
+          368
+        ],
+        "walk_left_01.png": [
+          184,
+          221,
+          329,
+          369
+        ],
+        "walk_left_02.png": [
+          185,
+          220,
+          330,
+          368
+        ],
+        "walk_left_03.png": [
+          184,
+          219,
+          329,
+          367
+        ],
+        "walk_right_00.png": [
+          185,
+          220,
+          330,
+          368
+        ],
+        "walk_right_01.png": [
+          184,
+          221,
+          329,
+          369
+        ],
+        "walk_right_02.png": [
+          183,
+          220,
+          328,
+          368
+        ],
+        "walk_right_03.png": [
+          184,
+          219,
+          329,
+          367
+        ]
+      },
+      "4": {
+        "idle_00.png": [
+          218,
+          285,
+          422,
+          509
+        ],
+        "idle_01.png": [
+          218,
+          286,
+          422,
+          510
+        ],
+        "idle_02.png": [
+          218,
+          285,
+          422,
+          509
+        ],
+        "idle_03.png": [
+          218,
+          284,
+          422,
+          508
+        ],
+        "walk_left_00.png": [
+          217,
+          285,
+          421,
+          509
+        ],
+        "walk_left_01.png": [
+          218,
+          286,
+          422,
+          510
+        ],
+        "walk_left_02.png": [
+          219,
+          285,
+          423,
+          509
+        ],
+        "walk_left_03.png": [
+          218,
+          284,
+          422,
+          508
+        ],
+        "walk_right_00.png": [
+          219,
+          285,
+          423,
+          509
+        ],
+        "walk_right_01.png": [
+          218,
+          286,
+          422,
+          510
+        ],
+        "walk_right_02.png": [
+          217,
+          285,
+          421,
+          509
+        ],
+        "walk_right_03.png": [
+          218,
+          284,
+          422,
+          508
+        ]
+      }
+    }
+  },
+  "pale_scale_correction": {
+    "updated_at": "2026-07-02T13:27:49",
+    "backup": "E:\\Linxi's evaluation adventure\\work_backup\\intake_layers_before_belly_pale_scale_fix_20260702-132747",
+    "reason": "Regraded tier 3/4 to match Linxi pale skin palette and scaled current tier 3 to 50%, tier 4 to 60% while preserving renderer attachment.",
+    "plans": {
+      "3": {
+        "source_crop": [
+          118,
+          250,
+          660,
+          779
+        ],
+        "canvas": [
+          512,
+          512
+        ],
+        "target_visible_width": 76,
+        "anchor_top_y": 220,
+        "x_offset": 0,
+        "y_offset": 0
+      },
+      "4": {
+        "source_crop": [
+          250,
+          245,
+          930,
+          980
+        ],
+        "canvas": [
+          640,
+          640
+        ],
+        "target_visible_width": 128,
+        "anchor_top_y": 284,
+        "x_offset": 0,
+        "y_offset": 0
+      }
+    },
+    "runtime_bboxes": {
+      "3": {
+        "idle_00.png": [
+          219,
+          222,
+          294,
+          297
+        ],
+        "idle_01.png": [
+          219,
+          223,
+          294,
+          298
+        ],
+        "idle_02.png": [
+          219,
+          222,
+          294,
+          297
+        ],
+        "idle_03.png": [
+          219,
+          221,
+          294,
+          296
+        ],
+        "walk_left_00.png": [
+          218,
+          222,
+          293,
+          297
+        ],
+        "walk_left_01.png": [
+          219,
+          223,
+          294,
+          298
+        ],
+        "walk_left_02.png": [
+          220,
+          222,
+          295,
+          297
+        ],
+        "walk_left_03.png": [
+          219,
+          221,
+          294,
+          296
+        ],
+        "walk_right_00.png": [
+          220,
+          222,
+          295,
+          297
+        ],
+        "walk_right_01.png": [
+          219,
+          223,
+          294,
+          298
+        ],
+        "walk_right_02.png": [
+          218,
+          222,
+          293,
+          297
+        ],
+        "walk_right_03.png": [
+          219,
+          221,
+          294,
+          296
+        ]
+      },
+      "4": {
+        "idle_00.png": [
+          258,
+          285,
+          382,
+          420
+        ],
+        "idle_01.png": [
+          258,
+          286,
+          382,
+          421
+        ],
+        "idle_02.png": [
+          258,
+          285,
+          382,
+          420
+        ],
+        "idle_03.png": [
+          258,
+          284,
+          382,
+          419
+        ],
+        "walk_left_00.png": [
+          257,
+          285,
+          381,
+          420
+        ],
+        "walk_left_01.png": [
+          258,
+          286,
+          382,
+          421
+        ],
+        "walk_left_02.png": [
+          259,
+          285,
+          383,
+          420
+        ],
+        "walk_left_03.png": [
+          258,
+          284,
+          382,
+          419
+        ],
+        "walk_right_00.png": [
+          259,
+          285,
+          383,
+          420
+        ],
+        "walk_right_01.png": [
+          258,
+          286,
+          382,
+          421
+        ],
+        "walk_right_02.png": [
+          257,
+          285,
+          381,
+          420
+        ],
+        "walk_right_03.png": [
+          258,
+          284,
+          382,
+          419
+        ]
+      }
+    },
+    "all_tiers_preview": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\previews\\belly_all_tiers_pale_scaled_check.png",
+    "renderer_preview": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\previews\\belly_tier_3_4_pale_scaled_renderer_position_preview.png"
+  },
+  "tier_order_correction": {
+    "updated_at": "2026-07-02T13:33:50",
+    "backup": "E:\\Linxi's evaluation adventure\\work_backup\\intake_layers_before_belly_tier_order_fix_20260702-133347",
+    "reason": "Tier 3 was smaller than tier 2. Set tier 3 to 110% of tier 2 width and tier 4 to 110% of tier 3 width, preserving attachment.",
+    "plans": {
+      "3": {
+        "source_crop": [
+          118,
+          250,
+          660,
+          779
+        ],
+        "canvas": [
+          512,
+          512
+        ],
+        "target_visible_width": 90,
+        "anchor_top_y": 220,
+        "x_offset": 0,
+        "y_offset": 0
+      },
+      "4": {
+        "source_crop": [
+          250,
+          245,
+          930,
+          980
+        ],
+        "canvas": [
+          640,
+          640
+        ],
+        "target_visible_width": 99,
+        "anchor_top_y": 285,
+        "x_offset": 0,
+        "y_offset": 0
+      }
+    },
+    "runtime_bboxes": {
+      "3": {
+        "idle_00.png": [
+          212,
+          222,
+          300,
+          311
+        ],
+        "idle_01.png": [
+          212,
+          223,
+          300,
+          312
+        ],
+        "idle_02.png": [
+          212,
+          222,
+          300,
+          311
+        ],
+        "idle_03.png": [
+          212,
+          221,
+          300,
+          310
+        ],
+        "walk_left_00.png": [
+          211,
+          222,
+          299,
+          311
+        ],
+        "walk_left_01.png": [
+          212,
+          223,
+          300,
+          312
+        ],
+        "walk_left_02.png": [
+          213,
+          222,
+          301,
+          311
+        ],
+        "walk_left_03.png": [
+          212,
+          221,
+          300,
+          310
+        ],
+        "walk_right_00.png": [
+          213,
+          222,
+          301,
+          311
+        ],
+        "walk_right_01.png": [
+          212,
+          223,
+          300,
+          312
+        ],
+        "walk_right_02.png": [
+          211,
+          222,
+          299,
+          311
+        ],
+        "walk_right_03.png": [
+          212,
+          221,
+          300,
+          310
+        ]
+      },
+      "4": {
+        "idle_00.png": [
+          271,
+          286,
+          368,
+          391
+        ],
+        "idle_01.png": [
+          271,
+          287,
+          368,
+          392
+        ],
+        "idle_02.png": [
+          271,
+          286,
+          368,
+          391
+        ],
+        "idle_03.png": [
+          271,
+          285,
+          368,
+          390
+        ],
+        "walk_left_00.png": [
+          270,
+          286,
+          367,
+          391
+        ],
+        "walk_left_01.png": [
+          271,
+          287,
+          368,
+          392
+        ],
+        "walk_left_02.png": [
+          272,
+          286,
+          369,
+          391
+        ],
+        "walk_left_03.png": [
+          271,
+          285,
+          368,
+          390
+        ],
+        "walk_right_00.png": [
+          272,
+          286,
+          369,
+          391
+        ],
+        "walk_right_01.png": [
+          271,
+          287,
+          368,
+          392
+        ],
+        "walk_right_02.png": [
+          270,
+          286,
+          367,
+          391
+        ],
+        "walk_right_03.png": [
+          271,
+          285,
+          368,
+          390
+        ]
+      }
+    },
+    "all_tiers_preview": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\previews\\belly_all_tiers_order_fixed_check.png",
+    "renderer_preview": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\previews\\belly_tier_3_4_order_fixed_renderer_position_preview.png"
+  },
+  "enlarge_offset_correction": {
+    "updated_at": "2026-07-02T13:46:04",
+    "backup": "E:\\Linxi's evaluation adventure\\work_backup\\intake_layers_before_belly_enlarge_offset_fix_20260702-134603",
+    "reason": "Tier 3 and 4 still looked too small. Enlarged both and shifted visible overlays 5 px right, 3 px up.",
+    "target_widths": {
+      "3": 106,
+      "4": 118
+    },
+    "offset_px": {
+      "x": 5,
+      "y": -3
+    },
+    "runtime_bboxes": {
+      "3": {
+        "idle_00.png": [
+          208,
+          219,
+          314,
+          326
+        ],
+        "idle_01.png": [
+          208,
+          220,
+          314,
+          327
+        ],
+        "idle_02.png": [
+          208,
+          219,
+          314,
+          326
+        ],
+        "idle_03.png": [
+          208,
+          218,
+          314,
+          325
+        ],
+        "walk_left_00.png": [
+          207,
+          219,
+          313,
+          326
+        ],
+        "walk_left_01.png": [
+          208,
+          220,
+          314,
+          327
+        ],
+        "walk_left_02.png": [
+          209,
+          219,
+          315,
+          326
+        ],
+        "walk_left_03.png": [
+          208,
+          218,
+          314,
+          325
+        ],
+        "walk_right_00.png": [
+          209,
+          219,
+          315,
+          326
+        ],
+        "walk_right_01.png": [
+          208,
+          220,
+          314,
+          327
+        ],
+        "walk_right_02.png": [
+          207,
+          219,
+          313,
+          326
+        ],
+        "walk_right_03.png": [
+          208,
+          218,
+          314,
+          325
+        ]
+      },
+      "4": {
+        "idle_00.png": [
+          265,
+          283,
+          383,
+          411
+        ],
+        "idle_01.png": [
+          265,
+          284,
+          383,
+          412
+        ],
+        "idle_02.png": [
+          265,
+          283,
+          383,
+          411
+        ],
+        "idle_03.png": [
+          265,
+          282,
+          383,
+          410
+        ],
+        "walk_left_00.png": [
+          265,
+          283,
+          383,
+          411
+        ],
+        "walk_left_01.png": [
+          265,
+          284,
+          383,
+          412
+        ],
+        "walk_left_02.png": [
+          267,
+          283,
+          385,
+          411
+        ],
+        "walk_left_03.png": [
+          265,
+          282,
+          383,
+          410
+        ],
+        "walk_right_00.png": [
+          267,
+          283,
+          385,
+          411
+        ],
+        "walk_right_01.png": [
+          265,
+          284,
+          383,
+          412
+        ],
+        "walk_right_02.png": [
+          265,
+          283,
+          383,
+          411
+        ],
+        "walk_right_03.png": [
+          265,
+          282,
+          383,
+          410
+        ]
+      }
+    },
+    "all_tiers_preview": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\previews\\belly_all_tiers_enlarged_offset_check.png",
+    "renderer_preview": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\previews\\belly_tier_3_4_enlarged_offset_renderer_position_preview.png"
+  },
+  "left_curve_correction": {
+    "updated_at": "2026-07-02T16:24:08",
+    "backup": "E:\\Linxi's evaluation adventure\\work_backup\\intake_layers_before_belly_left_curve_fix_20260702-162408",
+    "reason": "Tucked upper-left belly contour inward so the belly sits closer to Linxi's body curve without adding bridge layer.",
+    "tiers": [
+      2,
+      3,
+      4
+    ],
+    "indent_by_tier": {
+      "2": 7,
+      "3": 13,
+      "4": 16
+    },
+    "before_bboxes": {
+      "2": {
+        "idle_00.png": [
+          86,
+          91,
+          168,
+          177
+        ],
+        "idle_01.png": [
+          86,
+          90,
+          168,
+          176
+        ],
+        "idle_02.png": [
+          86,
+          91,
+          168,
+          177
+        ],
+        "idle_03.png": [
+          86,
+          92,
+          168,
+          178
+        ],
+        "walk_left_00.png": [
+          86,
+          91,
+          168,
+          177
+        ],
+        "walk_left_01.png": [
+          86,
+          90,
+          168,
+          176
+        ],
+        "walk_left_02.png": [
+          86,
+          91,
+          168,
+          177
+        ],
+        "walk_left_03.png": [
+          86,
+          92,
+          168,
+          178
+        ],
+        "walk_right_00.png": [
+          86,
+          91,
+          168,
+          177
+        ],
+        "walk_right_01.png": [
+          86,
+          90,
+          168,
+          176
+        ],
+        "walk_right_02.png": [
+          86,
+          91,
+          168,
+          177
+        ],
+        "walk_right_03.png": [
+          86,
+          92,
+          168,
+          178
+        ]
+      },
+      "3": {
+        "idle_00.png": [
+          208,
+          219,
+          314,
+          326
+        ],
+        "idle_01.png": [
+          208,
+          220,
+          314,
+          327
+        ],
+        "idle_02.png": [
+          208,
+          219,
+          314,
+          326
+        ],
+        "idle_03.png": [
+          208,
+          218,
+          314,
+          325
+        ],
+        "walk_left_00.png": [
+          207,
+          219,
+          313,
+          326
+        ],
+        "walk_left_01.png": [
+          208,
+          220,
+          314,
+          327
+        ],
+        "walk_left_02.png": [
+          209,
+          219,
+          315,
+          326
+        ],
+        "walk_left_03.png": [
+          208,
+          218,
+          314,
+          325
+        ],
+        "walk_right_00.png": [
+          209,
+          219,
+          315,
+          326
+        ],
+        "walk_right_01.png": [
+          208,
+          220,
+          314,
+          327
+        ],
+        "walk_right_02.png": [
+          207,
+          219,
+          313,
+          326
+        ],
+        "walk_right_03.png": [
+          208,
+          218,
+          314,
+          325
+        ]
+      },
+      "4": {
+        "idle_00.png": [
+          265,
+          283,
+          383,
+          411
+        ],
+        "idle_01.png": [
+          265,
+          284,
+          383,
+          412
+        ],
+        "idle_02.png": [
+          265,
+          283,
+          383,
+          411
+        ],
+        "idle_03.png": [
+          265,
+          282,
+          383,
+          410
+        ],
+        "walk_left_00.png": [
+          265,
+          283,
+          383,
+          411
+        ],
+        "walk_left_01.png": [
+          265,
+          284,
+          383,
+          412
+        ],
+        "walk_left_02.png": [
+          267,
+          283,
+          385,
+          411
+        ],
+        "walk_left_03.png": [
+          265,
+          282,
+          383,
+          410
+        ],
+        "walk_right_00.png": [
+          267,
+          283,
+          385,
+          411
+        ],
+        "walk_right_01.png": [
+          265,
+          284,
+          383,
+          412
+        ],
+        "walk_right_02.png": [
+          265,
+          283,
+          383,
+          411
+        ],
+        "walk_right_03.png": [
+          265,
+          282,
+          383,
+          410
+        ]
+      }
+    },
+    "after_bboxes": {
+      "2": {
+        "idle_00.png": [
+          88,
+          91,
+          168,
+          177
+        ],
+        "idle_01.png": [
+          88,
+          90,
+          168,
+          176
+        ],
+        "idle_02.png": [
+          88,
+          91,
+          168,
+          177
+        ],
+        "idle_03.png": [
+          88,
+          92,
+          168,
+          178
+        ],
+        "walk_left_00.png": [
+          88,
+          91,
+          168,
+          177
+        ],
+        "walk_left_01.png": [
+          88,
+          90,
+          168,
+          176
+        ],
+        "walk_left_02.png": [
+          88,
+          91,
+          168,
+          177
+        ],
+        "walk_left_03.png": [
+          88,
+          92,
+          168,
+          178
+        ],
+        "walk_right_00.png": [
+          88,
+          91,
+          168,
+          177
+        ],
+        "walk_right_01.png": [
+          88,
+          90,
+          168,
+          176
+        ],
+        "walk_right_02.png": [
+          88,
+          91,
+          168,
+          177
+        ],
+        "walk_right_03.png": [
+          88,
+          92,
+          168,
+          178
+        ]
+      },
+      "3": {
+        "idle_00.png": [
+          214,
+          219,
+          314,
+          326
+        ],
+        "idle_01.png": [
+          214,
+          220,
+          314,
+          327
+        ],
+        "idle_02.png": [
+          214,
+          219,
+          314,
+          326
+        ],
+        "idle_03.png": [
+          214,
+          218,
+          314,
+          325
+        ],
+        "walk_left_00.png": [
+          213,
+          219,
+          313,
+          326
+        ],
+        "walk_left_01.png": [
+          214,
+          220,
+          314,
+          327
+        ],
+        "walk_left_02.png": [
+          215,
+          219,
+          315,
+          326
+        ],
+        "walk_left_03.png": [
+          214,
+          218,
+          314,
+          325
+        ],
+        "walk_right_00.png": [
+          215,
+          219,
+          315,
+          326
+        ],
+        "walk_right_01.png": [
+          214,
+          220,
+          314,
+          327
+        ],
+        "walk_right_02.png": [
+          213,
+          219,
+          313,
+          326
+        ],
+        "walk_right_03.png": [
+          214,
+          218,
+          314,
+          325
+        ]
+      },
+      "4": {
+        "idle_00.png": [
+          270,
+          283,
+          383,
+          411
+        ],
+        "idle_01.png": [
+          270,
+          284,
+          383,
+          412
+        ],
+        "idle_02.png": [
+          270,
+          283,
+          383,
+          411
+        ],
+        "idle_03.png": [
+          270,
+          282,
+          383,
+          410
+        ],
+        "walk_left_00.png": [
+          270,
+          283,
+          383,
+          411
+        ],
+        "walk_left_01.png": [
+          270,
+          284,
+          383,
+          412
+        ],
+        "walk_left_02.png": [
+          272,
+          283,
+          385,
+          411
+        ],
+        "walk_left_03.png": [
+          270,
+          282,
+          383,
+          410
+        ],
+        "walk_right_00.png": [
+          272,
+          283,
+          385,
+          411
+        ],
+        "walk_right_01.png": [
+          270,
+          284,
+          383,
+          412
+        ],
+        "walk_right_02.png": [
+          270,
+          283,
+          383,
+          411
+        ],
+        "walk_right_03.png": [
+          270,
+          282,
+          383,
+          410
+        ]
+      }
+    },
+    "all_tiers_preview": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\previews\\belly_left_curve_all_tiers_check.png",
+    "before_after_preview": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\previews\\belly_left_curve_before_after.png",
+    "renderer_preview": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\intake_layers\\belly\\replacement_2026_07_02\\previews\\belly_left_curve_renderer_position_preview.png"
+  }
+}

@@ -1,0 +1,345 @@
+[gd_scene format=3 uid="uid://b370yoy4dhy26"]
+
+[ext_resource type="Script" uid="uid://cr8ag7x5vdhde" path="res://scripts/main.gd" id="1_main"]
+[ext_resource type="Script" uid="uid://dp3bbontjpga6" path="res://scripts/characters/player_component.gd" id="2_player"]
+[ext_resource type="Script" uid="uid://b8kro7ueix0r8" path="res://scripts/characters/player_renderer.gd" id="2_player_renderer"]
+[ext_resource type="Script" uid="uid://djacqs8t8r4h8" path="res://scripts/characters/player_visual_component.gd" id="2_player_visual"]
+[ext_resource type="Script" uid="uid://bblk5maaggbp5" path="res://scripts/enemies/enemy_component.gd" id="3_enemy"]
+[ext_resource type="Script" uid="uid://lf3cqrke5djg" path="res://scripts/enemies/enemy_visual_component.gd" id="3_enemy_visual"]
+[ext_resource type="Script" uid="uid://db732eh67v1bw" path="res://scripts/combat/combat_component.gd" id="4_combat"]
+[ext_resource type="Script" uid="uid://cuaxlidto07yu" path="res://scripts/systems/vore_component.gd" id="5_vore"]
+[ext_resource type="Script" uid="uid://dhfwq4tt3d3n0" path="res://scripts/systems/encounter_component.gd" id="6_encounter"]
+[ext_resource type="Resource" path="res://resources/maps/opening_scene.tres" id="8_opening_map"]
+[ext_resource type="Script" uid="uid://eerl8804m0b1" path="res://scripts/systems/interaction_component.gd" id="9_interaction"]
+[ext_resource type="Script" uid="uid://dfsg2651xfu7f" path="res://scripts/combat/weapon_component.gd" id="10_weapon"]
+[ext_resource type="Script" uid="uid://c50tmpufk7yym" path="res://scripts/systems/dialogue_component.gd" id="11_dialogue"]
+[ext_resource type="Resource" path="res://resources/balance/default_balance.tres" id="12_balance"]
+[ext_resource type="Script" uid="uid://bv1rd4m6d4xe4" path="res://scripts/systems/debug_component.gd" id="13_debug"]
+[ext_resource type="Resource" path="res://resources/enemies/red_night_enemy_visual_library.tres" id="13_enemy_visual_library"]
+[ext_resource type="Script" uid="uid://bbhbpel17rli6" path="res://scripts/story/story_stage_component.gd" id="14_story"]
+[ext_resource type="Script" path="res://scripts/ui/achievement_popup.gd" id="15_achievement"]
+[ext_resource type="Script" uid="uid://bdlyvg2mjphif" path="res://scripts/ui/player_hud.gd" id="16_player_hud"]
+[ext_resource type="Script" uid="uid://cj5c22505auw4" path="res://scripts/ui/hud_controller.gd" id="17_hud_controller"]
+[ext_resource type="Script" uid="uid://6apwgk1258u7" path="res://scripts/ui/transition_confirm_panel.gd" id="17_transition_confirm"]
+[ext_resource type="Resource" path="res://resources/characters/linxi_t_early_visual_library.tres" id="18_player_visual_library"]
+[ext_resource type="Script" uid="uid://c66c3kkwe8c46" path="res://scripts/rendering/map_renderer.gd" id="19_map_renderer"]
+[ext_resource type="Script" uid="uid://dgkpmb6elhkge" path="res://scripts/items/item_renderer.gd" id="20_item_renderer"]
+[ext_resource type="Resource" path="res://resources/items/red_night_item_visual_data.tres" id="21_item_visual"]
+[ext_resource type="Script" uid="uid://b75ef0vup6hkg" path="res://scripts/effects/effect_renderer.gd" id="22_effect_renderer"]
+[ext_resource type="Resource" path="res://resources/effects/red_night_effect_visual_data.tres" id="23_effect_visual"]
+[ext_resource type="Script" uid="uid://bdne38blj8o4o" path="res://scripts/enemies/enemy_renderer.gd" id="24_enemy_renderer"]
+[ext_resource type="Script" uid="uid://7xf8jen4pwts" path="res://scripts/audio/audio_component.gd" id="25_audio"]
+[ext_resource type="Script" uid="uid://6e3nywhqvjgy" path="res://scripts/systems/projection_component.gd" id="26_projection"]
+[ext_resource type="Script" uid="uid://csesxyq2bv8cw" path="res://scripts/effects/world_fx_component.gd" id="27_world_fx"]
+[ext_resource type="Script" uid="uid://cf11h671eaiph" path="res://scripts/systems/scene_flow_component.gd" id="28_scene_flow"]
+[ext_resource type="Script" path="res://scripts/ui/boss_health_bar.gd" id="29_boss_hud"]
+[ext_resource type="Texture2D" uid="uid://bitrgxaj2wu23" path="res://assets/ui/hud/boss_health_frame.png" id="30_boss_frame"]
+[ext_resource type="Script" uid="uid://bxt227e6eswyc" path="res://scripts/ui/defeat_panel.gd" id="31_defeat_panel"]
+[ext_resource type="Script" path="res://scripts/ui/mobile_controls.gd" id="32_mobile_controls"]
+
+[node name="Main" type="Node2D" unique_id=1885317215]
+script = ExtResource("1_main")
+map_data = ExtResource("8_opening_map")
+balance = ExtResource("12_balance")
+
+[node name="Components" type="Node" parent="." unique_id=1055962411]
+
+[node name="Player" type="Node" parent="Components" unique_id=1125666844]
+script = ExtResource("2_player")
+
+[node name="PlayerVisual" type="Node" parent="Components" unique_id=146444983]
+script = ExtResource("2_player_visual")
+visual_library = ExtResource("18_player_visual_library")
+
+[node name="PlayerRenderer" type="Node" parent="Components" unique_id=2008575351]
+script = ExtResource("2_player_renderer")
+
+[node name="Enemy" type="Node" parent="Components" unique_id=826642284]
+script = ExtResource("3_enemy")
+
+[node name="EnemyVisual" type="Node" parent="Components" unique_id=1757966335]
+script = ExtResource("3_enemy_visual")
+visual_library = ExtResource("13_enemy_visual_library")
+
+[node name="EnemyRenderer" type="Node" parent="Components" unique_id=46200981]
+script = ExtResource("24_enemy_renderer")
+
+[node name="Combat" type="Node" parent="Components" unique_id=473661016]
+script = ExtResource("4_combat")
+
+[node name="Vore" type="Node" parent="Components" unique_id=1666137306]
+script = ExtResource("5_vore")
+
+[node name="Encounter" type="Node" parent="Components" unique_id=1508109036]
+script = ExtResource("6_encounter")
+
+[node name="Interaction" type="Node" parent="Components" unique_id=482551229]
+script = ExtResource("9_interaction")
+
+[node name="ItemRenderer" type="Node" parent="Components" unique_id=610577377]
+script = ExtResource("20_item_renderer")
+fallback_visual_data = ExtResource("21_item_visual")
+
+[node name="Weapon" type="Node" parent="Components" unique_id=1385196561]
+script = ExtResource("10_weapon")
+
+[node name="Dialogue" type="Node" parent="Components" unique_id=1774760924]
+script = ExtResource("11_dialogue")
+
+[node name="MapRenderer" type="Node" parent="Components" unique_id=2068779730]
+script = ExtResource("19_map_renderer")
+
+[node name="EffectRenderer" type="Node" parent="Components" unique_id=597755666]
+script = ExtResource("22_effect_renderer")
+visual_data = ExtResource("23_effect_visual")
+
+[node name="Debug" type="Node" parent="Components" unique_id=1311232978]
+script = ExtResource("13_debug")
+
+[node name="Story" type="Node" parent="Components" unique_id=157164646]
+script = ExtResource("14_story")
+
+[node name="Audio" type="Node" parent="Components" unique_id=940201303]
+script = ExtResource("25_audio")
+
+[node name="HudController" type="Node" parent="Components" unique_id=672941467]
+script = ExtResource("17_hud_controller")
+
+[node name="Projection" type="Node" parent="Components" unique_id=706415390]
+script = ExtResource("26_projection")
+
+[node name="WorldFx" type="Node" parent="Components" unique_id=1619373912]
+script = ExtResource("27_world_fx")
+
+[node name="SceneFlow" type="Node" parent="Components" unique_id=428979989]
+script = ExtResource("28_scene_flow")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=1747290943]
+
+[node name="Title" type="Label" parent="HUD" unique_id=1179250939]
+visible = false
+offset_left = 36.0
+offset_top = 24.0
+offset_right = 600.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 26
+text = "LINXI'S EVOLUTION ADVENTURE"
+
+[node name="Phase" type="Label" parent="HUD" unique_id=1426889947]
+offset_left = 760.0
+offset_top = 24.0
+offset_right = 1242.0
+offset_bottom = 54.0
+theme_override_colors/font_color = Color(0.49, 0.91, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "PHASE: EVOLUTION"
+horizontal_alignment = 2
+
+[node name="Status" type="Label" parent="HUD" unique_id=1660202222]
+visible = false
+offset_left = 38.0
+offset_top = 105.0
+offset_right = 920.0
+offset_bottom = 135.0
+text = "Resolve: 0/6   Combo: 0   Height: 0   WALK: 140   Weight: 1.0   Biomass: 0.0   ATK: 2.0"
+
+[node name="PlayerHealth" type="Label" parent="HUD" unique_id=448109526]
+visible = false
+offset_left = 38.0
+offset_top = 140.0
+offset_right = 300.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0.56, 0.92, 1, 1)
+text = "Linxi HP: 10/10"
+
+[node name="PlayerHud" type="Control" parent="HUD" unique_id=826064735]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("16_player_hud")
+
+[node name="MobileControls" type="Control" parent="HUD"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("32_mobile_controls")
+
+[node name="BossHealthBar" type="Control" parent="HUD" unique_id=1617908983]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("29_boss_hud")
+frame_texture = ExtResource("30_boss_frame")
+
+[node name="EnemyHealth" type="Label" parent="HUD" unique_id=1387135345]
+visible = false
+offset_left = 930.0
+offset_top = 36.0
+offset_right = 1240.0
+offset_bottom = 66.0
+text = "GUARDS: 10/10   Target HP: 10"
+horizontal_alignment = 2
+
+[node name="Controls" type="Label" parent="HUD" unique_id=1227177093]
+visible = false
+offset_left = 19.0
+offset_top = 637.0
+offset_right = 1438.0
+offset_bottom = 687.0
+text = "WASD / Arrows: Walk     Double-tap A/D: Sprint     Space: Jump     J: Attack     K: Dodge     F: Interact     V: Vore     G: G Mode     Hold L: Digest / Release: Pause     Enter: Settle Clear"
+horizontal_alignment = 1
+
+[node name="DialoguePanel" type="Panel" parent="HUD" unique_id=1780830530]
+visible = false
+offset_left = 190.0
+offset_top = 500.0
+offset_right = 1120.0
+offset_bottom = 635.0
+
+[node name="Avatar" type="ColorRect" parent="HUD/DialoguePanel" unique_id=1604520797]
+layout_mode = 0
+offset_left = 24.0
+offset_top = -82.0
+offset_right = 154.0
+offset_bottom = 52.0
+color = Color(0.22, 0.31, 0.44, 1)
+
+[node name="Letter" type="Label" parent="HUD/DialoguePanel/Avatar" unique_id=1071897697]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.96, 0.82, 0.38, 1)
+theme_override_font_sizes/font_size = 58
+text = "O"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpeakerName" type="Label" parent="HUD/DialoguePanel" unique_id=434349228]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 14.0
+offset_right = 500.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.49, 0.91, 1, 1)
+theme_override_font_sizes/font_size = 20
+text = "Operator"
+
+[node name="DialogueText" type="Label" parent="HUD/DialoguePanel" unique_id=1136238793]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 48.0
+offset_right = 890.0
+offset_bottom = 108.0
+text = "Dialogue text"
+autowrap_mode = 2
+
+[node name="Continue" type="Label" parent="HUD/DialoguePanel" unique_id=632090392]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 105.0
+offset_right = 890.0
+offset_bottom = 130.0
+text = "F: Continue"
+horizontal_alignment = 2
+
+[node name="Hint" type="Label" parent="HUD" unique_id=2031765344]
+offset_left = 760.0
+offset_top = 60.0
+offset_right = 1242.0
+offset_bottom = 122.0
+theme_override_colors/font_color = Color(0.96, 0.78, 0.32, 1)
+text = "Land deliberate hits to complete the evolution trial."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="AchievementPopup" type="Control" parent="HUD" unique_id=2134646297]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("15_achievement")
+
+[node name="TransitionConfirmPanel" type="Control" parent="HUD" unique_id=552310990]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("17_transition_confirm")
+
+[node name="Panel" type="Panel" parent="HUD/TransitionConfirmPanel" unique_id=165546157]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 242.0
+offset_right = 874.0
+offset_bottom = 426.0
+
+[node name="Title" type="Label" parent="HUD/TransitionConfirmPanel/Panel" unique_id=763269395]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 22.0
+offset_right = 438.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0.95, 0.18, 0.16, 1)
+theme_override_font_sizes/font_size = 18
+text = "ROUTE CONFIRMATION"
+
+[node name="Body" type="Label" parent="HUD/TransitionConfirmPanel/Panel" unique_id=2057984793]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 68.0
+offset_right = 438.0
+offset_bottom = 102.0
+theme_override_colors/font_color = Color(0.94, 0.86, 0.8, 1)
+theme_override_font_sizes/font_size = 18
+text = "move to \"next place name\""
+
+[node name="YesButton" type="Button" parent="HUD/TransitionConfirmPanel/Panel" unique_id=213151130]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 124.0
+offset_right = 318.0
+offset_bottom = 164.0
+text = "YES"
+
+[node name="NoButton" type="Button" parent="HUD/TransitionConfirmPanel/Panel" unique_id=270063295]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 124.0
+offset_right = 428.0
+offset_bottom = 164.0
+text = "NO"
+
+[node name="DefeatPanel" type="Control" parent="HUD" unique_id=1639975749]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("31_defeat_panel")

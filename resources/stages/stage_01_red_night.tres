@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="StageData" load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://scripts/stages/stage_data.gd" id="1_stage"]
+[ext_resource type="Resource" path="res://resources/levels/stage_01_level_00_courtyard_fall_site.tres" id="2_level_00"]
+[ext_resource type="Resource" path="res://resources/levels/stage_01_level_01_dormitory_lobby.tres" id="3_level_01"]
+[ext_resource type="Resource" path="res://resources/levels/stage_01_level_02_dormitory_second_floor.tres" id="4_level_02"]
+[ext_resource type="Resource" path="res://resources/levels/stage_01_level_01_dormitory_su_ruo_room.tres" id="5_level_03"]
+[ext_resource type="Resource" path="res://resources/levels/stage_01_level_02_roof_route.tres" id="6_level_04"]
+[ext_resource type="Resource" path="res://resources/levels/stage_01_level_03_playground_return.tres" id="7_level_05"]
+[ext_resource type="Resource" path="res://resources/levels/stage_01_level_04_school_exit.tres" id="8_level_06"]
+[ext_resource type="Resource" path="res://resources/levels/stage_01_level_04_teaching_lobby.tres" id="9_level_06"]
+[ext_resource type="Resource" path="res://resources/levels/stage_01_level_04_teaching_building.tres" id="10_level_07"]
+[ext_resource type="Resource" path="res://resources/levels/stage_01_level_05_classroom_503.tres" id="11_level_08"]
+
+[resource]
+script = ExtResource("1_stage")
+stage_id = "stage_01_red_night"
+stage_number = 1
+display_name = "Stage 1: Red Night"
+summary = "The school outbreak opening route: fall aftermath, blue-virus awakening, claw fight, human-student crisis, dormitory lobby, second-floor hallway, Su Ruo's room, roof route, playground return, elite bone-blade zombie, teaching-building survivors, and the exit outside the school."
+opening_level_index = 0
+levels = Array[Resource]([ExtResource("2_level_00"), ExtResource("3_level_01"), ExtResource("4_level_02"), ExtResource("5_level_03"), ExtResource("6_level_04"), ExtResource("7_level_05"), ExtResource("9_level_06"), ExtResource("10_level_07"), ExtResource("11_level_08"), ExtResource("8_level_06")])

@@ -1,0 +1,141 @@
+{
+  "source": "source_assets\\characters\\linxi_t_early\\run_8f_restrained_v1\\bottom_aligned_preview",
+  "backup": "work_backup\\sprint_horizontal_before_run_replacement_20260616_200419",
+  "target_size": [
+    256,
+    256
+  ],
+  "target_body_height": 205,
+  "target_bottom_y": 235,
+  "target_center_x": 128,
+  "frames": [
+    {
+      "frame": 0,
+      "source": "source_assets\\characters\\linxi_t_early\\run_8f_restrained_v1\\bottom_aligned_preview\\right_00.png",
+      "source_bbox": [
+        154,
+        113,
+        306,
+        406
+      ],
+      "runtime_bbox": [
+        75,
+        30,
+        181,
+        235
+      ]
+    },
+    {
+      "frame": 1,
+      "source": "source_assets\\characters\\linxi_t_early\\run_8f_restrained_v1\\bottom_aligned_preview\\right_01.png",
+      "source_bbox": [
+        138,
+        112,
+        276,
+        406
+      ],
+      "runtime_bbox": [
+        80,
+        30,
+        176,
+        235
+      ]
+    },
+    {
+      "frame": 2,
+      "source": "source_assets\\characters\\linxi_t_early\\run_8f_restrained_v1\\bottom_aligned_preview\\right_02.png",
+      "source_bbox": [
+        91,
+        112,
+        248,
+        406
+      ],
+      "runtime_bbox": [
+        74,
+        30,
+        183,
+        235
+      ]
+    },
+    {
+      "frame": 3,
+      "source": "source_assets\\characters\\linxi_t_early\\run_8f_restrained_v1\\bottom_aligned_preview\\right_03.png",
+      "source_bbox": [
+        69,
+        113,
+        226,
+        406
+      ],
+      "runtime_bbox": [
+        73,
+        30,
+        183,
+        235
+      ]
+    },
+    {
+      "frame": 4,
+      "source": "source_assets\\characters\\linxi_t_early\\run_8f_restrained_v1\\bottom_aligned_preview\\right_04.png",
+      "source_bbox": [
+        145,
+        113,
+        289,
+        406
+      ],
+      "runtime_bbox": [
+        78,
+        30,
+        179,
+        235
+      ]
+    },
+    {
+      "frame": 5,
+      "source": "source_assets\\characters\\linxi_t_early\\run_8f_restrained_v1\\bottom_aligned_preview\\right_05.png",
+      "source_bbox": [
+        116,
+        116,
+        266,
+        406
+      ],
+      "runtime_bbox": [
+        75,
+        30,
+        181,
+        235
+      ]
+    },
+    {
+      "frame": 6,
+      "source": "source_assets\\characters\\linxi_t_early\\run_8f_restrained_v1\\bottom_aligned_preview\\right_06.png",
+      "source_bbox": [
+        92,
+        113,
+        250,
+        406
+      ],
+      "runtime_bbox": [
+        72,
+        30,
+        183,
+        235
+      ]
+    },
+    {
+      "frame": 7,
+      "source": "source_assets\\characters\\linxi_t_early\\run_8f_restrained_v1\\bottom_aligned_preview\\right_07.png",
+      "source_bbox": [
+        101,
+        113,
+        226,
+        406
+      ],
+      "runtime_bbox": [
+        84,
+        30,
+        171,
+        235
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+8-frame, 2x4 right-facing heavy walk cycle for Bone-Blade Twin. Preserve the approved fused adult-student zombie silhouette, torn school uniforms, uneven black hair, second face behind the left shoulder, and attached right wrist bone cleaver. Keep the body centered, scale-stable, and feet-aligned in solid #FF00FF cells.

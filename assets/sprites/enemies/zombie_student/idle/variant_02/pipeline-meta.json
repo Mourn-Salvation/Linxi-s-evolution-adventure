@@ -1,0 +1,45 @@
+{
+  "pipeline": "zombie_student_idle_from_approved_appearance",
+  "generated_at": "2026-07-10 11:27:42",
+  "note": "Explicit idle frame generated from approved zombie-student appearance art to preserve identity and scale.",
+  "files": [
+    {
+      "direction": "left",
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\left_02.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\idle\\variant_02\\left_00.png",
+      "image_size": [
+        256,
+        256
+      ],
+      "visible_bbox": [
+        84,
+        9,
+        173,
+        247
+      ],
+      "visible_size": [
+        89,
+        238
+      ]
+    },
+    {
+      "direction": "right",
+      "src": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\appearance_variants\\right_02.png",
+      "dst": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\idle\\variant_02\\right_00.png",
+      "image_size": [
+        256,
+        256
+      ],
+      "visible_bbox": [
+        83,
+        9,
+        172,
+        247
+      ],
+      "visible_size": [
+        89,
+        238
+      ]
+    }
+  ]
+}

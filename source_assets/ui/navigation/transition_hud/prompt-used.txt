@@ -1,0 +1,1 @@
+Transition HUD kit: wide route confirmation panel, button frames, route node states, and connector line. Raw art generated on solid magenta for transparent export.

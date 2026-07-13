@@ -1,0 +1,1 @@
+Provisional female human_student appearance variants. appearance_id 1=current black short hair, 2=black ponytail, 3=blonde long straight, 4=red long hair. Derived from accepted runtime sheet for immediate Red Night crowd variety.

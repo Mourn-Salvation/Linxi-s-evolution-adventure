@@ -1,0 +1,1 @@
+﻿Create a 2x2 sprite sheet with exactly 4 equal cells on solid #FF00FF. Each frame is a looping cyan-blue aerosol fog effect seen from a 3/4 fake-3D brawler ground view, low wide translucent mist around a dropped nebulizer, no device, no character, no floor, no text.

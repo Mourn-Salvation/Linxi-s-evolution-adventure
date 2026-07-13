@@ -1,0 +1,80 @@
+[gd_resource type="Resource" script_class="MapData" load_steps=4 format=3]
+
+[ext_resource path="res://scripts/maps/map_data.gd" type="Script" id="1"]
+[ext_resource path="res://resources/maps/red_night_playground_return_visual_data.tres" type="Resource" id="2_visual"]
+[ext_resource path="res://resources/items/red_night_item_visual_data.tres" type="Resource" id="3_item_visual"]
+
+[resource]
+script = ExtResource("1")
+map_id = "red_night_playground_return"
+display_name = "Playground Return"
+encounter_id = "red_night_playground_return_01"
+objective = "Cross halfway back toward the teaching building and survive the elite bone-blade zombie."
+story_id = "red_night_playground_return"
+initial_body_attack_unlocked = true
+environment_theme = "RED_NIGHT"
+camera_mode = "SCROLLING"
+visual_data = ExtResource("2_visual")
+footstep_surface = "GRASS"
+length = 1694.0
+depth = 280.0
+player_spawn = Vector2(52, 150)
+enemy_spawns = Array[Dictionary]([{
+"attack_type": "HEAVY",
+"armor_class": 1,
+"archetype": "bone_blade_twin",
+"boss": true,
+"boss_approach_range": 520.0,
+"boss_engaged": false,
+"boss_name": "BONE-BLADE TWIN",
+"display_name": "Bone-Blade Twin",
+"family": "ZOMBIE",
+"id": "elite_bone_blade_zombie",
+"health": 25,
+"ai_profile": "BONE_BLADE_ELITE",
+"appearance_id": 0,
+"initial_state": "NEUTRAL",
+"max_health": 25,
+"prey_weight": 4.0,
+"ai_frozen": true,
+"shadow_radius": 48.0,
+"position": Vector2(547, 140),
+"story_group": "playground_bone_blade_elite",
+"vore_visual_load": 4,
+}])
+items = Array[Dictionary]([{
+"active": true,
+"auto_trigger": true,
+"auto_trigger_once": true,
+"completion_effects": {
+"engage_boss_id": "elite_bone_blade_zombie",
+"group_states": {
+"playground_bone_blade_elite": "APPROACH"
+},
+"message": "The fused infected answers with a blade rush."
+},
+"dialogue": ["Linxi: Can you understand me?", "Bone-Blade Twin: Kkhh... rrraah...", "The two fused bodies pull against each other. Their eyes follow movement, but no trace of language remains.", "Linxi: There is no one left to answer."],
+"avatar_path": "res://assets/ui/dialogue_portraits/bone_blade_twin.png",
+"id": "bone_blade_twin_intro_trigger",
+"name": "Unresponsive Infected",
+"position": Vector2(785, 140),
+"render_hidden": true,
+"save_on_trigger": false,
+"speaker": "UNKNOWN SIGNAL",
+"trigger_range_depth": 130.0,
+"trigger_range_x": 72.0,
+"type": "dialogue"
+}, {
+"active": true,
+"destination_name": "Teaching Building Lobby",
+"id": "route_to_school_exit",
+"hide_when_locked": true,
+"locked_message": "The Bone-Blade Twin blocks the route to the teaching building.",
+"locked_prompt": "F: Route blocked",
+"name": "Teaching Building Route",
+"position": Vector2(0, 140),
+"required_defeated_group": "playground_bone_blade_elite",
+"target_scene": "res://scenes/red_night_teaching_lobby.tscn",
+"type": "transition"
+}])
+item_visual_data = ExtResource("3_item_visual")

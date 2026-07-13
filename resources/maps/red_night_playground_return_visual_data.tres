@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="MapVisualData" load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/maps/map_visual_data.gd" id="1_visual"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/red_night/playground_return_morning_full_panorama_v5_production_2x_slice_1.png" id="2_slice_1"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/red_night/playground_return_morning_full_panorama_v5_production_2x_slice_2.png" id="3_slice_2"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/red_night/playground_return_morning_full_panorama_v5_production_2x_slice_3.png" id="4_slice_3"]
+
+[resource]
+script = ExtResource("1_visual")
+scrolling_clear_color = Color(0.52, 0.58, 0.62, 1)
+themed_clear_color = Color(0.52, 0.58, 0.62, 1)
+background_layers = Array[Texture2D]([ExtResource("2_slice_1"), ExtResource("3_slice_2"), ExtResource("4_slice_3")])
+foreground_layers = Array[Texture2D]([])
+stitch_background_layers = true
+layer_fade_in_start = PackedFloat32Array()
+layer_fade_in_end = PackedFloat32Array()
+layer_fade_out_start = PackedFloat32Array()
+layer_fade_out_end = PackedFloat32Array()
+scrolling_background_scale = 1.0

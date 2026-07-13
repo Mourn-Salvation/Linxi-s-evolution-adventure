@@ -1,0 +1,168 @@
+{
+  "target": "asset",
+  "mode": "fx",
+  "prompt": "",
+  "role": "",
+  "input": "E:\\Linxi's evaluation adventure\\source_assets\\red_night\\effects\\nebulizer_blue_mist\\processed_v1\\raw-sheet.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 180,
+  "rows": 2,
+  "cols": 2,
+  "cell_size": 128,
+  "fit_scale": 0.85,
+  "trim_border": 4,
+  "edge_clean_depth": 3,
+  "align": "center",
+  "shared_scale": false,
+  "component_mode": "all",
+  "component_padding": 0,
+  "min_component_area": 1,
+  "edge_touch_margin": 0,
+  "frame_labels": [
+    "mist-1",
+    "mist-2",
+    "mist-3",
+    "mist-4"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        512,
+        768
+      ],
+      "component_mode": "all",
+      "component_count": 51,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        3,
+        3,
+        504,
+        760
+      ],
+      "edge_touch": false,
+      "output_size": [
+        72,
+        108
+      ],
+      "paste_position": [
+        28,
+        10
+      ]
+    },
+    {
+      "grid": [
+        0,
+        1
+      ],
+      "source_box": [
+        512,
+        0,
+        1024,
+        768
+      ],
+      "component_mode": "all",
+      "component_count": 36,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        0,
+        3,
+        501,
+        760
+      ],
+      "edge_touch": true,
+      "output_size": [
+        72,
+        108
+      ],
+      "paste_position": [
+        28,
+        10
+      ]
+    },
+    {
+      "grid": [
+        1,
+        0
+      ],
+      "source_box": [
+        0,
+        768,
+        512,
+        1536
+      ],
+      "component_mode": "all",
+      "component_count": 17,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        3,
+        0,
+        504,
+        757
+      ],
+      "edge_touch": true,
+      "output_size": [
+        72,
+        108
+      ],
+      "paste_position": [
+        28,
+        10
+      ]
+    },
+    {
+      "grid": [
+        1,
+        1
+      ],
+      "source_box": [
+        512,
+        768,
+        1024,
+        1536
+      ],
+      "component_mode": "all",
+      "component_count": 12,
+      "selected_component_area": null,
+      "selected_component_bbox": null,
+      "crop_bbox": [
+        0,
+        0,
+        501,
+        757
+      ],
+      "edge_touch": true,
+      "output_size": [
+        72,
+        108
+      ],
+      "paste_position": [
+        28,
+        10
+      ]
+    }
+  ],
+  "edge_touch_frames": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ]
+  ]
+}

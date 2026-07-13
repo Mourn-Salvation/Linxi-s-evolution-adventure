@@ -1,0 +1,24 @@
+{
+  "asset": "human_student_male_knife",
+  "variant_id": 6,
+  "created_at": "2026-07-06T17:22:52",
+  "raw_run_sheet": "C:\\Users\\13948\\.codex\\generated_images\\019eb097-b4aa-7322-93e0-fc4c214a63a7\\ig_04b627ee9fb85a6d016a4b70bcc87481968e2388827555ea16.png",
+  "raw_reaction_sheet": "C:\\Users\\13948\\.codex\\generated_images\\019eb097-b4aa-7322-93e0-fc4c214a63a7\\ig_04b627ee9fb85a6d016a4b718abe948196a619167602f420a2.png",
+  "runtime_dirs": {
+    "run": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\run_female_variants\\variant_06",
+    "hurt": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\hurt_female_variants\\variant_06",
+    "knocked_down": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\human_student\\knocked_down_female_variants\\variant_06"
+  },
+  "processing": {
+    "canvas": [
+      256,
+      256
+    ],
+    "run_target_height_px": 124,
+    "hurt_target_height_px": 124,
+    "knocked_target_width_px": 210,
+    "bottom_anchor_run_hurt": 242,
+    "bottom_anchor_knocked": 232,
+    "chroma_key": "edge-connected magenta flood cleanup with 2px fringe dilation"
+  }
+}

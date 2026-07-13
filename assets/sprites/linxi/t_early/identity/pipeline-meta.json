@@ -1,0 +1,120 @@
+{
+    "asset_id":  "linxi_t_early_identity_v1",
+    "processor":  "Sprite Forge contract compatible PowerShell fallback",
+    "processor_note":  "Official Python processor unavailable because no Python runtime is installed.",
+    "input":  "E:\\Linxi\u0027s evaluation adventure\\source_assets\\characters\\linxi_t_early\\linxi_t_identity_turnaround_final_raw.png",
+    "rows":  2,
+    "cols":  2,
+    "cell_size":  256,
+    "align":  "feet",
+    "shared_scale":  true,
+    "shared_scale_factor":  0.48115299334811529,
+    "component_mode":  "largest",
+    "chroma_key":  "#FF00FF",
+    "frames":  [
+                   {
+                       "index":  0,
+                       "label":  "front",
+                       "grid":  [
+                                    0,
+                                    0
+                                ],
+                       "source_bbox":  [
+                                           192,
+                                           49,
+                                           319,
+                                           497
+                                       ],
+                       "source_size":  [
+                                           127,
+                                           448
+                                       ],
+                       "output_bbox":  [
+                                           98,
+                                           32,
+                                           159,
+                                           248
+                                       ],
+                       "edge_touch":  false
+                   },
+                   {
+                       "index":  1,
+                       "label":  "left",
+                       "grid":  [
+                                    0,
+                                    1
+                                ],
+                       "source_bbox":  [
+                                           215,
+                                           50,
+                                           295,
+                                           497
+                                       ],
+                       "source_size":  [
+                                           80,
+                                           447
+                                       ],
+                       "output_bbox":  [
+                                           109,
+                                           33,
+                                           147,
+                                           248
+                                       ],
+                       "edge_touch":  false
+                   },
+                   {
+                       "index":  2,
+                       "label":  "back",
+                       "grid":  [
+                                    1,
+                                    0
+                                ],
+                       "source_bbox":  [
+                                           189,
+                                           49,
+                                           322,
+                                           497
+                                       ],
+                       "source_size":  [
+                                           133,
+                                           448
+                                       ],
+                       "output_bbox":  [
+                                           96,
+                                           32,
+                                           160,
+                                           248
+                                       ],
+                       "edge_touch":  false
+                   },
+                   {
+                       "index":  3,
+                       "label":  "gameplay_3q",
+                       "grid":  [
+                                    1,
+                                    1
+                                ],
+                       "source_bbox":  [
+                                           205,
+                                           47,
+                                           307,
+                                           498
+                                       ],
+                       "source_size":  [
+                                           102,
+                                           451
+                                       ],
+                       "output_bbox":  [
+                                           104,
+                                           31,
+                                           153,
+                                           248
+                                       ],
+                       "edge_touch":  false
+                   }
+               ],
+    "edge_touch_frames":  [
+
+                          ],
+    "passed":  true
+}

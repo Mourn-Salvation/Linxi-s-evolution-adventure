@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/stages/level_data.gd" id="1_level"]
+[ext_resource type="Resource" path="res://resources/maps/red_night_playground_return.tres" id="2_map"]
+
+[resource]
+script = ExtResource("1_level")
+stage_id = "stage_01_red_night"
+level_id = "stage_01_level_03_playground_return"
+level_index = 5
+display_name = "Playground Return"
+summary = "Linxi returns halfway toward the teaching building across the playground and faces the elite bone-blade zombie."
+map_data = ExtResource("2_map")

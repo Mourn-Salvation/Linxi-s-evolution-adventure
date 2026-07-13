@@ -1,0 +1,46 @@
+[gd_resource type="Resource" script_class="MapData" load_steps=4 format=3]
+
+[ext_resource path="res://scripts/maps/map_data.gd" type="Script" id="1"]
+[ext_resource path="res://resources/maps/red_night_school_exit_visual_data.tres" type="Resource" id="2_visual"]
+[ext_resource path="res://resources/items/red_night_item_visual_data.tres" type="Resource" id="3_item_visual"]
+
+[resource]
+script = ExtResource("1")
+map_id = "red_night_school_exit"
+display_name = "Outside The School"
+encounter_id = "red_night_school_exit_01"
+objective = "Leave the school and unlock the next route beyond Red Night."
+story_id = "red_night_school_exit"
+initial_body_attack_unlocked = true
+environment_theme = "RED_NIGHT"
+camera_mode = "FIXED_ROOM"
+visual_data = ExtResource("2_visual")
+footstep_surface = "WET"
+length = 1230.0
+depth = 280.0
+player_spawn = Vector2(180, 190)
+walkable_areas = Array[Dictionary]([{
+"id": "school_front_gate_pavement",
+"points": Array[Vector2]([Vector2(0, 70), Vector2(0, 280), Vector2(1230, 280), Vector2(1230, 70)])
+}])
+enemy_spawns = Array[Dictionary]([])
+items = Array[Dictionary]([{
+"active": true,
+"destination_name": "Teaching Building Lobby",
+"id": "school_gate_return_to_teaching_lobby",
+"name": "Return Through School Grounds",
+"position": Vector2(725, 70),
+"target_scene": "res://scenes/red_night_teaching_lobby.tscn",
+"target_spawn": Vector2(960, 300),
+"type": "transition"
+}, {
+"active": true,
+"destination_name": "Shelter",
+"id": "route_to_shelter_after_school_exit",
+"name": "Shelter Route",
+"position": Vector2(25, 160),
+"stage_boundary": true,
+"target_scene": "res://scenes/safe_house.tscn",
+"type": "transition"
+}])
+item_visual_data = ExtResource("3_item_visual")

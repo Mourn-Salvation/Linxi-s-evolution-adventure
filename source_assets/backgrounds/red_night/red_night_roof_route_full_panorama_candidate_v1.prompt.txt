@@ -1,0 +1,16 @@
+Use the accepted roof left plate as the visual reference for rooftop style, camera height, actor scale, wet concrete floor texture, parapet height, distant school/city scale, pre-dawn sky color, and red emergency-light accents. Generate a NEW single continuous panorama candidate for the Roof Route in Linxi's Evaluation Adventure.
+
+Asset type: 2D Godot background source panorama for a fake-3D belt-scroller rooftop map. This is a candidate full-width source image, not separate plates.
+Primary request: Generate one continuous rooftop route map that already contains the full route in a single image. The result must look like one camera, one rooftop, one floor plane, one time of day, and one physical location. It must not look like two images put together.
+
+Scene/backdrop: roof of a contemporary Chinese school dormitory or teaching building during the Red Night outbreak. Rain-wet concrete rooftop, low parapet wall, visible left building edge on the far left, visible right building edge on the far right, roof vents, low pipes, small safety rails, utility boxes, distant school buildings, dorm blocks, city silhouettes, red emergency marker lights.
+
+Time requirement: the last few minutes before dawn, around 4:50-5:10 AM. Deep blue-black sky lifting toward pale cyan, thin rose-orange glow on the horizon, wet floor reflecting faint dawn light and red emergency lamps. Not midnight, not sunset, not full daytime.
+
+Composition/framing: ultra-wide horizontal 21:9 or wider panoramic game background, side-readable brawler/fake-3D stage view. Broad lower foreground rooftop floor band for characters to walk; visible fake-3D depth from foreground floor to back parapet. Shallow side-stage perspective, not a dramatic cinematic angle. The left side must clearly show the left roof/building edge and drop; the right side must clearly show the right roof/building edge and drop. The middle should be a continuous playable rooftop route with stable floor grid/perspective, parapet height, horizon, light rhythm, material scale, and actor scale.
+
+Continuity rule: this should be one single panorama source image. Do not create a split, seam, hard lighting change, black divider, red seam line, second camera angle, or sudden location transition in the middle. The entire rooftop should feel like one physically connected stage.
+
+Style/medium: high-resolution illustrated survival-horror game background, pixel-filter-friendly, dark realistic anime game art direction, close to the current project map style but cleaner and continuous. Not low-resolution pixel art, not a realistic photo.
+
+Gameplay constraints: no characters, no enemies, no UI, no readable text, no labels, no arrows, no glowing transition circle, no teleport portal. Leave the bottom/floor area open enough for combat and movement. Do not place large rooftop structures that block the playable band. Avoid huge black unused margins.

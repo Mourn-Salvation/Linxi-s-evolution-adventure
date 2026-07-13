@@ -1,0 +1,134 @@
+[gd_resource type="Resource" script_class="MapData" load_steps=5 format=3]
+
+[ext_resource path="res://scripts/maps/map_data.gd" type="Script" id="1_map_data"]
+[ext_resource path="res://resources/maps/dormitory_lobby_visual_data.tres" type="Resource" id="2_visual"]
+[ext_resource path="res://resources/items/red_night_item_visual_data.tres" type="Resource" id="3_item_visual"]
+
+[resource]
+script = ExtResource("1_map_data")
+map_id = "dormitory_lobby"
+display_name = "Dormitory Lobby"
+encounter_id = "dormitory_lobby_01"
+objective = "Enter the dormitory lobby and use the staircase on the right to reach the second-floor rooms."
+story_id = "red_night_dormitory"
+initial_body_attack_unlocked = true
+environment_theme = "RED_NIGHT"
+camera_mode = "FIXED_ROOM"
+visual_data = ExtResource("2_visual")
+footstep_surface = "MARBLE"
+length = 1280.0
+depth = 260.0
+player_spawn = Vector2(150, 178)
+walkable_areas = Array[Dictionary]([{
+"id": "main_lobby_floor",
+"position": Vector2(0, 128),
+"size": Vector2(900, 112)
+}, {
+"id": "lower_switchback_stair_run",
+"position": Vector2(900, 72),
+"size": Vector2(150, 110)
+}, {
+"id": "stair_middle_platform",
+"position": Vector2(1010, 20),
+"size": Vector2(185, 74)
+}, {
+"id": "lower_to_middle_stair_walkable_extension",
+"points": Array[Vector2]([Vector2(805, 154), Vector2(1000, 0), Vector2(1100, 0), Vector2(830, 200)])
+}])
+blocked_areas = Array[Dictionary]([{
+"id": "lower_switchback_side_wall",
+"position": Vector2(1048, 150),
+"size": Vector2(162, 90)
+}, {
+"id": "upper_switchback_stair_body",
+"position": Vector2(710, 36),
+"size": Vector2(80, 74)
+}, {
+"id": "right_second_floor_wall_mass",
+"position": Vector2(1195, 72),
+"size": Vector2(85, 188)
+}, {
+"id": "lower_staircase_visual_mass",
+"points": Array[Vector2]([Vector2(705, 260), Vector2(1130, 260), Vector2(1145, 30)])
+}])
+enemy_spawns = Array[Dictionary]([{
+"archetype": "human_student",
+"display_name": "Li Yingying",
+"family": "HUMAN",
+"id": "li_yingying",
+"ai_profile": "NON_COMBAT_WANDER",
+"appearance_id": 3,
+"facing": 1.0,
+"health": 10,
+"initial_health": 0,
+"initial_state": "KNOCKED_DOWN",
+"position": Vector2(245, 188),
+"story_group": "li_yingying",
+"vore_locked_until_group_defeated": "dormitory_lobby_stair_zombies"
+}, {
+"family": "ZOMBIE",
+"id": "lobby_stair_zombie_01",
+"ai_profile": "STANDARD",
+"appearance_id": 1,
+"facing": -1.0,
+"health": 10,
+"initial_state": "APPROACH",
+"position": Vector2(930, 132),
+"story_group": "dormitory_lobby_stair_zombies"
+}, {
+"family": "ZOMBIE",
+"id": "lobby_stair_zombie_02",
+"ai_profile": "STANDARD",
+"appearance_id": 2,
+"facing": -1.0,
+"health": 10,
+"initial_state": "APPROACH",
+"position": Vector2(1038, 76),
+"story_group": "dormitory_lobby_stair_zombies"
+}])
+items = Array[Dictionary]([{
+"active": true,
+"destination_name": "Courtyard Fall Site",
+"id": "dormitory_lobby_return_to_courtyard",
+"name": "Dormitory Main Entrance",
+"position": Vector2(90, 190),
+"target_scene": "res://scenes/red_night.tscn",
+"target_spawn": Vector2(2680, 20),
+"type": "transition"
+}, {
+"active": true,
+"avatar_path": "res://assets/ui/dialogue_portraits/li_yingying.png",
+"choice": {
+"body": "Help Li Yingying leave the lobby?",
+"deactivate_item_id": "li_yingying_dialogue",
+"no_flag": "li_yingying_left_in_lobby",
+"no_message": "Linxi leaves Li Yingying where she is. The choice remains heavy in the air.",
+"no_text": "LEAVE",
+"prompt_message": "Li Yingying waits for Linxi's decision.",
+"target_enemy_id": "li_yingying",
+"title": "LI YINGYING",
+"yes_enemy_state": "ESCAPED",
+"yes_flag": "li_yingying_rescued",
+"yes_message": "Linxi helps Li Yingying out of the lobby.",
+"yes_text": "HELP"
+},
+"dialogue": ["Li Yingying: ...Don't come closer. Are you one of them?", "Linxi: I don't know what I am. But I know those two were going to tear you apart.", "Li Yingying: Your eyes... they are red. Linxi, please, if you can still understand me, help me get out.", "Linxi: I can hear you. I can also hear something inside me asking for your pulse.", "Li Yingying: Then choose with your own voice, not with that thing.", "Linxi: Stay down. When I decide, it will be me deciding."],
+"always_show_prompt": true,
+"id": "li_yingying_dialogue",
+"locked_message": "Two infected are still on the stairs. Linxi cannot safely speak with Li Yingying yet.",
+"locked_prompt": "F: Clear the stair infected first",
+"name": "Li Yingying",
+"position": Vector2(245, 188),
+"required_defeated_group": "dormitory_lobby_stair_zombies",
+"speaker": "Li Yingying",
+"type": "dialogue"
+}, {
+"active": true,
+"destination_name": "Dormitory Second Floor",
+"id": "lobby_staircase_to_second_floor",
+"name": "Second-Floor Staircase",
+"position": Vector2(1085, 22),
+"target_scene": "res://scenes/dormitory_second_floor.tscn",
+"type": "transition"
+}])
+item_visual_data = ExtResource("3_item_visual")

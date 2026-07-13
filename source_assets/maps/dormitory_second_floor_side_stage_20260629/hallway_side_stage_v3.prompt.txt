@@ -1,0 +1,5 @@
+Asset id: dormitory_second_floor_hallway_side_stage_v3
+Purpose: scrolling map background panel B for Dormitory Second Floor; side-readable hallway continuation; no foreground bars over actors.
+Reference handoff: generated from accepted side-stage stair panel and previous hallway view.
+Prompt summary: preserve shallow side-readable fake-3D stage view, broad walkable floor deck, wall/door rhythm, Red Night palette; no stairs in continuation; no deep one-point corridor/tunnel view.
+Runtime destination: assets/backgrounds/red_night/dormitory_second_floor_hallway_side_stage_v3.png

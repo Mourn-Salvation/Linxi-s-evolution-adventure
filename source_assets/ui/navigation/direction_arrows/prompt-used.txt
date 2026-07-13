@@ -1,0 +1,1 @@
+2x2 directional arrow UI sheet: up, down, left, right. Signalis-inspired emergency navigation overlay. Solid magenta source background.

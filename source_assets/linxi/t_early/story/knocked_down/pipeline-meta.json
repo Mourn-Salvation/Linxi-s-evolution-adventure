@@ -1,0 +1,24 @@
+{
+  "source": "C:\\Users\\13948\\.codex\\generated_images\\019eb097-b4aa-7322-93e0-fc4c214a63a7\\ig_0cd48dacdff2b37d016a3a8ac783f481979133d8ea2cbdb38a.png",
+  "raw_copy": "E:\\Linxi's evaluation adventure\\source_assets\\linxi\\t_early\\story\\knocked_down\\linxi_t_early_knocked_down_raw.png",
+  "runtime": "E:\\Linxi's evaluation adventure\\assets\\sprites\\linxi\\t_early\\story\\knocked_down\\00_knocked_down.png",
+  "source_sha256": "d063622e8710e18646085141bdf9c0b317355b6029ad31bed0443a507494b50f",
+  "runtime_sha256": "144498a85559844b2ee8a6a5f8c9c7fe0e7f13a57ab25b2b0818fd23c2497c5b",
+  "magenta_key": "r>=210 g<=95 b>=175",
+  "source_bbox_after_key": [
+    59,
+    431,
+    1180,
+    887
+  ],
+  "runtime_canvas": [
+    256,
+    256
+  ],
+  "runtime_body_size": [
+    242,
+    98
+  ],
+  "bottom_anchor_y": 245,
+  "notes": "Dedicated Linxi early T-form knocked-down/faint pose. Not reused from drink-blue frames."
+}

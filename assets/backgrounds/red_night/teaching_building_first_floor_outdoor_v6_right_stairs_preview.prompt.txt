@@ -1,0 +1,5 @@
+Use the visible teaching-building map image immediately above as the direct visual reference. Create a new production preview background for the same fake-3D 2D Godot map.
+
+Primary change: preserve the same school teaching-building facade, three-floor proportions, courtyard foreground, wet concrete reflections, daylight, color palette, camera angle, wall/door/window rhythm, and empty playable foreground, but place the exterior stair/stairwell structure on the RIGHT side of the building instead of the left side. The right-side stairs should feel naturally built into the teaching building, visible as a route up to higher floors, with railings and concrete landings, but not blocking the broad foreground movement space.
+
+Keep: no characters, no zombies, no UI, no text, no labels, no arrows, no frame border, no watermark. Keep the map readable for a 2D fake-3D beat-em-up: horizontal facade, straight architecture, broad ground lane, clean scale for human-sized sprites. Do not change the time of day; keep pale daylight after rain. Do not turn it into a cinematic perspective. Do not make it a different building.

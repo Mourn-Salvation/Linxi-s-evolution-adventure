@@ -1,0 +1,1 @@
+Derived provisional enemy animation pass. These files complete runtime move/attack/hurt contracts from verified accepted sprites. Replace with true generated/approved sheets when the image pipeline is stable. Do not treat this as final art approval.

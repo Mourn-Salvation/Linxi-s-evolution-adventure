@@ -1,0 +1,93 @@
+[gd_resource type="Resource" script_class="EffectVisualData" load_steps=72 format=3]
+
+[ext_resource type="Script" path="res://scripts/effects/effect_visual_data.gd" id="1_visual"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/red/left_00.png" id="2_red_left_00"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/red/left_01.png" id="3_red_left_01"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/red/left_02.png" id="4_red_left_02"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/red/left_03.png" id="5_red_left_03"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/red/left_04.png" id="6_red_left_04"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/red/left_05.png" id="7_red_left_05"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/red/right_00.png" id="8_red_right_00"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/red/right_01.png" id="9_red_right_01"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/red/right_02.png" id="10_red_right_02"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/red/right_03.png" id="11_red_right_03"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/red/right_04.png" id="12_red_right_04"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/red/right_05.png" id="13_red_right_05"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/silver/left_00.png" id="14_silver_left_00"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/silver/left_01.png" id="15_silver_left_01"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/silver/left_02.png" id="16_silver_left_02"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/silver/left_03.png" id="17_silver_left_03"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/silver/left_04.png" id="18_silver_left_04"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/silver/left_05.png" id="19_silver_left_05"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/silver/right_00.png" id="20_silver_right_00"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/silver/right_01.png" id="21_silver_right_01"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/silver/right_02.png" id="22_silver_right_02"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/silver/right_03.png" id="23_silver_right_03"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/silver/right_04.png" id="24_silver_right_04"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/claw_slash/silver/right_05.png" id="25_silver_right_05"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/zombie_attack_vertical/red/left_00.png" id="56_zombie_vertical_left_00"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/zombie_attack_vertical/red/left_01.png" id="57_zombie_vertical_left_01"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/zombie_attack_vertical/red/left_02.png" id="58_zombie_vertical_left_02"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/zombie_attack_vertical/red/left_03.png" id="59_zombie_vertical_left_03"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/zombie_attack_vertical/red/right_00.png" id="60_zombie_vertical_right_00"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/zombie_attack_vertical/red/right_01.png" id="61_zombie_vertical_right_01"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/zombie_attack_vertical/red/right_02.png" id="62_zombie_vertical_right_02"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/zombie_attack_vertical/red/right_03.png" id="63_zombie_vertical_right_03"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/knife_attack_horizontal/silver/left_00.png" id="64_knife_horizontal_left_00"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/knife_attack_horizontal/silver/left_01.png" id="65_knife_horizontal_left_01"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/knife_attack_horizontal/silver/left_02.png" id="66_knife_horizontal_left_02"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/knife_attack_horizontal/silver/left_03.png" id="67_knife_horizontal_left_03"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/knife_attack_horizontal/silver/right_00.png" id="68_knife_horizontal_right_00"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/knife_attack_horizontal/silver/right_01.png" id="69_knife_horizontal_right_01"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/knife_attack_horizontal/silver/right_02.png" id="70_knife_horizontal_right_02"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/knife_attack_horizontal/silver/right_03.png" id="71_knife_horizontal_right_03"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/virus_mist_hit/00.png" id="26_mist_00"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/virus_mist_hit/01.png" id="27_mist_01"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/virus_mist_hit/02.png" id="28_mist_02"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/virus_mist_hit/03.png" id="29_mist_03"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/virus_liquid_ground_spread/00.png" id="30_spread_00"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/virus_liquid_ground_spread/01.png" id="31_spread_01"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/virus_liquid_ground_spread/02.png" id="32_spread_02"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/virus_liquid_ground_spread/03.png" id="33_spread_03"]
+[ext_resource type="Texture2D" path="res://assets/cutscenes/red_night/classroom_chase.png" id="34_classroom_chase"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/enemy_telegraph/normal_red/fx-1.png" id="35_tel_red_1"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/enemy_telegraph/normal_red/fx-2.png" id="36_tel_red_2"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/enemy_telegraph/normal_red/fx-3.png" id="37_tel_red_3"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/enemy_telegraph/normal_red/fx-4.png" id="38_tel_red_4"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/enemy_telegraph/normal_red/fx-5.png" id="39_tel_red_5"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/enemy_telegraph/normal_red/fx-6.png" id="40_tel_red_6"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/enemy_telegraph/heavy_purple/fx-1.png" id="41_tel_purple_1"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/enemy_telegraph/heavy_purple/fx-2.png" id="42_tel_purple_2"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/enemy_telegraph/heavy_purple/fx-3.png" id="43_tel_purple_3"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/enemy_telegraph/heavy_purple/fx-4.png" id="44_tel_purple_4"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/enemy_telegraph/heavy_purple/fx-5.png" id="45_tel_purple_5"]
+[ext_resource type="Texture2D" path="res://assets/effects/combat/enemy_telegraph/heavy_purple/fx-6.png" id="46_tel_purple_6"]
+[ext_resource type="Texture2D" path="res://assets/effects/red_night/atomization_fog/dense_00.png" id="47_fog_dense_00"]
+[ext_resource type="Texture2D" path="res://assets/effects/red_night/atomization_fog/dense_01.png" id="48_fog_dense_01"]
+[ext_resource type="Texture2D" path="res://assets/effects/red_night/atomization_fog/dense_02.png" id="49_fog_dense_02"]
+[ext_resource type="Texture2D" path="res://assets/effects/red_night/atomization_fog/dense_03.png" id="50_fog_dense_03"]
+[ext_resource type="Texture2D" path="res://assets/effects/red_night/atomization_fog/subtle_00.png" id="51_fog_subtle_00"]
+[ext_resource type="Texture2D" path="res://assets/effects/red_night/atomization_fog/subtle_01.png" id="52_fog_subtle_01"]
+[ext_resource type="Texture2D" path="res://assets/effects/red_night/atomization_fog/subtle_02.png" id="53_fog_subtle_02"]
+[ext_resource type="Texture2D" path="res://assets/effects/red_night/atomization_fog/subtle_03.png" id="54_fog_subtle_03"]
+[ext_resource type="Texture2D" path="res://assets/cutscenes/red_night/teaching_first_floor_zombie_gathering_v2_daytime_converge.png" id="55_teaching_crowd"]
+
+[resource]
+script = ExtResource("1_visual")
+claw_slash_red_left_frames = Array[Texture2D]([ExtResource("2_red_left_00"), ExtResource("3_red_left_01"), ExtResource("4_red_left_02"), ExtResource("5_red_left_03"), ExtResource("6_red_left_04"), ExtResource("7_red_left_05")])
+claw_slash_red_right_frames = Array[Texture2D]([ExtResource("8_red_right_00"), ExtResource("9_red_right_01"), ExtResource("10_red_right_02"), ExtResource("11_red_right_03"), ExtResource("12_red_right_04"), ExtResource("13_red_right_05")])
+claw_slash_silver_left_frames = Array[Texture2D]([ExtResource("14_silver_left_00"), ExtResource("15_silver_left_01"), ExtResource("16_silver_left_02"), ExtResource("17_silver_left_03"), ExtResource("18_silver_left_04"), ExtResource("19_silver_left_05")])
+claw_slash_silver_right_frames = Array[Texture2D]([ExtResource("20_silver_right_00"), ExtResource("21_silver_right_01"), ExtResource("22_silver_right_02"), ExtResource("23_silver_right_03"), ExtResource("24_silver_right_04"), ExtResource("25_silver_right_05")])
+zombie_attack_vertical_red_left_frames = Array[Texture2D]([ExtResource("56_zombie_vertical_left_00"), ExtResource("57_zombie_vertical_left_01"), ExtResource("58_zombie_vertical_left_02"), ExtResource("59_zombie_vertical_left_03")])
+zombie_attack_vertical_red_right_frames = Array[Texture2D]([ExtResource("60_zombie_vertical_right_00"), ExtResource("61_zombie_vertical_right_01"), ExtResource("62_zombie_vertical_right_02"), ExtResource("63_zombie_vertical_right_03")])
+knife_attack_horizontal_silver_left_frames = Array[Texture2D]([ExtResource("64_knife_horizontal_left_00"), ExtResource("65_knife_horizontal_left_01"), ExtResource("66_knife_horizontal_left_02"), ExtResource("67_knife_horizontal_left_03")])
+knife_attack_horizontal_silver_right_frames = Array[Texture2D]([ExtResource("68_knife_horizontal_right_00"), ExtResource("69_knife_horizontal_right_01"), ExtResource("70_knife_horizontal_right_02"), ExtResource("71_knife_horizontal_right_03")])
+virus_mist_hit_frames = Array[Texture2D]([ExtResource("26_mist_00"), ExtResource("27_mist_01"), ExtResource("28_mist_02"), ExtResource("29_mist_03")])
+virus_liquid_spread_frames = Array[Texture2D]([ExtResource("30_spread_00"), ExtResource("31_spread_01"), ExtResource("32_spread_02"), ExtResource("33_spread_03")])
+enemy_telegraph_normal_frames = Array[Texture2D]([ExtResource("35_tel_red_1"), ExtResource("36_tel_red_2"), ExtResource("37_tel_red_3"), ExtResource("38_tel_red_4"), ExtResource("39_tel_red_5"), ExtResource("40_tel_red_6")])
+enemy_telegraph_heavy_frames = Array[Texture2D]([ExtResource("41_tel_purple_1"), ExtResource("42_tel_purple_2"), ExtResource("43_tel_purple_3"), ExtResource("44_tel_purple_4"), ExtResource("45_tel_purple_5"), ExtResource("46_tel_purple_6")])
+atomization_fog_dense_frames = Array[Texture2D]([ExtResource("47_fog_dense_00"), ExtResource("48_fog_dense_01"), ExtResource("49_fog_dense_02"), ExtResource("50_fog_dense_03")])
+atomization_fog_subtle_frames = Array[Texture2D]([ExtResource("51_fog_subtle_00"), ExtResource("52_fog_subtle_01"), ExtResource("53_fog_subtle_02"), ExtResource("54_fog_subtle_03")])
+red_night_classroom_chase = ExtResource("34_classroom_chase")
+teaching_first_floor_zombie_gathering = ExtResource("55_teaching_crowd")
+motion_trail_color = Color(0.55, 0.86, 1, 1)

@@ -1,0 +1,5 @@
+Asset id: dormitory_second_floor_stair_clean_21x9_v2
+Purpose: scrolling map background panel A for Dormitory Second Floor; stair entrance on right; no foreground bars over actors.
+Reference handoff: generated after viewing current dormitory_second_floor_hallway_21x9_v1.png and dormitory_lobby_switchback_21x9_v1.png in-context.
+Prompt summary: preserve Red Night dormitory hallway/lobby camera, palette, wet floor, doors, emergency lights, and side-readable 21:9 map composition; remove foreground fence/bar occluders; keep broad fake-3D actor lane; show physical stair route on right.
+Runtime destination: assets/backgrounds/red_night/dormitory_second_floor_stair_clean_21x9_v2.png

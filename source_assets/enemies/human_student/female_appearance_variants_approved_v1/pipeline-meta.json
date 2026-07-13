@@ -1,0 +1,73 @@
+{
+  "status": "accepted_design_reference",
+  "approved_source": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\approved_design_sheet.png",
+  "approved_source_sha256": "3cce0727ceb82782bd39b31dbb3cbceaa15c180c9f3d29d7270b302d3e4a25ca",
+  "appearance_id_policy": "1=current existing female student; 2=black ponytail; 3=long straight black hair; 4=blonde hair; 5=red hair",
+  "variants": [
+    {
+      "appearance_id": 2,
+      "name": "black_ponytail",
+      "right_reference": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\appearance_02_black_ponytail.png",
+      "left_reference": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\appearance_02_black_ponytail_left.png",
+      "bbox": [
+        105,
+        31,
+        543,
+        574
+      ],
+      "visible_size": [
+        438,
+        543
+      ]
+    },
+    {
+      "appearance_id": 3,
+      "name": "long_straight_black_hair",
+      "right_reference": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\appearance_03_long_straight_black_hair.png",
+      "left_reference": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\appearance_03_long_straight_black_hair_left.png",
+      "bbox": [
+        41,
+        53,
+        460,
+        574
+      ],
+      "visible_size": [
+        419,
+        521
+      ]
+    },
+    {
+      "appearance_id": 4,
+      "name": "blonde_hair",
+      "right_reference": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\appearance_04_blonde_hair.png",
+      "left_reference": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\appearance_04_blonde_hair_left.png",
+      "bbox": [
+        109,
+        38,
+        538,
+        571
+      ],
+      "visible_size": [
+        429,
+        533
+      ]
+    },
+    {
+      "appearance_id": 5,
+      "name": "red_hair",
+      "right_reference": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\appearance_05_red_hair.png",
+      "left_reference": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\appearance_05_red_hair_left.png",
+      "bbox": [
+        26,
+        30,
+        445,
+        572
+      ],
+      "visible_size": [
+        419,
+        542
+      ]
+    }
+  ],
+  "cleanup": "border-connected magenta/pink chroma removal; character pixels otherwise preserved"
+}

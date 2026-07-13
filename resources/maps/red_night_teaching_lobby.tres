@@ -1,0 +1,111 @@
+[gd_resource type="Resource" script_class="MapData" load_steps=4 format=3]
+
+[ext_resource path="res://scripts/maps/map_data.gd" type="Script" id="1_map_data"]
+[ext_resource path="res://resources/maps/red_night_teaching_lobby_visual_data.tres" type="Resource" id="2_visual"]
+[ext_resource path="res://resources/items/red_night_item_visual_data.tres" type="Resource" id="3_item_visual"]
+
+[resource]
+script = ExtResource("1_map_data")
+map_id = "red_night_teaching_lobby"
+display_name = "Teaching Building Lobby"
+encounter_id = "red_night_teaching_lobby_01"
+objective = "Enter the teaching building lobby and look for the route toward the survivor classroom."
+story_id = "red_night_teaching_lobby"
+initial_body_attack_unlocked = true
+environment_theme = "RED_NIGHT"
+camera_mode = "FIXED_ROOM"
+visual_data = ExtResource("2_visual")
+footstep_surface = "WET"
+gameplay_screen_offset = Vector2(0, 100)
+ground_min_x = -200.0
+length = 1145.0
+depth = 457.0
+player_spawn = Vector2(120, 310)
+walkable_areas = Array[Dictionary]([{
+"id": "teaching_lobby_floor",
+"points": Array[Vector2]([Vector2(-120, 170), Vector2(-200, 457), Vector2(965, 457), Vector2(1035, 170)])
+}])
+enemy_spawns = Array[Dictionary]([{
+"ai_profile": "STANDARD",
+"appearance_id": 0,
+"family": "ZOMBIE",
+"facing": 1.0,
+"health": 10,
+"id": "teaching_lobby_zombie_01",
+"initial_state": "APPROACH",
+"position": Vector2(120, 300),
+"story_group": "teaching_lobby_infected"
+}, {
+"ai_profile": "STANDARD",
+"appearance_id": 1,
+"family": "ZOMBIE",
+"facing": -1.0,
+"health": 10,
+"id": "teaching_lobby_zombie_02",
+"initial_state": "APPROACH",
+"position": Vector2(325, 390),
+"story_group": "teaching_lobby_infected"
+}, {
+"ai_profile": "STANDARD",
+"appearance_id": 2,
+"family": "ZOMBIE",
+"facing": 1.0,
+"health": 10,
+"id": "teaching_lobby_zombie_03",
+"initial_state": "APPROACH",
+"position": Vector2(520, 275),
+"story_group": "teaching_lobby_infected"
+}, {
+"ai_profile": "STANDARD",
+"appearance_id": 3,
+"family": "ZOMBIE",
+"facing": -1.0,
+"health": 10,
+"id": "teaching_lobby_zombie_04",
+"initial_state": "APPROACH",
+"position": Vector2(700, 410),
+"story_group": "teaching_lobby_infected"
+}, {
+"ai_profile": "STANDARD",
+"appearance_id": 1,
+"family": "ZOMBIE",
+"facing": -1.0,
+"health": 10,
+"id": "teaching_lobby_zombie_05",
+"initial_state": "APPROACH",
+"position": Vector2(840, 300),
+"story_group": "teaching_lobby_infected"
+}])
+items = Array[Dictionary]([{
+"active": true,
+"destination_name": "Teaching Building Second Floor",
+"id": "teaching_lobby_to_second_floor",
+"name": "Second-Floor Staircase",
+"position": Vector2(880, 175),
+"target_scene": "res://scenes/red_night_teaching_building.tscn",
+"target_spawn": Vector2(120, 178),
+"type": "transition"
+}, {
+"active": true,
+"destination_name": "School Front Gate",
+"id": "teaching_lobby_return_to_playground",
+"name": "Teaching Building Entrance",
+"position": Vector2(-100, 300),
+"target_scene": "res://scenes/red_night_playground_return.tscn",
+"target_spawn": Vector2(90, 140),
+"type": "transition"
+}, {
+"active": true,
+"destination_name": "School Front Gate",
+"hide_when_locked": true,
+"id": "teaching_lobby_to_school_front_gate",
+"locked_message": "Linxi still needs to find the survivors in Classroom 503.",
+"locked_prompt": "F: Search Upstairs First",
+"name": "Teaching Building Front Exit",
+"position": Vector2(1000, 300),
+"required_story_flag": "red_night_twins_met",
+"target_scene": "res://scenes/red_night_school_exit.tscn",
+"target_spawn": Vector2(800, 190),
+"type": "transition"
+}])
+item_visual_data = ExtResource("3_item_visual")

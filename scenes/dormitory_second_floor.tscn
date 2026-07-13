@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/main.tscn" id="1_main"]
+[ext_resource type="Resource" path="res://resources/levels/stage_01_level_02_dormitory_second_floor.tres" id="2_level"]
+
+[node name="DormitorySecondFloor" instance=ExtResource("1_main")]
+level_data = ExtResource("2_level")

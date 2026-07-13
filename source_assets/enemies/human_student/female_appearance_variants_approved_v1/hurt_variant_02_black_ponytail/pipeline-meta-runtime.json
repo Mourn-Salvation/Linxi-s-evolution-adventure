@@ -1,0 +1,60 @@
+{
+  "source": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\hurt_variant_02_black_ponytail\\raw-sheet.png",
+  "source_sha256": "bbd8bbc1d32bdb286e9a8afa82e41e9dbdd2d61436b2b4e461072f9879044779",
+  "variant": "appearance_id_02_black_ponytail",
+  "action": "hurt",
+  "raw_rows": 2,
+  "raw_cols": 2,
+  "runtime_frames": 2,
+  "frame_size": 256,
+  "target_visible_height": 122,
+  "baseline_y": 242,
+  "center_x": 128,
+  "frames": [
+    {
+      "index": 0,
+      "source_bbox": [
+        198,
+        60,
+        550,
+        547
+      ],
+      "resized": [
+        88,
+        122
+      ],
+      "placed": [
+        84,
+        120
+      ],
+      "largest_component_only": true
+    },
+    {
+      "index": 1,
+      "source_bbox": [
+        122,
+        98,
+        392,
+        545
+      ],
+      "resized": [
+        74,
+        122
+      ],
+      "placed": [
+        91,
+        120
+      ],
+      "largest_component_only": true
+    }
+  ],
+  "operations": [
+    "magenta_chroma_alpha",
+    "largest_connected_character_component",
+    "first_two_cells",
+    "bbox_crop",
+    "uniform_scale",
+    "baseline_align",
+    "horizontal_mirror"
+  ]
+}

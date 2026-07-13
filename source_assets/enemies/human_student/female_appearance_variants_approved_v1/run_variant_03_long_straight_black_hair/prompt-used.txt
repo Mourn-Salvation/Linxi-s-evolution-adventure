@@ -1,0 +1,1 @@
+Variant appearance_id 3, long straight black hair. 8-frame run/flee sheet, 2x4, facing right, magenta background.

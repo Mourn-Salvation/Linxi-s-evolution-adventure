@@ -1,0 +1,35 @@
+{
+  "asset": "linxi_t_early dialogue avatar",
+  "source": "C:\\Users\\13948\\.codex\\generated_images\\019eb097-b4aa-7322-93e0-fc4c214a63a7\\ig_05e6e3006349a905016a4f63b2d178819390beeafe65c7c46c.png",
+  "source_copy": "E:\\Linxi's evaluation adventure\\source_assets\\ui\\dialogue_portraits\\linxi_t_early_generated\\raw_linxi_t_early_dialogue_avatar.png",
+  "runtime_output": "E:\\Linxi's evaluation adventure\\assets\\ui\\dialogue_portraits\\linxi_t_early.png",
+  "sha256": "d9cc37629f33b75551680c4bccb44469be57b1aa525f088c83558d65227e1317",
+  "processor": "PIL chroma-key #FF00FF, crop alpha bounds, fit into 256x256 transparent canvas",
+  "generated_at": "2026-07-09T17:06:36",
+  "runtime_asset": "E:\\Linxi's evaluation adventure\\assets\\ui\\dialogue_portraits\\linxi_t_early.png",
+  "latest_edge_cleanup_backup": "E:\\Linxi's evaluation adventure\\work_backup\\ui\\dialogue_portraits\\linxi_t_early_before_edge_cleanup_20260709_171400.png",
+  "edge_cleanup": {
+    "method": "alpha edge magenta removal plus local despill",
+    "near_edge_radius_px": 4,
+    "removed_pixels": 302,
+    "despilled_pixels": 107
+  },
+  "global_magenta_cleanup": {
+    "backup": "E:\\Linxi's evaluation adventure\\work_backup\\ui\\dialogue_portraits\\linxi_t_early_before_global_magenta_cleanup_20260709_171529.png",
+    "removed_pixels": 71,
+    "dimmed_edge_pixels": 89,
+    "rule": "remove high-red/high-blue/low-green chroma-key leftovers; preserve red-only blood and eyes"
+  },
+  "purple_edge_neutralize": {
+    "backup": "E:\\Linxi's evaluation adventure\\work_backup\\ui\\dialogue_portraits\\linxi_t_early_before_purple_edge_neutralize_20260709_171737.png",
+    "changed_pixels": 822,
+    "removed_low_alpha_pixels": 423,
+    "hue_range": "282-322 degrees near transparent matte"
+  },
+  "global_purple_neutralize": {
+    "backup": "E:\\Linxi's evaluation adventure\\work_backup\\ui\\dialogue_portraits\\linxi_t_early_before_global_purple_neutralize_20260709_171850.png",
+    "changed_pixels": 90,
+    "removed_pixels": 44,
+    "rule": "global hue 276-326 violet cleanup while preserving red eyes and blood"
+  }
+}

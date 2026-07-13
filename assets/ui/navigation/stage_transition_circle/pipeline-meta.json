@@ -1,0 +1,127 @@
+{
+  "source": "E:\\Linxi's evaluation adventure\\source_assets\\ui\\navigation\\stage_transition_circle\\raw-sheet.png",
+  "source_sha256": "9339d1d9798be2aa40c0ffd88937e27bbbf00939ba5a10d73177f9350de87026",
+  "layout": "2x4 8-frame pulse",
+  "runtime_dir": "E:\\Linxi's evaluation adventure\\assets\\ui\\navigation\\stage_transition_circle",
+  "frames": [
+    {
+      "index": 0,
+      "source_bbox": [
+        28,
+        185,
+        397,
+        327
+      ],
+      "resized": [
+        220,
+        85
+      ],
+      "output": "frame_00.png"
+    },
+    {
+      "index": 1,
+      "source_bbox": [
+        25,
+        183,
+        407,
+        331
+      ],
+      "resized": [
+        220,
+        85
+      ],
+      "output": "frame_01.png"
+    },
+    {
+      "index": 2,
+      "source_bbox": [
+        13,
+        175,
+        429,
+        340
+      ],
+      "resized": [
+        217,
+        86
+      ],
+      "output": "frame_02.png"
+    },
+    {
+      "index": 3,
+      "source_bbox": [
+        15,
+        174,
+        422,
+        341
+      ],
+      "resized": [
+        210,
+        86
+      ],
+      "output": "frame_03.png"
+    },
+    {
+      "index": 4,
+      "source_bbox": [
+        26,
+        115,
+        408,
+        264
+      ],
+      "resized": [
+        220,
+        86
+      ],
+      "output": "frame_04.png"
+    },
+    {
+      "index": 5,
+      "source_bbox": [
+        21,
+        116,
+        416,
+        262
+      ],
+      "resized": [
+        220,
+        81
+      ],
+      "output": "frame_05.png"
+    },
+    {
+      "index": 6,
+      "source_bbox": [
+        33,
+        118,
+        410,
+        262
+      ],
+      "resized": [
+        220,
+        84
+      ],
+      "output": "frame_06.png"
+    },
+    {
+      "index": 7,
+      "source_bbox": [
+        35,
+        119,
+        409,
+        264
+      ],
+      "resized": [
+        220,
+        85
+      ],
+      "output": "frame_07.png"
+    }
+  ],
+  "operations": [
+    "magenta_unblend_alpha_threshold_60",
+    "tiny_component_cleanup",
+    "cell_crop",
+    "fit_256x128",
+    "transparent_export"
+  ]
+}

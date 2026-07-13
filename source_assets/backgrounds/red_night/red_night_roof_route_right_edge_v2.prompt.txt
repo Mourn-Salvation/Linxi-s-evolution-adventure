@@ -1,0 +1,14 @@
+Use the accepted left roof plate as the visual reference. Generate the RIGHT plate continuation for the same two-image stitched rooftop map.
+
+Asset type: 2D Godot background plate for a fake-3D belt-scroller rooftop route, RIGHT plate only.
+Primary request: Continue the accepted left roof plate naturally to the right, as if it is the next adjacent section of the same rooftop. The left edge of this new image must connect to the accepted left plate's right edge: same parapet height, same wet concrete floor scale, same floor grid perspective, same horizon height, same distant school/city building scale, same blue-black pre-dawn sky and thin rose-orange horizon glow.
+
+Scene/backdrop: continuation of the contemporary Chinese school rooftop during the Red Night outbreak. Rain-wet concrete roof, low parapet wall across the back, small roof vents and pipes kept low, distant school buildings and city silhouettes. The far RIGHT side of the image must show the right edge/corner of the building roof and a visible drop/side-wall silhouette beyond the parapet, so the full two-image map reads from the left building edge to the right building edge.
+
+Time requirement: the last few minutes before dawn, around 4:50-5:10 AM. It must match the reference image: deep blue-black sky lifting to pale cyan with a thin rose-orange horizon glow; wet surfaces reflect faint dawn and sparse red emergency lights. Not midnight, not sunset, not daytime.
+
+Style/medium: high-resolution painterly 2D game background, pixel-filter-friendly, dark survival horror mood, sharp readable forms, same style as the accepted left plate.
+
+Composition/framing: ultra-wide 21:9 side-readable brawler stage with fake-3D depth; broad lower rooftop floor band where characters can walk. Camera mostly side-on with slight top-down floor visibility. Keep the playable lower band open. The left third should feel like open continuation from the reference plate, not a new location or new camera angle. The far right should end with the rooftop's right edge.
+
+Constraints: no characters, no enemies, no UI, no text, no labels, no arrows, no readable signs, no huge roof access block dominating the plate, no sudden change in perspective, no foreground object blocking the walkable band. Avoid making it look like a separate cinematic shot; it must attach to the accepted left plate.

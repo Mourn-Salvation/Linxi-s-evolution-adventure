@@ -1,0 +1,99 @@
+[gd_resource type="Resource" script_class="MapData" load_steps=4 format=3]
+
+[ext_resource path="res://scripts/maps/map_data.gd" type="Script" id="1_map_data"]
+[ext_resource path="res://resources/items/red_night_item_visual_data.tres" type="Resource" id="2_item_visual"]
+[ext_resource path="res://resources/maps/empty_bed_visual_data.tres" type="Resource" id="3_visual"]
+
+[resource]
+script = ExtResource("1_map_data")
+map_id = "empty_bed_dorm_room"
+display_name = "Empty Bed"
+encounter_id = "empty_bed_dormitory_01"
+objective = "Search the dormitory room, inspect Su Ruo's empty bed, collect the clue, and leave toward the teaching building."
+story_id = "empty_bed"
+initial_body_attack_unlocked = false
+environment_theme = "RED_NIGHT"
+camera_mode = "FIXED_ROOM"
+visual_data = ExtResource("3_visual")
+footstep_surface = "CONCRETE"
+length = 880.0
+depth = 260.0
+player_spawn = Vector2(120, 178)
+walkable_areas = Array[Dictionary]([{
+"id": "dorm_room_floor",
+"position": Vector2(96, 122),
+"size": Vector2(688, 96)
+}])
+enemy_spawns = Array[Dictionary]([{
+"archetype": "human_student",
+"display_name": "Dorm Student",
+"family": "HUMAN",
+"id": "su_ruo_room_student_01",
+"ai_profile": "NON_COMBAT_WANDER",
+"appearance_id": 2,
+"facing": -1.0,
+"health": 10,
+"initial_state": "NEUTRAL",
+"position": Vector2(270, 176)
+}, {
+"archetype": "human_student",
+"display_name": "Dorm Student",
+"family": "HUMAN",
+"id": "su_ruo_room_student_02",
+"ai_profile": "NON_COMBAT_WANDER",
+"appearance_id": 3,
+"facing": 1.0,
+"health": 10,
+"initial_state": "NEUTRAL",
+"position": Vector2(460, 206)
+}, {
+"archetype": "human_student",
+"display_name": "Dorm Student",
+"family": "HUMAN",
+"id": "su_ruo_room_student_03",
+"ai_profile": "NON_COMBAT_WANDER",
+"appearance_id": 4,
+"facing": -1.0,
+"health": 10,
+"initial_state": "NEUTRAL",
+"position": Vector2(650, 178)
+}])
+items = Array[Dictionary]([{
+"active": true,
+"avatar_path": "res://assets/ui/dialogue_portraits/linxi_t_early.png",
+"dialogue": ["The lower bunk is empty.", "Su Ruo's blanket is twisted into a knot, as if she left in a hurry.", "Linxi cannot decide whether the emptiness is hope or another kind of wound."],
+"id": "su_ruo_empty_bed",
+"name": "Su Ruo's Empty Bed",
+"position": Vector2(430, 132),
+"speaker": "Linxi",
+"type": "dialogue"
+}, {
+"active": true,
+"dialogue": ["A torn page is tucked beneath the pillow.", "Su Ruo wrote only one line: \"If the alarm repeats, go to the teaching building.\""],
+"id": "su_ruo_first_clue",
+"name": "Folded Note",
+"position": Vector2(520, 150),
+"set_story_flag": "red_night_su_ruo_clue",
+"speaker": "Archive",
+"type": "dialogue"
+}, {
+"active": true,
+"avatar_path": "res://assets/ui/dialogue_portraits/linxi_t_early.png",
+"dialogue": ["A blood-smeared student ID lies near the right-side bed.", "The photo is Su Ruo. Her card is scratched, but the name is still readable.", "Linxi's throat tightens. Su Ruo was here, and she left in a hurry."],
+"id": "su_ruo_student_id",
+"name": "Su Ruo's Student ID",
+"position": Vector2(780, 170),
+"set_story_flag": "red_night_su_ruo_id_found",
+"speaker": "Linxi",
+"type": "dialogue"
+}, {
+"active": true,
+"destination_name": "Dormitory Second Floor",
+"id": "teaching_building_exit",
+"name": "Door Back to Second Floor",
+"position": Vector2(158, 72),
+"target_scene": "res://scenes/dormitory_second_floor.tscn",
+"target_spawn": Vector2(970, 5),
+"type": "transition"
+}])
+item_visual_data = ExtResource("2_item_visual")

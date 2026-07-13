@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="MapData" load_steps=3 format=3]
+
+[ext_resource path="res://scripts/maps/map_data.gd" type="Script" id="1"]
+[ext_resource path="res://resources/items/red_night_item_visual_data.tres" type="Resource" id="2_item_visual"]
+
+[resource]
+script = ExtResource("1")
+map_id = "shelter_memory_classroom"
+display_name = "Roof Stairwell Shelter"
+encounter_id = "shelter_memory_classroom_01"
+objective = "Catch your breath. Review Linxi's state before returning to the route."
+story_id = "shelter"
+initial_body_attack_unlocked = true
+environment_theme = "EVALUATION"
+camera_mode = "FIXED_ROOM"
+footstep_surface = "CONCRETE"
+length = 840.0
+depth = 220.0
+player_spawn = Vector2(420, 120)
+enemy_spawns = Array[Dictionary]([])
+items = Array[Dictionary]([{
+"active": true,
+"destination_name": "Courtyard Fall Site",
+"id": "return_to_red_night",
+"name": "Return Route",
+"position": Vector2(720, 120),
+"target_scene": "res://scenes/red_night.tscn",
+"type": "transition"
+}])
+item_visual_data = ExtResource("2_item_visual")

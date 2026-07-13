@@ -1,0 +1,78 @@
+{
+  "source": "built-in image_gen",
+  "layout": "2x2 per variant: top left/right are left wind-up/strike, bottom left/right are right wind-up/strike",
+  "variants": {
+    "variant_00": [
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_00\\left_00.png",
+        "label": "left wind-up"
+      },
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_00\\left_01.png",
+        "label": "left strike"
+      },
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_00\\right_00.png",
+        "label": "right wind-up"
+      },
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_00\\right_01.png",
+        "label": "right strike"
+      }
+    ],
+    "variant_01": [
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_01\\left_00.png",
+        "label": "left wind-up"
+      },
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_01\\left_01.png",
+        "label": "left strike"
+      },
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_01\\right_00.png",
+        "label": "right wind-up"
+      },
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_01\\right_01.png",
+        "label": "right strike"
+      }
+    ],
+    "variant_02": [
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_02\\left_00.png",
+        "label": "left wind-up"
+      },
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_02\\left_01.png",
+        "label": "left strike"
+      },
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_02\\right_00.png",
+        "label": "right wind-up"
+      },
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_02\\right_01.png",
+        "label": "right strike"
+      }
+    ],
+    "variant_03": [
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_03\\left_00.png",
+        "label": "left wind-up"
+      },
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_03\\left_01.png",
+        "label": "left strike"
+      },
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_03\\right_00.png",
+        "label": "right wind-up"
+      },
+      {
+        "file": "E:\\Linxi's evaluation adventure\\assets\\sprites\\enemies\\zombie_student\\attack\\variant_03\\right_01.png",
+        "label": "right strike"
+      }
+    ]
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "source": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\human_student\\female_appearance_variants_approved_v1\\run_variant_03_long_straight_black_hair\\raw-sheet.png",
+  "source_sha256": "e7f8b3844adcb7e335a366c8920986fea065ad872040c7e52bcb1050326cf73f",
+  "variant": "appearance_id_03_long_straight_black_hair",
+  "rows": 2,
+  "cols": 4,
+  "frame_size": 256,
+  "target_visible_height": 122,
+  "baseline_y": 242,
+  "center_x": 128,
+  "frames": [
+    {
+      "index": 0,
+      "source_bbox": [
+        160,
+        69,
+        298,
+        421
+      ],
+      "resized": [
+        48,
+        122
+      ],
+      "placed": [
+        104,
+        120
+      ],
+      "largest_component_only": true
+    },
+    {
+      "index": 1,
+      "source_bbox": [
+        99,
+        73,
+        293,
+        418
+      ],
+      "resized": [
+        69,
+        122
+      ],
+      "placed": [
+        94,
+        120
+      ],
+      "largest_component_only": true
+    },
+    {
+      "index": 2,
+      "source_bbox": [
+        59,
+        76,
+        384,
+        387
+      ],
+      "resized": [
+        127,
+        122
+      ],
+      "placed": [
+        64,
+        120
+      ],
+      "largest_component_only": true
+    },
+    {
+      "index": 3,
+      "source_bbox": [
+        80,
+        80,
+        353,
+        419
+      ],
+      "resized": [
+        98,
+        122
+      ],
+      "placed": [
+        79,
+        120
+      ],
+      "largest_component_only": true
+    },
+    {
+      "index": 4,
+      "source_bbox": [
+        89,
+        62,
+        339,
+        408
+      ],
+      "resized": [
+        88,
+        122
+      ],
+      "placed": [
+        84,
+        120
+      ],
+      "largest_component_only": true
+    },
+    {
+      "index": 5,
+      "source_bbox": [
+        116,
+        72,
+        292,
+        407
+      ],
+      "resized": [
+        64,
+        122
+      ],
+      "placed": [
+        96,
+        120
+      ],
+      "largest_component_only": true
+    },
+    {
+      "index": 6,
+      "source_bbox": [
+        63,
+        70,
+        363,
+        393
+      ],
+      "resized": [
+        113,
+        122
+      ],
+      "placed": [
+        72,
+        120
+      ],
+      "largest_component_only": true
+    },
+    {
+      "index": 7,
+      "source_bbox": [
+        122,
+        67,
+        280,
+        409
+      ],
+      "resized": [
+        56,
+        122
+      ],
+      "placed": [
+        100,
+        120
+      ],
+      "largest_component_only": true
+    }
+  ],
+  "operations": [
+    "magenta_chroma_alpha",
+    "largest_connected_character_component",
+    "cell_crop",
+    "bbox_crop",
+    "uniform_scale",
+    "baseline_align",
+    "horizontal_mirror"
+  ]
+}

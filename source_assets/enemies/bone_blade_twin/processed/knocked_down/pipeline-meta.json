@@ -1,0 +1,64 @@
+{
+  "target": "creature",
+  "mode": "knocked_down",
+  "prompt": "",
+  "role": "",
+  "input": "E:\\Linxi's evaluation adventure\\source_assets\\enemies\\bone_blade_twin\\bone_blade_twin_knocked_down_raw.png",
+  "threshold": 100,
+  "edge_threshold": 150,
+  "duration": 200,
+  "rows": 1,
+  "cols": 1,
+  "cell_size": 256,
+  "fit_scale": 0.82,
+  "trim_border": 4,
+  "edge_clean_depth": 6,
+  "align": "bottom",
+  "shared_scale": true,
+  "component_mode": "largest",
+  "component_padding": 3,
+  "min_component_area": 1,
+  "edge_touch_margin": 0,
+  "frame_labels": [
+    "knocked_down-1"
+  ],
+  "frames": [
+    {
+      "grid": [
+        0,
+        0
+      ],
+      "source_box": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "component_mode": "largest",
+      "component_count": 72,
+      "selected_component_area": 266444,
+      "selected_component_bbox": [
+        102,
+        313,
+        1442,
+        804
+      ],
+      "crop_bbox": [
+        99,
+        310,
+        1445,
+        807
+      ],
+      "edge_touch": false,
+      "output_size": [
+        209,
+        77
+      ],
+      "paste_position": [
+        23,
+        156
+      ]
+    }
+  ],
+  "edge_touch_frames": []
+}

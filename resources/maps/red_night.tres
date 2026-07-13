@@ -1,0 +1,157 @@
+[gd_resource type="Resource" script_class="MapData" load_steps=4 format=3]
+
+[ext_resource path="res://scripts/maps/map_data.gd" type="Script" id="1"]
+[ext_resource path="res://resources/maps/red_night_courtyard_visual_data.tres" type="Resource" id="2_visual"]
+[ext_resource path="res://resources/items/red_night_item_visual_data.tres" type="Resource" id="3_item_visual"]
+
+[resource]
+script = ExtResource("1")
+map_id = "red_night_courtyard"
+display_name = "Red Night Courtyard"
+encounter_id = "red_night_awakening_01"
+objective = "Wake, drink the chopper-dropped blue stock solution, and reach the roof stairs."
+story_id = "red_night"
+initial_body_attack_unlocked = false
+environment_theme = "RED_NIGHT"
+visual_data = ExtResource("2_visual")
+footstep_surface = "WET"
+length = 3280.0
+depth = 280.0
+player_spawn = Vector2(141, 95)
+enemy_spawns = Array[Dictionary]([{
+"family": "HUMAN",
+"id": "human_student",
+"ai_profile": "NON_COMBAT_WANDER",
+"appearance_id": 1,
+"initial_state": "DORMANT",
+"position": Vector2(632, 160)
+}, {
+"family": "ZOMBIE",
+"id": "courtyard_scout",
+"ai_profile": "NEUTRAL_WANDER",
+"appearance_id": 0,
+"initial_state": "DORMANT",
+"position": Vector2(890, 175),
+"story_group": "scout"
+}, {
+"family": "ZOMBIE",
+"id": "infected_01",
+"ai_profile": "NEUTRAL_WANDER",
+"appearance_id": 1,
+"initial_state": "DORMANT",
+"position": Vector2(1476, 125),
+"story_group": "claw_tutorial_infected"
+}, {
+"family": "ZOMBIE",
+"id": "infected_02",
+"ai_profile": "NEUTRAL_WANDER",
+"appearance_id": 2,
+"initial_state": "DORMANT",
+"position": Vector2(1687, 205),
+"story_group": "claw_tutorial_infected"
+}, {
+"family": "ZOMBIE",
+"id": "infected_03",
+"ai_profile": "NEUTRAL_WANDER",
+"appearance_id": 3,
+"initial_state": "DORMANT",
+"position": Vector2(1898, 270),
+"story_group": "claw_tutorial_infected"
+}, {
+"archetype": "human_student",
+"family": "HUMAN",
+"id": "dorm_human_student_01",
+"ai_profile": "NON_COMBAT_WANDER",
+"appearance_id": 2,
+"initial_state": "DORMANT",
+"neutral_direction": 1.0,
+"position": Vector2(2437, 155),
+"story_group": "dormitory_civilians"
+}, {
+"archetype": "human_student",
+"family": "HUMAN",
+"id": "dorm_human_student_02",
+"ai_profile": "NON_COMBAT_WANDER",
+"appearance_id": 3,
+"initial_state": "DORMANT",
+"neutral_direction": 1.0,
+"position": Vector2(2553, 95),
+"story_group": "dormitory_civilians"
+}, {
+"archetype": "human_student",
+"family": "HUMAN",
+"id": "dorm_human_student_03",
+"ai_profile": "NON_COMBAT_WANDER",
+"appearance_id": 4,
+"initial_state": "DORMANT",
+"neutral_direction": 1.0,
+"position": Vector2(2670, 205),
+"story_group": "dormitory_civilians"
+}, {
+"archetype": "human_student",
+"family": "HUMAN",
+"id": "dorm_human_student_04",
+"ai_profile": "NON_COMBAT_WANDER",
+"appearance_id": 5,
+"initial_state": "DORMANT",
+"neutral_direction": 1.0,
+"position": Vector2(2741, 145),
+"story_group": "dormitory_civilians"
+}, {
+"ai_profile": "ZOMBIE_CHASE_HUMAN",
+"family": "ZOMBIE",
+"id": "dormitory_infected_01",
+"appearance_id": 2,
+"initial_state": "DORMANT",
+"position": Vector2(1850, 150),
+"story_group": "dormitory_wave"
+}, {
+"ai_profile": "ZOMBIE_CHASE_HUMAN",
+"family": "ZOMBIE",
+"id": "dormitory_infected_02",
+"appearance_id": 0,
+"initial_state": "DORMANT",
+"position": Vector2(2038, 230),
+"story_group": "dormitory_wave"
+}, {
+"ai_profile": "ZOMBIE_CHASE_HUMAN",
+"family": "ZOMBIE",
+"id": "dormitory_infected_03",
+"appearance_id": 3,
+"initial_state": "DORMANT",
+"position": Vector2(2179, 180),
+"story_group": "dormitory_wave"
+}, {
+"ai_profile": "ZOMBIE_CHASE_HUMAN",
+"family": "ZOMBIE",
+"id": "dormitory_infected_04",
+"appearance_id": 1,
+"initial_state": "DORMANT",
+"position": Vector2(2319, 80),
+"story_group": "dormitory_wave"
+}, {
+"ai_profile": "ZOMBIE_CHASE_HUMAN",
+"family": "ZOMBIE",
+"id": "dormitory_infected_05",
+"appearance_id": 2,
+"initial_state": "DORMANT",
+"position": Vector2(2460, 260),
+"story_group": "dormitory_wave"
+}])
+items = Array[Dictionary]([{
+"active": true,
+"event_id": "drink_blue_stock",
+"id": "chopper_nebulizer",
+"name": "Dropped Chopper Nebulizer",
+"position": Vector2(398, 140),
+"type": "story"
+}, {
+"active": true,
+"destination_name": "Dormitory Lobby",
+"id": "roof_stairwell_transition",
+"name": "Dormitory Main Gate",
+"position": Vector2(2750, 8),
+"target_scene": "res://scenes/dormitory_lobby.tscn",
+"type": "transition"
+}])
+item_visual_data = ExtResource("3_item_visual")

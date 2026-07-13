@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linxi T-form Slow Walk - zealman API 控制台</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { width: 100%; height: 100%; }
+        body { 
+            background: radial-gradient(circle at top, #eff6ff 0%, #f8fafc 42%, #eef2ff 100%);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1e293b;
+            line-height: 1.5;
+            padding: 14px;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            height: calc(100vh - 28px);
+            max-width: none;
+            margin: 0;
+        }
+        .card { 
+            background: #ffffff; 
+            border-radius: 20px; 
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            padding: 28px 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .title {
+            font-size: 30px;
+            font-weight: 800;
+            background: linear-gradient(to right, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 12px;
+        }
+        .endpoint-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            background: #eff6ff;
+            border: 1px solid #dbeafe;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 12px;
+            color: #1d4ed8;
+        }
+        .content { padding: 18px; flex: 1; min-height: 0; }
+        .api-note {
+            margin: 0 0 14px;
+            padding: 10px 12px;
+            border-radius: 12px;
+            border: 1px solid #bfdbfe;
+            background: #eff6ff;
+            color: #1e3a8a;
+            font-size: 12px;
+            line-height: 1.55;
+        }
+        .api-note code {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid #dbeafe;
+            border-radius: 6px;
+            padding: 1px 5px;
+            color: #1d4ed8;
+        }
+        .content-grid {
+            display: grid;
+            grid-template-columns: minmax(360px, 460px) minmax(0, 1fr);
+            gap: 18px;
+            align-items: stretch;
+            min-height: 0;
+            height: 100%;
+        }
+        .left-pane, .right-pane {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 8px 20px -14px rgba(15, 23, 42, 0.4);
+            min-height: 0;
+        }
+        .left-pane { display: flex; flex-direction: column; }
+        .right-pane {
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        #workflowForm { overflow-y: auto; padding-right: 4px; }
+        @media (max-width: 980px) {
+            .content-grid { grid-template-columns: 1fr; }
+            .container { height: auto; min-height: calc(100vh - 28px); }
+            .card { height: auto; min-height: calc(100vh - 28px); }
+            .content-grid { height: auto; }
+            #workflowForm { max-height: none; overflow: visible; }
+        }
+        .section-title {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .field-group {
+            margin-bottom: 14px;
+            background: linear-gradient(180deg, #ffffff, #f8fafc);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 12px;
+        }
+        .field-label-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+        .field-label { font-size: 13px; font-weight: 700; color: #0f172a; }
+        .field-type {
+            font-size: 10px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            background: #eef2ff;
+            color: #4338ca;
+            padding: 2px 6px;
+            border-radius: 6px;
+            border: 1px solid #c7d2fe;
+        }
+        .field-input, .field-textarea {
+            width: 100%;
+            background: #ffffff;
+            border: 1px solid #dbe4ef;
+            border-radius: 10px;
+            padding: 10px 12px;
+            font-size: 13px;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+        .field-textarea { min-height: 90px; resize: vertical; }
+        .upload-zone {
+            position: relative;
+            border: 1px dashed #cbd5e1;
+            border-radius: 12px;
+            padding: 18px;
+            background: #f8fafc;
+            text-align: center;
+            transition: all 0.2s ease;
+            overflow: hidden;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .upload-zone:hover {
+            border-color: #6366f1;
+            background: #eef2ff;
+        }
+        .upload-zone input[type=file] {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+        }
+        .upload-hint { position: relative; z-index: 1; pointer-events: none; }
+        .upload-preview {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            margin-top: 10px;
+            pointer-events: none;
+        }
+        .upload-preview-media {
+            width: 100%;
+            max-height: 210px;
+            object-fit: contain;
+            border-radius: 10px;
+            border: 1px solid #dbeafe;
+            background: #ffffff;
+        }
+        .upload-preview-audio {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(to right, #2563eb, #4f46e5);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+            filter: brightness(1.1);
+        }
+        .btn-submit:disabled {
+            background: #94a3b8;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        .result-area { margin-top: 2px; flex: 1; overflow: auto; min-height: 0; }
+        .result-card {
+            position: relative;
+            background: transparent;
+            border: none;
+            border-radius: 6px;
+            padding: 0;
+            box-shadow: none;
+            overflow: visible;
+        }
+        .result-thumb {
+            width: 100%;
+            height: auto;
+            max-height: 260px;
+            object-fit: contain;
+            border-radius: 6px;
+            background: #f8fafc;
+            border: none;
+            display: block;
+            cursor: zoom-in;
+        }
+        .result-audio {
+            width: 100%;
+            border-radius: 6px;
+        }
+        .viewer {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.48);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .viewer-content {
+            max-width: min(1280px, 96vw);
+            max-height: 90vh;
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            box-shadow: none;
+        }
+        .viewer img, .viewer video {
+            width: 100%;
+            max-height: calc(90vh - 80px);
+            object-fit: contain;
+            border-radius: 6px;
+            display: block;
+            background: transparent;
+        }
+        .viewer-close {
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            width: 34px;
+            height: 34px;
+            border: 1px solid #e2e8f0;
+            border-radius: 999px;
+            background: #ffffff;
+            color: #475569;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 34px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
+        }
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        .result-placeholder {
+            margin-top: 8px;
+            flex: 1;
+            border: 1px dashed #cbd5e1;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f8fafc, #eef2ff);
+            color: #64748b;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #3b82f6 !important;
+            background: #ffffff !important;
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+        
+        /* 进度条样式 */
+        .progress-panel {
+            margin-top: 24px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+        }
+        .progress-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #64748b;
+        }
+        .progress-bar-bg {
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background: linear-gradient(to right, #2563eb, #7c3aed);
+            transition: width 0.3s ease;
+        }
+        .progress-bar-fill.node {
+            background: linear-gradient(to right, #10b981, #3b82f6);
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1 class="title">zealman-ComfyUI QQ群1046279436</h1>
+                <div class="endpoint-tag">
+                    <span style="margin-right: 8px; opacity: 0.5;">POST</span>
+                    https://uu1025211-78012eab3400.bjb2.seetacloud.com:8443/api/workflow/generate
+                </div>
+            </div>
+            
+            <div class="content">
+                <div class="content-grid">
+                    <div class="left-pane">
+                        <div class="section-title">
+                            <span style="background: #f1f5f9; padding: 4px; border-radius: 6px;">⚙️</span>
+                            参数设置
+                        </div>
+                        <div class="api-note">
+                            <strong>文件参数说明：</strong>图片、视频、音频等字段支持公网 <code>http/https</code> URL、<code>data:*;base64,...</code>，或先 <code>POST /api/comfy/upload/file</code> 上传后填写返回的 <code>name</code>。Base64 默认单次 50MB 上限，公网 URL 会拦截 localhost、内网和保留 IP。
+                        </div>
+                        <div class="api-note"><strong>Required input:</strong> upload <code>ComfyUI_00024_.png</code>. Generate the canonical 4x4 directional slow-walk sheet. Save both branches in the Early T-form source folder.</div><form id="workflowForm">
+                            
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">CFG Scale</label>
+                        <span class="field-type">FLOAT</span>
+                    </div>
+                    
+                    <input type="number" id="247:cfg" value="1" 
+                        step="0.1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">批次大小</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="249:batch_size" value="1" 
+                        step="1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">CFG Scale</label>
+                        <span class="field-type">FLOAT</span>
+                    </div>
+                    
+                    <input type="number" id="257:cfg" value="1" 
+                        step="0.1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">批次大小</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="259:batch_size" value="1" 
+                        step="1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">迭代步数</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="263:steps" value="16" 
+                        step="1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">upscale_method (节点 264)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="264:upscale_method" class="field-textarea">lanczos</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">megapixels (节点 264)</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="264:megapixels" value="1" 
+                        step="1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">resolution_steps (节点 264)</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="264:resolution_steps" value="1" 
+                        step="1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">upscale_method (节点 267)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="267:upscale_method" class="field-textarea">lanczos</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">megapixels (节点 267)</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="267:megapixels" value="1" 
+                        step="1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">resolution_steps (节点 267)</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="267:resolution_steps" value="1" 
+                        step="1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">strength_model (节点 268)</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="268:strength_model" value="1" 
+                        step="1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">strength_model (节点 269)</label>
+                        <span class="field-type">FLOAT</span>
+                    </div>
+                    
+                    <input type="number" id="269:strength_model" value="0.8000000000000002" 
+                        step="0.1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">上传图片 (节点 270)</label>
+                        <span class="field-type">FILE</span>
+                    </div>
+                    
+                    <div class="upload-zone" id="270:image_zone">
+                        <input type="file" id="270:image" accept="image/*">
+                        <div class="upload-hint" id="270:image_hint">
+                            <div style="font-size:28px;margin-bottom:8px">🖼️</div>
+                            <div style="font-size:13px;color:#64748b;font-weight:500">点击上传图片</div>
+                            <div id="270:image_filename" style="margin-top:6px;font-size:12px;color:#3b82f6;font-weight:600;display:none"></div>
+                        </div>
+                        <div class="upload-preview" id="270:image_previewWrap" style="display:none">
+                            <img id="270:image_previewImage" class="upload-preview-media" style="display:none" alt="preview" />
+                            <video id="270:image_previewVideo" class="upload-preview-media" style="display:none" controls muted playsinline></video>
+                            <audio id="270:image_previewAudio" class="upload-preview-audio" style="display:none" controls></audio>
+                        </div>
+                    </div>
+                    <script>
+                        (function () {
+                            const inputEl = document.getElementById('270:image');
+                            const el = document.getElementById('270:image_filename');
+                            const zone = document.getElementById('270:image_zone');
+                            const previewWrap = document.getElementById('270:image_previewWrap');
+                            const previewImage = document.getElementById('270:image_previewImage');
+                            const previewVideo = document.getElementById('270:image_previewVideo');
+                            const previewAudio = document.getElementById('270:image_previewAudio');
+                            let objectUrl = '';
+
+                            inputEl.addEventListener('change', function(e) {
+                                const file = e.target.files && e.target.files[0];
+                                if (objectUrl) {
+                                    URL.revokeObjectURL(objectUrl);
+                                    objectUrl = '';
+                                }
+                                previewImage.style.display = 'none';
+                                previewVideo.style.display = 'none';
+                                previewAudio.style.display = 'none';
+
+                                if (!file) {
+                                    previewWrap.style.display = 'none';
+                                    el.style.display = 'none';
+                                    zone.style.borderColor = '';
+                                    zone.style.background = '';
+                                    return;
+                                }
+
+                                objectUrl = URL.createObjectURL(file);
+                                const mimeType = file.type || '';
+                                el.textContent = '✓ ' + file.name;
+                                el.style.display = 'block';
+                                zone.style.borderColor = '#6366f1';
+                                zone.style.background = '#eef2ff';
+                                previewWrap.style.display = 'block';
+
+                                if (mimeType.startsWith('image/')) {
+                                    previewImage.src = objectUrl;
+                                    previewImage.style.display = 'block';
+                                } else if (mimeType.startsWith('video/')) {
+                                    previewVideo.src = objectUrl;
+                                    previewVideo.style.display = 'block';
+                                } else if (mimeType.startsWith('audio/')) {
+                                    previewAudio.src = objectUrl;
+                                    previewAudio.style.display = 'block';
+                                } else {
+                                    previewWrap.style.display = 'none';
+                                }
+                            });
+
+                            window.addEventListener('beforeunload', function () {
+                                if (objectUrl) URL.revokeObjectURL(objectUrl);
+                            });
+                        })();
+                    </script>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">weight_dtype (节点 271)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="271:weight_dtype" class="field-textarea">default</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">type (节点 272)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="272:type" class="field-textarea">flux2</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">device (节点 272)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="272:device" class="field-textarea">default</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">type (节点 273)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="273:type" class="field-textarea">flux2</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">device (节点 273)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="273:device" class="field-textarea">default</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">weight_dtype (节点 274)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="274:weight_dtype" class="field-textarea">default</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">noise_seed (节点 277)</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="277:noise_seed" value="453280520098690" 
+                        step="1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">font_file (节点 279)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="279:font_file" class="field-textarea">Alibaba-PuHuiTi-Heavy.ttf</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">font_size (节点 279)</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="279:font_size" value="40" 
+                        step="1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">border (节点 279)</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="279:border" value="8" 
+                        step="1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">color_theme (节点 279)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="279:color_theme" class="field-textarea">light</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">image1_text (节点 280)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="280:image1_text" class="field-textarea">reference</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">image2_text (节点 280)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="280:image2_text" class="field-textarea">walk-v1</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">image3_text (节点 280)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="280:image3_text" class="field-textarea">walk-klein</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">image4_text (节点 280)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="280:image4_text" class="field-textarea"></textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">reel_height (节点 280)</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="280:reel_height" value="1024" 
+                        step="1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">border (节点 280)</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="280:border" value="32" 
+                        step="1" class="field-input">
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">提示词 (节点 281)</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="281:text" class="field-textarea">Create one 4x4 sprite sheet with exactly sixteen equal cells. Use the uploaded Linxi image as the exact character reference. Each row is one four-frame slow walking cycle.
+
+Row 1: Linxi walks toward screen-right in a side-oriented gameplay view.
+Row 2: Linxi walks toward screen-left in a mirrored side-oriented gameplay view.
+Row 3: Linxi walks downstage, diagonally toward the camera, with her front and side both visible.
+Row 4: Linxi walks upstage, diagonally away from the camera, with her back and side both visible.
+
+In every row, columns 1 to 4 are: contact, passing, opposite contact, passing. Her movement is slow, tired, cautious, and slightly stiff. Use short restrained steps and minimal arm swing.
+
+Keep exactly the same adult Linxi identity, short black hair, round glasses when visible, pale gray skin, red eyes when visible, damaged white shirt, short knee-length pleated skirt, dark leggings, black shoes, proportions, body height, camera elevation, and scale in all sixteen cells. Keep each full body centered. Keep the feet on the same bottom anchor line in every cell. Nothing crosses a cell edge.
+
+Perfectly flat solid #FF00FF background. No grid lines, borders, labels, text, floor, shadow, extra character, duplicate body inside a cell, running, long strides, crossed legs, fashion pose, attack pose, long skirt, gore, or detached effects.</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">文件名前缀</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="282:filename_prefix" class="field-textarea">linxi/t_early/slow_walk_v1_</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">文件名前缀</label>
+                        <span class="field-type">STRING</span>
+                    </div>
+                    
+                    <textarea id="283:filename_prefix" class="field-textarea">linxi/t_early/slow_walk_klein_</textarea>
+                </div>
+                <div class="field-group">
+                    <div class="field-label-row">
+                        <label class="field-label">迭代步数</label>
+                        <span class="field-type">INT</span>
+                    </div>
+                    
+                    <input type="number" id="287:steps" value="24" 
+                        step="1" class="field-input">
+                </div>
+                            <button type="button" id="submitBtn" class="btn-submit">
+                                <span>开始生成</span>
+                            </button>
+                        </form>
+
+                        <div id="progressArea" style="display: none;" class="progress-panel">
+                            <div class="progress-label">
+                                <span>整体渲染进度</span>
+                                <span id="workflowProgressText">0%</span>
+                            </div>
+                            <div class="progress-bar-bg">
+                                <div id="workflowProgressBar" class="progress-bar-fill" style="width: 0%"></div>
+                            </div>
+                            <div class="progress-label">
+                                <span id="currentNodeText">准备中...</span>
+                                <span id="nodeProgressText">0%</span>
+                            </div>
+                            <div class="progress-bar-bg" style="margin-bottom: 0">
+                                <div id="nodeProgressBar" class="progress-bar-fill node" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right-pane">
+                        <div class="section-title">
+                            <span style="background: #f1f5f9; padding: 4px; border-radius: 6px;">✨</span>
+                            生成结果
+                        </div>
+                        <div id="resultArea" style="display: none;" class="result-area">
+                            <div id="resultContainer" class="results-grid"></div>
+                        </div>
+                        <div id="resultPlaceholder" class="result-placeholder">
+                            提交参数后，这里会展示图片 / 视频 / 音频结果
+                        </div>
+                        <div id="logs" style="display:none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="mediaViewer" class="viewer">
+            <button id="viewerCloseBtn" class="viewer-close" type="button">×</button>
+            <div class="viewer-content" id="viewerContent"></div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'https://uu1025211-78012eab3400.bjb2.seetacloud.com:8443';
+        const ENDPOINT = 'https://uu1025211-78012eab3400.bjb2.seetacloud.com:8443/api/workflow/generate';
+        const WORKFLOW_ID = 'D12-图生图-Flux2Klein单图';
+        const CONFIG = {"247:cfg":{"label":"CFG Scale","type":"float","default":1,"nodeId":"247","field":"cfg","classType":"CFGGuider"},"249:batch_size":{"label":"批次大小","type":"int","default":1,"nodeId":"249","field":"batch_size","classType":"EmptyFlux2LatentImage"},"257:cfg":{"label":"CFG Scale","type":"float","default":1,"nodeId":"257","field":"cfg","classType":"CFGGuider"},"259:batch_size":{"label":"批次大小","type":"int","default":1,"nodeId":"259","field":"batch_size","classType":"EmptyFlux2LatentImage"},"263:steps":{"label":"迭代步数","type":"int","default":8,"nodeId":"263","field":"steps","classType":"Flux2Scheduler"},"264:upscale_method":{"label":"upscale_method (节点 264)","type":"string","default":"lanczos","nodeId":"264","field":"upscale_method","classType":"ImageScaleToTotalPixels"},"264:megapixels":{"label":"megapixels (节点 264)","type":"int","default":1,"nodeId":"264","field":"megapixels","classType":"ImageScaleToTotalPixels"},"264:resolution_steps":{"label":"resolution_steps (节点 264)","type":"int","default":1,"nodeId":"264","field":"resolution_steps","classType":"ImageScaleToTotalPixels"},"267:upscale_method":{"label":"upscale_method (节点 267)","type":"string","default":"lanczos","nodeId":"267","field":"upscale_method","classType":"ImageScaleToTotalPixels"},"267:megapixels":{"label":"megapixels (节点 267)","type":"int","default":1,"nodeId":"267","field":"megapixels","classType":"ImageScaleToTotalPixels"},"267:resolution_steps":{"label":"resolution_steps (节点 267)","type":"int","default":1,"nodeId":"267","field":"resolution_steps","classType":"ImageScaleToTotalPixels"},"268:strength_model":{"label":"strength_model (节点 268)","type":"int","default":1,"nodeId":"268","field":"strength_model","classType":"LoraLoaderModelOnly"},"269:strength_model":{"label":"strength_model (节点 269)","type":"float","default":0.8000000000000002,"nodeId":"269","field":"strength_model","classType":"LoraLoaderModelOnly"},"270:image":{"label":"上传图片 (节点 270)","type":"file","nodeId":"270","field":"image","classType":"LoadImage"},"271:weight_dtype":{"label":"weight_dtype (节点 271)","type":"string","default":"default","nodeId":"271","field":"weight_dtype","classType":"UNETLoader"},"272:type":{"label":"type (节点 272)","type":"string","default":"flux2","nodeId":"272","field":"type","classType":"CLIPLoader"},"272:device":{"label":"device (节点 272)","type":"string","default":"default","nodeId":"272","field":"device","classType":"CLIPLoader"},"273:type":{"label":"type (节点 273)","type":"string","default":"flux2","nodeId":"273","field":"type","classType":"CLIPLoader"},"273:device":{"label":"device (节点 273)","type":"string","default":"default","nodeId":"273","field":"device","classType":"CLIPLoader"},"274:weight_dtype":{"label":"weight_dtype (节点 274)","type":"string","default":"default","nodeId":"274","field":"weight_dtype","classType":"UNETLoader"},"277:noise_seed":{"label":"noise_seed (节点 277)","type":"int","default":453280520098690,"nodeId":"277","field":"noise_seed","classType":"RandomNoise"},"279:font_file":{"label":"font_file (节点 279)","type":"string","default":"Alibaba-PuHuiTi-Heavy.ttf","nodeId":"279","field":"font_file","classType":"LayerUtility: ImageReelComposit"},"279:font_size":{"label":"font_size (节点 279)","type":"int","default":40,"nodeId":"279","field":"font_size","classType":"LayerUtility: ImageReelComposit"},"279:border":{"label":"border (节点 279)","type":"int","default":8,"nodeId":"279","field":"border","classType":"LayerUtility: ImageReelComposit"},"279:color_theme":{"label":"color_theme (节点 279)","type":"string","default":"light","nodeId":"279","field":"color_theme","classType":"LayerUtility: ImageReelComposit"},"280:image1_text":{"label":"image1_text (节点 280)","type":"string","default":"original","nodeId":"280","field":"image1_text","classType":"LayerUtility: ImageReel"},"280:image2_text":{"label":"image2_text (节点 280)","type":"string","default":"V1","nodeId":"280","field":"image2_text","classType":"LayerUtility: ImageReel"},"280:image3_text":{"label":"image3_text (节点 280)","type":"string","default":"klein","nodeId":"280","field":"image3_text","classType":"LayerUtility: ImageReel"},"280:image4_text":{"label":"image4_text (节点 280)","type":"string","default":"","nodeId":"280","field":"image4_text","classType":"LayerUtility: ImageReel"},"280:reel_height":{"label":"reel_height (节点 280)","type":"int","default":1024,"nodeId":"280","field":"reel_height","classType":"LayerUtility: ImageReel"},"280:border":{"label":"border (节点 280)","type":"int","default":32,"nodeId":"280","field":"border","classType":"LayerUtility: ImageReel"},"281:text":{"label":"提示词 (节点 281)","type":"string","default":"Generate black and white pen sketches and digital paintings from photos, completely removing all color elements while retaining the poses and expressions of people and animals. Transform the entire image into a highly detailed black and white pen sketch digital painting, adopting a hand-drawn realistic style, depicting facial contours, hair texture, clothing wrinkles, and fabric texture with fine lines and layered shadows, creating a strong contrast of light and shadow, and creating a three-dimensional effect through fine lines.","nodeId":"281","field":"text","classType":"CR Text"},"282:filename_prefix":{"label":"文件名前缀","type":"string","default":"ComfyUI","nodeId":"282","field":"filename_prefix","classType":"SaveImage"},"283:filename_prefix":{"label":"文件名前缀","type":"string","default":"ComfyUI","nodeId":"283","field":"filename_prefix","classType":"SaveImage"},"287:steps":{"label":"迭代步数","type":"int","default":16,"nodeId":"287","field":"steps","classType":"Flux2Scheduler"}};
+        const WORKFLOW = {"242":{"inputs":{"conditioning":["265",0],"latent":["246",0]},"class_type":"ReferenceLatent","_meta":{"title":"参考Latent"}},"243":{"inputs":{"conditioning":["265",0]},"class_type":"ConditioningZeroOut","_meta":{"title":"条件零化"}},"244":{"inputs":{"conditioning":["243",0],"latent":["246",0]},"class_type":"ReferenceLatent","_meta":{"title":"参考Latent"}},"245":{"inputs":{"noise":["277",0],"guider":["247",0],"sampler":["286",0],"sigmas":["263",0],"latent_image":["249",0]},"class_type":"SamplerCustomAdvanced","_meta":{"title":"自定义采样器（高级）"}},"246":{"inputs":{"pixels":["264",0],"vae":["251",0]},"class_type":"VAEEncode","_meta":{"title":"VAE编码"}},"247":{"inputs":{"cfg":1,"model":["269",0],"positive":["242",0],"negative":["244",0]},"class_type":"CFGGuider","_meta":{"title":"CFG引导器"}},"248":{"inputs":{"images":["275",0]},"class_type":"PreviewImage","_meta":{"title":"预览图像"}},"249":{"inputs":{"width":["250",0],"height":["250",1],"batch_size":1},"class_type":"EmptyFlux2LatentImage","_meta":{"title":"空Latent图像（Flux2）"}},"250":{"inputs":{"image":["264",0]},"class_type":"GetImageSize","_meta":{"title":"获取图像尺寸"}},"251":{"inputs":{"vae_name":"flux2-vae.safetensors"},"class_type":"VAELoader","_meta":{"title":"加载VAE"}},"252":{"inputs":{"conditioning":["266",0],"latent":["256",0]},"class_type":"ReferenceLatent","_meta":{"title":"参考Latent"}},"253":{"inputs":{"conditioning":["266",0]},"class_type":"ConditioningZeroOut","_meta":{"title":"条件零化"}},"254":{"inputs":{"conditioning":["253",0],"latent":["256",0]},"class_type":"ReferenceLatent","_meta":{"title":"参考Latent"}},"255":{"inputs":{"noise":["277",0],"guider":["257",0],"sampler":["285",0],"sigmas":["287",0],"latent_image":["259",0]},"class_type":"SamplerCustomAdvanced","_meta":{"title":"自定义采样器（高级）"}},"256":{"inputs":{"pixels":["267",0],"vae":["261",0]},"class_type":"VAEEncode","_meta":{"title":"VAE编码"}},"257":{"inputs":{"cfg":1,"model":["268",0],"positive":["252",0],"negative":["254",0]},"class_type":"CFGGuider","_meta":{"title":"CFG引导器"}},"258":{"inputs":{"images":["276",0]},"class_type":"PreviewImage","_meta":{"title":"预览图像"}},"259":{"inputs":{"width":["260",0],"height":["260",1],"batch_size":1},"class_type":"EmptyFlux2LatentImage","_meta":{"title":"空Latent图像（Flux2）"}},"260":{"inputs":{"image":["267",0]},"class_type":"GetImageSize","_meta":{"title":"获取图像尺寸"}},"261":{"inputs":{"vae_name":"flux2-vae.safetensors"},"class_type":"VAELoader","_meta":{"title":"加载VAE"}},"262":{"inputs":{"rgthree_comparer":{"images":[{"name":"A","selected":true,"url":"/api/view?filename=rgthree.compare._temp_nbacg_00003_.png&type=temp&subfolder=&rand=0.23387408550340338"},{"name":"B","selected":true,"url":"/api/view?filename=rgthree.compare._temp_nbacg_00004_.png&type=temp&subfolder=&rand=0.3102840432546141"}]},"image_a":["276",0],"image_b":["267",0]},"class_type":"Image Comparer (rgthree)","_meta":{"title":"Image Comparer (rgthree)"}},"263":{"inputs":{"steps":8,"width":["250",1],"height":["250",1]},"class_type":"Flux2Scheduler","_meta":{"title":"Flux2调度器"}},"264":{"inputs":{"upscale_method":"lanczos","megapixels":1,"resolution_steps":1,"image":["270",0]},"class_type":"ImageScaleToTotalPixels","_meta":{"title":"缩放图像（像素）"}},"265":{"inputs":{"text":["281",0],"clip":["272",0]},"class_type":"CLIPTextEncode","_meta":{"title":"CLIP文本编码"}},"266":{"inputs":{"text":["281",0],"clip":["273",0]},"class_type":"CLIPTextEncode","_meta":{"title":"CLIP文本编码"}},"267":{"inputs":{"upscale_method":"lanczos","megapixels":1,"resolution_steps":1,"image":["270",0]},"class_type":"ImageScaleToTotalPixels","_meta":{"title":"缩放图像（像素）"}},"268":{"inputs":{"lora_name":"Flux/Klein-yizhixing-lora.safetensors","strength_model":1,"model":["274",0]},"class_type":"LoraLoaderModelOnly","_meta":{"title":"LoRA加载器（仅模型）"}},"269":{"inputs":{"lora_name":"Flux/Klein-yizhixing-lora.safetensors","strength_model":0.8000000000000002,"model":["271",0]},"class_type":"LoraLoaderModelOnly","_meta":{"title":"LoRA加载器（仅模型）"}},"270":{"inputs":{"image":"b690b4d67dcc3b4b0b48764b37af0e81.jpeg"},"class_type":"LoadImage","_meta":{"title":"加载图像"}},"271":{"inputs":{"unet_name":"flux/flux-2-klein-9b-fp8.safetensors","weight_dtype":"default"},"class_type":"UNETLoader","_meta":{"title":"UNet加载器"}},"272":{"inputs":{"clip_name":"qwen_3_8b_fp8mixed.safetensors","type":"flux2","device":"default"},"class_type":"CLIPLoader","_meta":{"title":"加载CLIP"}},"273":{"inputs":{"clip_name":"qwen_3_8b_fp8mixed.safetensors","type":"flux2","device":"default"},"class_type":"CLIPLoader","_meta":{"title":"加载CLIP"}},"274":{"inputs":{"unet_name":"flux/flux-2-klein-9b-fp8.safetensors","weight_dtype":"default"},"class_type":"UNETLoader","_meta":{"title":"UNet加载器"}},"275":{"inputs":{"samples":["245",0],"vae":["251",0]},"class_type":"VAEDecode","_meta":{"title":"VAE解码"}},"276":{"inputs":{"samples":["255",0],"vae":["261",0]},"class_type":"VAEDecode","_meta":{"title":"VAE解码"}},"277":{"inputs":{"noise_seed":453280520098690},"class_type":"RandomNoise","_meta":{"title":"随机噪波"}},"278":{"inputs":{"images":["279",0]},"class_type":"PreviewImage","_meta":{"title":"预览图像"}},"279":{"inputs":{"font_file":"Alibaba-PuHuiTi-Heavy.ttf","font_size":40,"border":8,"color_theme":"light","reel_1":["280",0]},"class_type":"LayerUtility: ImageReelComposit","_meta":{"title":"图层工具：图像卷轴合成"}},"280":{"inputs":{"image1_text":"original","image2_text":"V1","image3_text":"klein","image4_text":"","reel_height":1024,"border":32,"image1":["270",0],"image2":["275",0],"image3":["276",0]},"class_type":"LayerUtility: ImageReel","_meta":{"title":"图层工具：图像卷轴"}},"281":{"inputs":{"text":"Generate black and white pen sketches and digital paintings from photos, completely removing all color elements while retaining the poses and expressions of people and animals. Transform the entire image into a highly detailed black and white pen sketch digital painting, adopting a hand-drawn realistic style, depicting facial contours, hair texture, clothing wrinkles, and fabric texture with fine lines and layered shadows, creating a strong contrast of light and shadow, and creating a three-dimensional effect through fine lines."},"class_type":"CR Text","_meta":{"title":"🔤 CR Text"}},"282":{"inputs":{"filename_prefix":"ComfyUI","images":["275",0]},"class_type":"SaveImage","_meta":{"title":"保存图像"}},"283":{"inputs":{"filename_prefix":"ComfyUI","images":["276",0]},"class_type":"SaveImage","_meta":{"title":"保存图像"}},"284":{"inputs":{"rgthree_comparer":{"images":[{"name":"A","selected":true,"url":"/api/view?filename=rgthree.compare._temp_hqtar_00001_.png&type=temp&subfolder=&rand=0.05845087692329454"},{"name":"B","selected":true,"url":"/api/view?filename=rgthree.compare._temp_hqtar_00002_.png&type=temp&subfolder=&rand=0.5770114807382247"}]},"image_a":["275",0],"image_b":["264",0]},"class_type":"Image Comparer (rgthree)","_meta":{"title":"Image Comparer (rgthree)"}},"285":{"inputs":{"sampler_name":"euler"},"class_type":"KSamplerSelect","_meta":{"title":"K采样器选择"}},"286":{"inputs":{"sampler_name":"euler"},"class_type":"KSamplerSelect","_meta":{"title":"K采样器选择"}},"287":{"inputs":{"steps":16,"width":["260",1],"height":["260",1]},"class_type":"Flux2Scheduler","_meta":{"title":"Flux2调度器"}},"_api_config":{"customLabels":{"247:cfg":"CFG Scale","249:batch_size":"批次大小","257:cfg":"CFG Scale","259:batch_size":"批次大小","263:steps":"迭代步数","264:upscale_method":"upscale_method (节点 264)","264:megapixels":"megapixels (节点 264)","264:resolution_steps":"resolution_steps (节点 264)","267:upscale_method":"upscale_method (节点 267)","267:megapixels":"megapixels (节点 267)","267:resolution_steps":"resolution_steps (节点 267)","268:strength_model":"strength_model (节点 268)","269:strength_model":"strength_model (节点 269)","270:image":"上传图片 (节点 270)","271:weight_dtype":"weight_dtype (节点 271)","272:type":"type (节点 272)","272:device":"device (节点 272)","273:type":"type (节点 273)","273:device":"device (节点 273)","274:weight_dtype":"weight_dtype (节点 274)","277:noise_seed":"noise_seed (节点 277)","279:font_file":"font_file (节点 279)","279:font_size":"font_size (节点 279)","279:border":"border (节点 279)","279:color_theme":"color_theme (节点 279)","280:image1_text":"image1_text (节点 280)","280:image2_text":"image2_text (节点 280)","280:image3_text":"image3_text (节点 280)","280:image4_text":"image4_text (节点 280)","280:reel_height":"reel_height (节点 280)","280:border":"border (节点 280)","281:text":"提示词 (节点 281)","282:filename_prefix":"文件名前缀","283:filename_prefix":"文件名前缀","287:steps":"迭代步数"},"enabledParams":{"247:cfg":true,"249:batch_size":true,"257:cfg":true,"259:batch_size":true,"263:steps":true,"264:upscale_method":true,"264:megapixels":true,"264:resolution_steps":true,"267:upscale_method":true,"267:megapixels":true,"267:resolution_steps":true,"268:strength_model":true,"269:strength_model":true,"270:image":true,"271:weight_dtype":true,"272:type":true,"272:device":true,"273:type":true,"273:device":true,"274:weight_dtype":true,"277:noise_seed":true,"279:font_file":true,"279:font_size":true,"279:border":true,"279:color_theme":true,"280:image1_text":true,"280:image2_text":true,"280:image3_text":true,"280:image4_text":true,"280:reel_height":true,"280:border":true,"281:text":true,"282:filename_prefix":true,"283:filename_prefix":true,"287:steps":true},"formValues":{"247:cfg":1,"249:batch_size":1,"257:cfg":1,"259:batch_size":1,"263:steps":8,"264:upscale_method":"lanczos","264:megapixels":1,"264:resolution_steps":1,"267:upscale_method":"lanczos","267:megapixels":1,"267:resolution_steps":1,"268:strength_model":1,"269:strength_model":0.8000000000000002,"270:image":null,"271:weight_dtype":"default","272:type":"flux2","272:device":"default","273:type":"flux2","273:device":"default","274:weight_dtype":"default","277:noise_seed":453280520098690,"279:font_file":"Alibaba-PuHuiTi-Heavy.ttf","279:font_size":40,"279:border":8,"279:color_theme":"light","280:image1_text":"original","280:image2_text":"V1","280:image3_text":"klein","280:image4_text":"","280:reel_height":1024,"280:border":32,"281:text":"Generate black and white pen sketches and digital paintings from photos, completely removing all color elements while retaining the poses and expressions of people and animals. Transform the entire image into a highly detailed black and white pen sketch digital painting, adopting a hand-drawn realistic style, depicting facial contours, hair texture, clothing wrinkles, and fabric texture with fine lines and layered shadows, creating a strong contrast of light and shadow, and creating a three-dimensional effect through fine lines.","282:filename_prefix":"ComfyUI","283:filename_prefix":"ComfyUI","287:steps":16}}};
+        const CLIENT_ID = 'api-client-' + Math.random().toString(36).substring(7);
+
+        const form = document.getElementById('workflowForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const progressArea = document.getElementById('progressArea');
+        const resultArea = document.getElementById('resultArea');
+        const resultPlaceholder = document.getElementById('resultPlaceholder');
+        const resultContainer = document.getElementById('resultContainer');
+        const logsDiv = document.getElementById('logs');
+        const mediaViewer = document.getElementById('mediaViewer');
+        const viewerContent = document.getElementById('viewerContent');
+        const viewerCloseBtn = document.getElementById('viewerCloseBtn');
+
+        const workflowProgressBar = document.getElementById('workflowProgressBar');
+        const workflowProgressText = document.getElementById('workflowProgressText');
+        const nodeProgressBar = document.getElementById('nodeProgressBar');
+        const nodeProgressText = document.getElementById('nodeProgressText');
+        const currentNodeText = document.getElementById('currentNodeText');
+
+        let ws = null;
+        let totalNodes = 46;
+        let executedNodes = 0;
+        let executedNodeIds = new Set();
+        let currentPromptId = null;
+        let hasLoggedWsProgress = false;
+
+        function openViewer(type, url) {
+            if (!mediaViewer || !viewerContent) return;
+            viewerContent.innerHTML = '';
+            if (type === 'video') {
+                const vid = document.createElement('video');
+                vid.src = url;
+                vid.controls = true;
+                vid.autoplay = true;
+                viewerContent.appendChild(vid);
+            } else {
+                const img = document.createElement('img');
+                img.src = url;
+                img.alt = 'preview';
+                viewerContent.appendChild(img);
+            }
+            mediaViewer.style.display = 'flex';
+        }
+
+        function closeViewer() {
+            if (!mediaViewer || !viewerContent) return;
+            mediaViewer.style.display = 'none';
+            viewerContent.innerHTML = '';
+        }
+
+        function appendResultItem(type, url) {
+            const card = document.createElement('div');
+            card.className = 'result-card';
+
+            if (type === 'audio') {
+                const aud = document.createElement('audio');
+                aud.src = url;
+                aud.controls = true;
+                aud.className = 'result-audio';
+                card.appendChild(aud);
+                resultContainer.appendChild(card);
+                return;
+            }
+
+            if (type === 'video') {
+                const vid = document.createElement('video');
+                vid.src = url;
+                vid.muted = true;
+                vid.loop = true;
+                vid.autoplay = true;
+                vid.playsInline = true;
+                vid.className = 'result-thumb';
+                vid.addEventListener('click', function () { openViewer('video', url); });
+                card.appendChild(vid);
+            } else {
+                const img = document.createElement('img');
+                img.src = url;
+                img.className = 'result-thumb';
+                img.alt = 'result';
+                img.addEventListener('click', function () { openViewer('image', url); });
+                card.appendChild(img);
+            }
+            resultContainer.appendChild(card);
+        }
+
+        if (viewerCloseBtn) viewerCloseBtn.addEventListener('click', function (e) { e.stopPropagation(); closeViewer(); });
+        if (mediaViewer) {
+            mediaViewer.addEventListener('click', function (e) {
+                if (viewerContent && viewerContent.contains(e.target)) return;
+                closeViewer();
+            });
+        }
+        window.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeViewer();
+        });
+
+        function addLog(msg, type = 'info') {
+            const time = new Date().toLocaleTimeString([], { hour12: false });
+            const item = document.createElement('div');
+            item.className = 'console-item';
+            
+            let colorClass = 'console-info';
+            if (type === 'success') colorClass = 'console-success';
+            if (type === 'error') colorClass = 'console-error';
+            
+            item.innerHTML = `<span class="console-time">[${time}]</span><span class="${colorClass}">${msg}</span>`;
+            logsDiv.appendChild(item);
+            logsDiv.scrollTop = logsDiv.scrollHeight;
+        }
+
+        function updateProgress(workflowPercent, nodePercent, nodeName) {
+            if (workflowPercent !== null) {
+                workflowProgressBar.style.width = workflowPercent + '%';
+                workflowProgressText.textContent = workflowPercent + '%';
+            }
+            if (nodePercent !== null) {
+                nodeProgressBar.style.width = nodePercent + '%';
+                nodeProgressText.textContent = nodePercent + '%';
+            }
+            if (nodeName) {
+                currentNodeText.textContent = '当前节点: ' + nodeName;
+            }
+        }
+
+        function markNodeExecuting(nodeId) {
+            if (!nodeId || executedNodeIds.has(String(nodeId))) return;
+            executedNodeIds.add(String(nodeId));
+            executedNodes = executedNodeIds.size;
+            const percent = totalNodes > 0 ? Math.min(100, Math.floor((executedNodes / totalNodes) * 100)) : 0;
+            updateProgress(percent, 0, '节点 ' + nodeId);
+            if (!hasLoggedWsProgress) {
+                hasLoggedWsProgress = true;
+                addLog('📡 已收到 ComfyUI 节点执行事件', 'success');
+            }
+        }
+
+        function initWebSocket() {
+            return new Promise((resolve) => {
+                if (ws) ws.close();
+
+                const wsUrl = API_URL.replace(/^http/, 'ws') + '/comfyui-ws?clientId=' + CLIENT_ID;
+                ws = new WebSocket(wsUrl);
+                executedNodes = 0;
+                executedNodeIds = new Set();
+                hasLoggedWsProgress = false;
+
+                let settled = false;
+                const readyTimer = setTimeout(() => {
+                    if (!settled) {
+                        settled = true;
+                        addLog('⚠️ WebSocket 连接较慢，继续提交任务；若进度不动，请检查浏览器是否允许 WSS 连接');
+                        resolve();
+                    }
+                }, 8000);
+                const markReady = () => {
+                    if (!settled) {
+                        settled = true;
+                        clearTimeout(readyTimer);
+                        resolve();
+                    }
+                };
+
+                ws.onopen = () => {
+                    addLog('✅ WebSocket 连接已建立');
+                    markReady();
+                };
+
+                ws.onmessage = (event) => {
+                    const data = JSON.parse(event.data);
+                    const promptId = data.data && data.data.prompt_id;
+
+                    if (promptId && currentPromptId && promptId !== currentPromptId) return;
+
+                    if (data.type === 'execution_cached') {
+                        (data.data && data.data.nodes || []).forEach(markNodeExecuting);
+                    } else if (data.type === 'executing') {
+                        const nodeId = data.data && data.data.node;
+                        if (nodeId === null) {
+                            updateProgress(100, 0, '执行完成');
+                        } else {
+                            markNodeExecuting(nodeId);
+                        }
+                    } else if (data.type === 'progress' && data.data && data.data.max > 0) {
+                        const percent = Math.round((data.data.value / data.data.max) * 100);
+                        updateProgress(null, percent, null);
+                        if (!hasLoggedWsProgress) {
+                            hasLoggedWsProgress = true;
+                            addLog('📡 已收到 ComfyUI 实时进度事件', 'success');
+                        }
+                    } else if (data.type === 'execution_success') {
+                        updateProgress(100, 100, '执行完成');
+                    }
+                };
+
+                ws.onerror = (err) => {
+                    console.error('WebSocket error:', err);
+                    addLog('WebSocket 连接错误', 'error');
+                    markReady();
+                };
+            });
+        }
+
+        async function uploadFile(file) {
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('overwrite', 'true');
+
+            const res = await fetch(API_URL + '/api/comfy/upload/file', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (!res.ok) throw new Error('文件上传失败: ' + res.status);
+            const data = await res.json();
+            return data.name;
+        }
+
+        function encodeOutputPathPart(value) {
+            return String(value || '').split('/').filter(Boolean).map(encodeURIComponent).join('/');
+        }
+
+        function buildComfyResultUrl(item) {
+            const filename = String(item && item.filename || '');
+            const subfolder = String(item && item.subfolder || '');
+            const type = String(item && item.type || 'output');
+
+            if (type === 'output') {
+                const outputPath = [subfolder, filename]
+                    .filter(Boolean)
+                    .map(encodeOutputPathPart)
+                    .filter(Boolean)
+                    .join('/');
+                return API_URL + '/output/' + outputPath;
+            }
+
+            const params = new URLSearchParams();
+            params.set('filename', filename);
+            params.set('type', type);
+            if (subfolder) params.set('subfolder', subfolder);
+            return API_URL + '/api/comfy/view?' + params.toString();
+        }
+
+        async function pollResult(promptId) {
+            return new Promise((resolve, reject) => {
+                const interval = setInterval(async () => {
+                    try {
+                        const res = await fetch(API_URL + '/api/comfy/proxy/history?prompt_id=' + promptId);
+                        if (!res.ok) return;
+
+                        const data = await res.json();
+                        if (data[promptId]) {
+                            clearInterval(interval);
+                            const outputs = data[promptId].outputs;
+                            const allResults = [];
+                            const referencedNodeIds = new Set();
+
+                            Object.values(WORKFLOW || {}).forEach(node => {
+                                Object.values((node && node.inputs) || {}).forEach(value => {
+                                    if (Array.isArray(value) && value.length > 0 && value[0] !== undefined && value[0] !== null) {
+                                        referencedNodeIds.add(String(value[0]));
+                                    }
+                                });
+                            });
+
+                            for (const nodeId in outputs) {
+                                const nodeOutput = outputs[nodeId];
+                                const workflowNode = WORKFLOW && WORKFLOW[nodeId];
+                                const nodeClassType = (workflowNode && workflowNode.class_type) || '';
+                                const saveOutput = workflowNode && workflowNode.inputs ? workflowNode.inputs.save_output : undefined;
+                                const isTerminalNode = !referencedNodeIds.has(String(nodeId));
+
+                                if (nodeOutput.images) {
+                                    const isPreviewImageNode = nodeClassType === 'PreviewImage';
+                                    const isExplicitImageOutputNode = ['SaveImage', 'PreviewImage'].includes(nodeClassType);
+                                    if (isPreviewImageNode || (isExplicitImageOutputNode && saveOutput === false) || (!isTerminalNode && saveOutput !== true)) {
+                                        continue;
+                                    }
+                                    nodeOutput.images.forEach(img => {
+                                        allResults.push({
+                                            type: 'image',
+                                            url: buildComfyResultUrl(img)
+                                        });
+                                    });
+                                }
+                                const videoOutputs = [
+                                    ...(Array.isArray(nodeOutput.gifs) ? nodeOutput.gifs : []),
+                                    ...(Array.isArray(nodeOutput.videos) ? nodeOutput.videos : [])
+                                ];
+                                if (videoOutputs.length > 0) {
+                                    const isVideoOutputNode = ['VHS_VideoCombine', 'SaveVideo', 'VideoCombine'].includes(nodeClassType);
+                                    if ((isVideoOutputNode && saveOutput === false) || (!isTerminalNode && saveOutput !== true)) {
+                                        continue;
+                                    }
+                                    videoOutputs.forEach(vid => {
+                                        allResults.push({
+                                            type: 'video',
+                                            url: buildComfyResultUrl(vid)
+                                        });
+                                    });
+                                }
+                                const audioOutputs = [
+                                    ...(Array.isArray(nodeOutput.audio) ? nodeOutput.audio : []),
+                                    ...(Array.isArray(nodeOutput.audios) ? nodeOutput.audios : [])
+                                ];
+                                if (audioOutputs.length > 0) {
+                                    if (!isTerminalNode && saveOutput !== true) {
+                                        continue;
+                                    }
+                                    audioOutputs.forEach(aud => {
+                                        allResults.push({
+                                            type: 'audio',
+                                            url: buildComfyResultUrl(aud)
+                                        });
+                                    });
+                                }
+                            }
+                            
+                            if (allResults.length > 0) resolve(allResults);
+                            else reject(new Error('未找到任何输出结果'));
+                        }
+                    } catch (e) {}
+                }, 2000);
+            });
+        }
+
+        submitBtn.addEventListener('click', async () => {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>正在生成中...</span>';
+            progressArea.style.display = 'block';
+            resultArea.style.display = 'block';
+            if (resultPlaceholder) resultPlaceholder.style.display = 'none';
+            logsDiv.innerHTML = '';
+            resultContainer.innerHTML = '';
+            updateProgress(0, 0, '准备执行...');
+            
+            try {
+                addLog('🚀 准备执行工作流任务...');
+
+                const inputValues = {};
+                for (const [key, conf] of Object.entries(CONFIG)) {
+                    const input = document.getElementById(key);
+                    if (conf.type === 'file' && input.files && input.files[0]) {
+                        addLog('正在上传资源: ' + input.files[0].name + '...');
+                        const fileName = await uploadFile(input.files[0]);
+                        inputValues[key] = fileName;
+                        addLog('✅ 资源上传成功: ' + fileName, 'success');
+                    } else if (conf.type === 'int' || conf.type === 'float') {
+                        inputValues[key] = Number(input.value);
+                    } else if (conf.type === 'boolean' || typeof conf.default === 'boolean') {
+                        inputValues[key] = !!input.checked;
+                    } else {
+                        inputValues[key] = input.value;
+                    }
+                }
+
+                addLog('🔌 正在连接 WebSocket...');
+                await initWebSocket();
+                addLog('📡 正在提交到 API 节点...');
+                const res = await fetch(ENDPOINT, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        input_values: inputValues,
+                        workflow_id: WORKFLOW_ID,
+                        client_id: CLIENT_ID // 传入客户端 ID 以匹配 WebSocket
+                    })
+                });
+
+                if (!res.ok) throw new Error('API 响应异常: ' + res.status);
+                const data = await res.json();
+                if (!data.success) throw new Error(data.error || '执行失败');
+
+                currentPromptId = data.prompt_id || (data.id && data.id.startsWith('workflow-') ? null : data.id);
+
+                if (data.images && data.images.length > 0) {
+                    updateProgress(100, 100, '任务完成');
+                    addLog('🎉 任务执行成功！', 'success');
+                    data.images.forEach(imageData => {
+                        appendResultItem('image', 'data:image/png;base64,' + imageData);
+                    });
+                } else if (currentPromptId) {
+                    addLog('⏳ 任务已入队，ID: ' + currentPromptId, 'info');
+                    const allResults = await pollResult(currentPromptId);
+                    updateProgress(100, 100, '执行完成');
+                    addLog('🎉 渲染完成！', 'success');
+                    
+                    allResults.forEach(res => {
+                        appendResultItem(res.type, res.url);
+                    });
+                } else {
+                    addLog('✅ 任务提交成功', 'success');
+                }
+            } catch (err) {
+                addLog('❌ 发生错误: ' + err.message, 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<span>开始生成</span>';
+            }
+        });
+    </script>
+</body>
+</html>

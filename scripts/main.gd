@@ -297,6 +297,7 @@ func _process(delta: float) -> void:
 	attack_cooldown = maxf(attack_cooldown - delta, 0.0)
 	combo_timeout = maxf(combo_timeout - delta, 0.0)
 	dodge_cooldown = maxf(dodge_cooldown - delta, 0.0)
+	combat_component.update(delta)
 
 	player_invulnerability = maxf(player_invulnerability - delta, 0.0)
 	player_hurt_flash = maxf(player_hurt_flash - delta, 0.0)

@@ -77,9 +77,21 @@ func _initialize() -> void:
 	expect_equal(stage.combo_step, 1, "running attack binds to first claw animation stage")
 	expect_equal(int(stage.enemies[0]["health"]), 8, "running attack deals fixed 2 damage despite biomass")
 	var running_attack_start: Vector2 = stage.player_ground
+	stage.combat_component.update_running_attack(stage.balance.running_attack_duration * 0.25)
+	var first_quarter_distance: float = stage.player_ground.x - running_attack_start.x
+	expect(first_quarter_distance > 25.0, "running attack covers most distance early under ground friction")
 	stage.combat_component.update_running_attack(stage.balance.running_attack_duration)
 	expect_near(stage.player_ground.x, running_attack_start.x + 50.0, "running attack slides 50 pixels on X")
 	expect_equal(stage.combo_step, 0, "running attack returns without entering the normal combo chain")
+	expect_near(stage.combat_component.running_attack_cooldown_remaining, 3.0, "running attack starts a three-second internal cooldown")
+	stage.attack_cooldown = 0.0
+	stage.enemies[0]["health"] = 10
+	stage.combat_component.try_attack()
+	expect(not stage.combat_component.is_running_attack_active(), "running attack cannot restart during its internal cooldown")
+	expect_equal(int(stage.enemies[0]["health"]), 10, "cooldown-gated running attack deals no damage")
+	stage.combat_component.update(stage.balance.running_attack_cooldown)
+	stage.combat_component.try_attack()
+	expect(stage.combat_component.is_running_attack_active(), "running attack becomes available after three seconds")
 
 	stage.queue_free()
 	await process_frame

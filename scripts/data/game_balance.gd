@@ -32,6 +32,8 @@ extends Resource
 @export var running_attack_damage := 2
 @export var running_attack_slide_distance := 50.0
 @export var running_attack_duration := 0.3
+@export var running_attack_cooldown := 3.0
+@export var running_attack_friction_curve := 3.0
 
 @export_group("Vore And Digestion")
 @export var maximum_biomass := 50.0

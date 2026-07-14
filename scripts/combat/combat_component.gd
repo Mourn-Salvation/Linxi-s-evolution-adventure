@@ -9,9 +9,11 @@ const ATTACKS := {
 }
 
 var host: Node
-var running_attack_time_remaining := 0.0
-var running_attack_distance_remaining := 0.0
+var running_attack_elapsed := 0.0
+var running_attack_distance_applied := 0.0
 var running_attack_direction := 0.0
+var running_attack_cooldown_remaining := 0.0
+var running_attack_active := false
 
 func setup(value: Node) -> void: host = value
 func speed_weight_multiplier() -> float: return host.balance.weight_speed_multiplier(host.vore_component.current_weight(), host.weight_speed_debuff_disabled)
@@ -28,6 +30,10 @@ func input_attack_tag() -> String:
 func attack_for_tag(tag: String) -> AttackData:
 	return ATTACKS.get(tag.to_upper(), ATTACKS["NEUTRAL"])
 
+
+func update(delta: float) -> void:
+	running_attack_cooldown_remaining = maxf(running_attack_cooldown_remaining - delta, 0.0)
+
 func try_attack() -> void:
 	if host.digesting or host.player_defeated or host.player_hit_reaction_time > 0.0 or host.attack_cooldown > 0.0 or host.dodge_time > 0.0: return
 	if not host.body_attack_unlocked:
@@ -38,6 +44,9 @@ func try_attack() -> void:
 		return
 	var direction: Vector2 = host.player_component.input_direction()
 	var running_attack: bool = host.player_component.is_sprinting(direction)
+	if running_attack and running_attack_cooldown_remaining > 0.0:
+		host.update_hud("Running attack is recovering: %.1fs." % running_attack_cooldown_remaining)
+		return
 	var attack: AttackData = attack_for_tag(input_attack_tag())
 	host.last_body_attack_id = "claw_running" if running_attack else attack.attack_id
 	if running_attack:
@@ -79,35 +88,44 @@ func _begin_running_attack(direction: Vector2) -> void:
 	host.combo_step = 1
 	host.combo_timeout = host.balance.running_attack_duration
 	host.attack_cooldown = host.balance.running_attack_duration
-	running_attack_time_remaining = host.balance.running_attack_duration
-	running_attack_distance_remaining = host.balance.running_attack_slide_distance
+	running_attack_elapsed = 0.0
+	running_attack_distance_applied = 0.0
 	running_attack_direction = host.facing
+	running_attack_cooldown_remaining = host.balance.running_attack_cooldown
+	running_attack_active = true
 	host.movement_mode = "ATTACK"
 
 
 func is_running_attack_active() -> bool:
-	return running_attack_time_remaining > 0.0 and running_attack_distance_remaining > 0.0
+	return running_attack_active
 
 
 func update_running_attack(delta: float) -> void:
 	if not is_running_attack_active():
 		reset_running_attack()
 		return
-	var step_fraction := minf(delta / maxf(running_attack_time_remaining, 0.001), 1.0)
-	var step_distance := running_attack_distance_remaining * step_fraction
+	running_attack_elapsed = minf(running_attack_elapsed + delta, host.balance.running_attack_duration)
+	var progress: float = running_attack_elapsed / maxf(host.balance.running_attack_duration, 0.001)
+	var eased_progress: float = 1.0 - pow(1.0 - progress, host.balance.running_attack_friction_curve)
+	var target_distance: float = host.balance.running_attack_slide_distance * eased_progress
+	var step_distance: float = maxf(target_distance - running_attack_distance_applied, 0.0)
 	host.player_ground.x += running_attack_direction * step_distance
-	running_attack_distance_remaining = maxf(running_attack_distance_remaining - step_distance, 0.0)
-	running_attack_time_remaining = maxf(running_attack_time_remaining - delta, 0.0)
-	if running_attack_time_remaining <= 0.0 or running_attack_distance_remaining <= 0.0:
+	running_attack_distance_applied = target_distance
+	if running_attack_elapsed >= host.balance.running_attack_duration or running_attack_distance_applied >= host.balance.running_attack_slide_distance:
 		reset_running_attack()
 
 
 func reset_running_attack() -> void:
-	running_attack_time_remaining = 0.0
-	running_attack_distance_remaining = 0.0
+	running_attack_elapsed = host.balance.running_attack_duration if is_instance_valid(host) else 0.0
+	running_attack_distance_applied = host.balance.running_attack_slide_distance if is_instance_valid(host) else 0.0
 	running_attack_direction = 0.0
+	running_attack_active = false
 	if is_instance_valid(host) and host.last_body_attack_id == "claw_running":
 		host.combo_step = 0
+
+
+func reset_running_attack_cooldown() -> void:
+	running_attack_cooldown_remaining = 0.0
 
 func try_dodge() -> void:
 	if host.g_mode:

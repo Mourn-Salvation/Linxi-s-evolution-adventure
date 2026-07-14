@@ -63,6 +63,24 @@ func _initialize() -> void:
 	stage.combat_component.try_attack()
 	expect_equal(int(stage.enemies[0]["health"]), 10, "player attack misses beyond combined shadow range")
 
+	stage.attack_cooldown = 0.0
+	stage.combo_step = 0
+	stage.biomass = 20.0
+	stage.player_ground = Vector2(200.0, 120.0)
+	stage.enemies[0]["health"] = 10
+	stage.enemies[0]["position"] = stage.player_ground + Vector2(180.0, 0.0)
+	stage.mobile_controls.set_joystick_direction(Vector2(0.8, 0.0))
+	stage.player_component.move(0.0)
+	expect(stage.movement_mode == "SPRINT", "running attack setup recognizes joystick sprint")
+	stage.combat_component.try_attack()
+	expect(stage.combat_component.is_running_attack_active(), "attack during sprint starts one running attack")
+	expect_equal(stage.combo_step, 1, "running attack binds to first claw animation stage")
+	expect_equal(int(stage.enemies[0]["health"]), 8, "running attack deals fixed 2 damage despite biomass")
+	var running_attack_start: Vector2 = stage.player_ground
+	stage.combat_component.update_running_attack(stage.balance.running_attack_duration)
+	expect_near(stage.player_ground.x, running_attack_start.x + 50.0, "running attack slides 50 pixels on X")
+	expect_equal(stage.combo_step, 0, "running attack returns without entering the normal combo chain")
+
 	stage.queue_free()
 	await process_frame
 	if failures == 0:

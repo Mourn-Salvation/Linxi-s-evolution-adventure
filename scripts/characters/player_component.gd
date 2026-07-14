@@ -16,13 +16,24 @@ func move(delta: float) -> void:
 		host.player_ground += direction * host.balance.g_mode_move_speed * delta
 		return
 	if absf(direction.x) > 0.1: host.facing = signf(direction.x)
-	var sprint_direction := movement_vector_for_key(host.sprint_key)
-	var sprinting: bool = host.sprint_key != KEY_NONE and Input.is_key_pressed(host.sprint_key) and absf(direction.x) > 0.1 and signf(direction.x) == sprint_direction.x
+	var sprinting: bool = is_sprinting(direction)
 	host.movement_mode = "SPRINT" if sprinting else "WALK"
 	var story_speed: float = float(host.get("story_movement_multiplier"))
 	var velocity: Vector2 = direction * host.balance.walk_speed * host.combat_component.speed_weight_multiplier() * story_speed
 	if sprinting: velocity.x = direction.x * host.balance.sprint_speed * host.combat_component.speed_weight_multiplier() * story_speed
 	host.player_ground += velocity * delta
+
+
+func is_sprinting(direction: Vector2) -> bool:
+	if host.g_mode or absf(direction.x) <= 0.1:
+		return false
+	var sprint_direction: Vector2 = movement_vector_for_key(host.sprint_key)
+	var keyboard_sprint: bool = host.sprint_key != KEY_NONE and Input.is_key_pressed(host.sprint_key) and signf(direction.x) == sprint_direction.x
+	var mobile_sprint: bool = false
+	if is_instance_valid(host.mobile_controls):
+		var joystick: Vector2 = host.mobile_controls.joystick_vector()
+		mobile_sprint = joystick.length() > host.balance.mobile_sprint_threshold and absf(joystick.x) >= absf(joystick.y)
+	return keyboard_sprint or mobile_sprint
 
 func input_direction() -> Vector2:
 	var direction := Vector2.ZERO
@@ -143,6 +154,8 @@ func damage(damage_value: int, source: Dictionary = {}) -> void:
 		host.audio_component.play_player_hurt()
 	host.attack_cooldown = 0.0
 	host.attack_duration_current = 0.0
+	if is_instance_valid(host.combat_component):
+		host.combat_component.reset_running_attack()
 	host.combo_step = 0
 	if host.player_health <= 0:
 		host.player_defeated = true

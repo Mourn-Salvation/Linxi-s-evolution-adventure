@@ -37,6 +37,7 @@ func _reset_runtime() -> void:
 	host.facing = 1.0
 	host.attack_cooldown = 0.0
 	host.attack_duration_current = 0.0
+	host.combat_component.reset_running_attack()
 	host.combo_timeout = 0.0
 	host.combo_step = 0
 	host.clean_hits = 0

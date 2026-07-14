@@ -34,6 +34,10 @@ func movement_vector() -> Vector2:
 	return direction.limit_length(1.0)
 
 
+func joystick_vector() -> Vector2:
+	return joystick_direction
+
+
 func release_all() -> void:
 	for keycode in held_directions:
 		held_directions[keycode] = false

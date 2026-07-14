@@ -11,6 +11,7 @@ extends Resource
 @export var walk_speed := 140.0
 @export var minimum_move_speed := 50.0
 @export var double_tap_window := 0.3
+@export var mobile_sprint_threshold := 0.5
 @export var dodge_speed := 760.0
 @export var dodge_duration := 0.18
 @export var evolved_dodge_duration := 0.16
@@ -28,6 +29,9 @@ extends Resource
 @export var maximum_attack_bonus := 2.0
 @export var hit_stun_per_damage := 0.025
 @export var maximum_attack_stun := 0.24
+@export var running_attack_damage := 2
+@export var running_attack_slide_distance := 50.0
+@export var running_attack_duration := 0.3
 
 @export_group("Vore And Digestion")
 @export var maximum_biomass := 50.0

@@ -337,6 +337,8 @@ func _process(delta: float) -> void:
 		pass
 	elif player_hit_reaction_time > 0.0:
 		pass
+	elif combat_component.is_running_attack_active():
+		combat_component.update_running_attack(delta)
 	elif not player_defeated:
 		player_component.move(delta)
 

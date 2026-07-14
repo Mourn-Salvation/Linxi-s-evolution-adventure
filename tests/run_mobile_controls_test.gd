@@ -33,6 +33,21 @@ func _initialize() -> void:
 	if stage.combat_component.input_attack_tag() != "UP":
 		push_error("Virtual joystick diagonals must preserve vertical-priority directional attacks")
 		failures += 1
+	stage.mobile_controls.set_joystick_direction(Vector2(0.49, 0.0))
+	stage.player_component.move(0.0)
+	if stage.movement_mode != "WALK":
+		push_error("Virtual joystick at or below 50 percent must remain walking")
+		failures += 1
+	stage.mobile_controls.set_joystick_direction(Vector2(0.75, 0.0))
+	stage.player_component.move(0.0)
+	if stage.movement_mode != "SPRINT":
+		push_error("Virtual joystick beyond 50 percent must sprint horizontally")
+		failures += 1
+	stage.mobile_controls.set_joystick_direction(Vector2(0.0, 0.9))
+	stage.player_component.move(0.0)
+	if stage.movement_mode != "WALK":
+		push_error("Vertical joystick movement must never become a sprint")
+		failures += 1
 	stage.mobile_controls.set_joystick_direction(Vector2.ZERO)
 	var mobile_j: Button = stage.mobile_controls.get_node("MobileJ") as Button
 	if mobile_j.size.x < 105.0 or mobile_j.size.y < 105.0:

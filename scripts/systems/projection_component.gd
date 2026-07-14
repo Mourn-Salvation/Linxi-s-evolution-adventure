@@ -65,6 +65,29 @@ func project_actor(ground: Vector2) -> Vector2:
 	return ground_origin() + Vector2(ground.x - _camera_x(), 0.0) + ACTOR_DEPTH_AXIS * ground.y + gameplay_screen_offset()
 
 
+func player_safe_screen_rect() -> Rect2:
+	var viewport := viewport_size()
+	var insets := Vector4(16.0, 16.0, 16.0, 16.0)
+	if is_instance_valid(host.player_renderer_component):
+		insets = host.player_renderer_component.screen_safe_insets()
+	var safe_size := Vector2(
+		maxf(viewport.x - insets.x - insets.z, 1.0),
+		maxf(viewport.y - insets.y - insets.w, 1.0)
+	)
+	return Rect2(Vector2(insets.x, insets.y), safe_size)
+
+
+func constrain_player_to_safe_zone(ground: Vector2) -> Vector2:
+	var safe_rect := player_safe_screen_rect()
+	var screen_position := project_actor(ground)
+	var safe_screen_position := screen_position.clamp(safe_rect.position, safe_rect.end)
+	var correction := safe_screen_position - screen_position
+	return Vector2(
+		ground.x + correction.x,
+		ground.y + correction.y / maxf(ACTOR_DEPTH_AXIS.y, 0.001)
+	)
+
+
 func gameplay_screen_offset() -> Vector2:
 	var data = _map_data()
 	if data == null:

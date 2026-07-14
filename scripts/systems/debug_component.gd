@@ -84,6 +84,9 @@ func refresh() -> void:
 func draw_dev_placement_overlay(viewport_size: Vector2) -> void:
 	if not bool(host.development_mode):
 		return
+	var safe_rect: Rect2 = host.player_safe_screen_rect()
+	host.draw_rect(safe_rect, Color(0.2, 0.9, 1.0, 0.035), true)
+	host.draw_rect(safe_rect, Color(0.35, 0.95, 1.0, 0.88), false, 2.0)
 	var map_bounds := Rect2(Vector2(host.ground_min_x, 0.0), Vector2(host.ground_width - host.ground_min_x, host.ground_depth))
 	_draw_ground_rect_overlay(map_bounds, Color(0.1, 0.45, 1.0, 0.08), Color(0.35, 0.75, 1.0, 0.72), 2.0)
 	for polygon in host.map_walkable_polygons():

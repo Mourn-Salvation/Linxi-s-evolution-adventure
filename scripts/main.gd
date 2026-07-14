@@ -346,8 +346,12 @@ func _process(delta: float) -> void:
 	player_ground = resolve_map_blockers(previous_player_ground, player_ground)
 	player_ground.x = clampf(player_ground.x, ground_min_x, ground_width)
 	player_ground.y = clampf(player_ground.y, 0.0, ground_depth)
-	interaction_component.update_auto_triggers()
 	_update_camera(delta)
+	player_ground = projection_component.constrain_player_to_safe_zone(player_ground)
+	player_ground.x = clampf(player_ground.x, ground_min_x, ground_width)
+	player_ground.y = clampf(player_ground.y, 0.0, ground_depth)
+	_update_camera(delta)
+	interaction_component.update_auto_triggers()
 	_refresh_hud_labels()
 	story_component.update(delta)
 	scene_flow_component.update_story_overlay()
@@ -553,6 +557,10 @@ func _project_ground(ground: Vector2) -> Vector2:
 
 func _project_actor(ground: Vector2) -> Vector2:
 	return projection_component.project_actor(ground)
+
+
+func player_safe_screen_rect() -> Rect2:
+	return projection_component.player_safe_screen_rect()
 
 
 func _camera_scroll_range() -> float:

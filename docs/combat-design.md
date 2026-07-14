@@ -19,6 +19,7 @@ The transformation is mechanical, visual, and audible. It should not be presente
 - Double-tap `A` or `D` within `0.3` seconds and hold it: sprint horizontally
 - On Android, push the virtual joystick beyond `50%` of its range in a primarily horizontal direction to sprint; the inner half remains analog walking
 - `W` and `S` always adjust depth at walking speed; they never start or receive sprint speed
+- The camera/projection layer keeps Linxi's rendered body and shadow inside a dynamic viewport safe zone with `16px` of additional clearance; oversized forms receive larger insets
 - Press `J` while sprinting to perform one running claw attack: Linxi uses claw stage one, slides about `50` pixels on X with rapid ground-friction deceleration, deals a fixed `2` damage once, and returns to locomotion without entering the standing three-hit chain. The running attack has its own `3s` cooldown
 - `J`: basic attack chain
 - `K`: directional dodge with a `1.0` second internal cooldown

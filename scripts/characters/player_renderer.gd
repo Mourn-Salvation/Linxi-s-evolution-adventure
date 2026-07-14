@@ -5,6 +5,10 @@ const BELLY_LAYER_TIER_X_OFFSETS := {
 	1: -5.0,
 	3: -5.0
 }
+const SAFE_ZONE_PADDING := 16.0
+const FRAME_HALF_WIDTH := 128.0
+const FRAME_TOP_EXTENT := 248.0
+const FRAME_BOTTOM_EXTENT := 8.0
 
 var host: Node2D
 var route_layer_visible_regions: Dictionary = {}
@@ -92,6 +96,18 @@ func t_form_visual_scale() -> Vector2:
 	if not moving and host.facing > 0.0:
 		scale.x *= -1.0
 	return scale
+
+
+func screen_safe_insets() -> Vector4:
+	var visual_scale: Vector2
+	if host.g_mode:
+		visual_scale = Vector2(1.34, 1.46) * biomass_growth_scale()
+	else:
+		visual_scale = Vector2.ONE * t_form_render_scale() * biomass_growth_scale()
+	var horizontal: float = FRAME_HALF_WIDTH * visual_scale.x + SAFE_ZONE_PADDING
+	var top: float = FRAME_TOP_EXTENT * visual_scale.y + SAFE_ZONE_PADDING
+	var bottom: float = maxf(FRAME_BOTTOM_EXTENT * visual_scale.y, host.player_shadow_depth_radius()) + SAFE_ZONE_PADDING
+	return Vector4(horizontal, top, horizontal, bottom)
 
 
 func biomass_growth_scale() -> float:

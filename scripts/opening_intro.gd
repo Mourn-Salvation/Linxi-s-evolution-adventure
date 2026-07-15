@@ -1,5 +1,7 @@
 extends Node2D
 
+const GameSessionData = preload("res://scripts/data/game_session.gd")
+
 enum Phase {
 	TITLE_LOOP,
 	CLIP_00001,
@@ -13,6 +15,7 @@ enum Phase {
 }
 
 const RED_NIGHT_SCENE := "res://scenes/red_night.tscn"
+const TITLE_MENU_SCENE := "res://scenes/title_menu.tscn"
 const RAIN_AMBIENCE_PATH := "res://assets/audio/ambience/opening/rain_window_loop.ogg"
 const MIN_WINDOW_SIZE := Vector2i(1280, 720)
 const FRAME_FPS := 24.0
@@ -51,6 +54,11 @@ var lying_still: Texture2D
 
 
 func _ready() -> void:
+	GameSessionData.initialize()
+	if GameSessionData.has_returning_profile() and not GameSessionData.force_opening_once:
+		get_tree().change_scene_to_file(TITLE_MENU_SCENE)
+		return
+	GameSessionData.force_opening_once = false
 	DisplayServer.window_set_min_size(MIN_WINDOW_SIZE)
 	DisplayServer.window_set_size(MIN_WINDOW_SIZE)
 	load_opening_assets()
@@ -176,6 +184,9 @@ func transition_to_red_night() -> void:
 	if transition_requested:
 		return
 	transition_requested = true
+	if GameSessionData.active_slot <= 0:
+		GameSessionData.select_slot(1)
+	GameSessionData.mark_opening_completed()
 	if not ResourceLoader.exists(RED_NIGHT_SCENE):
 		transition_requested = false
 		black.color.a = 0.0

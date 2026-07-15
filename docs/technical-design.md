@@ -19,6 +19,8 @@
 ## Scene Boundaries
 
 - `Main`: stage host for the currently loaded level. It initializes the runtime components, routes input/process/draw calls, and keeps compatibility wrappers while systems move into reusable components.
+- `TitleMenu`: returning-player entry point. The first completed opening marks the profile as initialized; later executable launches route from the boot opening scene to the title menu before any stage scene is instantiated.
+- `GameSession`: lightweight runtime profile service for the active save slot, first-run/opening state, legacy-save migration, and presentation settings. Gameplay systems ask it for the active save path rather than owning profile selection themselves.
 - `StageData`: owns a fiction arc such as `Stage 1: Red Night`
 - `LevelData`: owns one playable scene/beat inside a stage, such as `Courtyard Fall Site`, and points to the map/encounter payload
 - `MapData`: owns encounter flow payload, camera bounds, navigation belt, enemy placement, and item placement
@@ -77,6 +79,9 @@
 
 - Canonical gameplay tuning lives in `resources/balance/default_balance.tres` using `GameBalance`.
 - Shared save migration lives in `scripts/data/linxi_progression.gd`.
+- Player profiles expose three isolated save slots. Existing `user://linxi_progress.json` data is copied into Slot 1 on first migration and is deliberately retained as a rollback source. New Game only clears a slot after the player selects it and confirms overwrite; Save Files is the only title-menu page that exposes deletion, with confirmation.
+- Load Game resumes the selected slot at its last committed route checkpoint. It never restores an abandoned active enemy simulation. If a valid route checkpoint is unavailable, the slot falls back to the authored Red Night opening level.
+- Window size and master volume are stored in the profile and shared by the title-menu Settings page and in-mission Memory Settings.
 - Project content validation lives in `scripts/data/content_validator.gd`; it checks map dictionaries, story event IDs, story groups, AI profiles, and required sprite/effect resources.
 - Run the deterministic full suite with `tools/run_test_suite.ps1`. It executes all active tests and diagnostics in isolated Godot processes with timeouts. `run_stage_1_playthrough_test.gd` is the save-backed whole-route check; use `--headless --script res://tests/run_tests.gd` only for the smaller stabilization subset.
 - When `development_mode` is enabled on the stage host, press `F10` in the combat room to open the balance debug panel.

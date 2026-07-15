@@ -1,5 +1,7 @@
 extends Node2D
 
+const GameSessionData = preload("res://scripts/data/game_session.gd")
+
 const BALANCE = preload("res://resources/balance/default_balance.tres")
 const MEMORY_CLASSROOM_BACKGROUND: Texture2D = preload("res://assets/backgrounds/safe_house/memory_classroom.png")
 const PauseMenuScript = preload("res://scripts/ui/pause_menu.gd")
@@ -208,7 +210,7 @@ func load_progress() -> void:
 
 
 func progress_path() -> String:
-	return save_path_override if not save_path_override.is_empty() else PROGRESS_PATH
+	return save_path_override if not save_path_override.is_empty() else GameSessionData.active_save_path()
 
 
 func _heal_and_commit_shelter_entry() -> void:

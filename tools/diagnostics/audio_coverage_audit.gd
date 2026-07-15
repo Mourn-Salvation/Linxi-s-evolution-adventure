@@ -2,6 +2,7 @@ extends SceneTree
 
 const MainScene = preload("res://scenes/red_night.tscn")
 const OpeningScene = preload("res://scenes/opening_intro.tscn")
+const GameSessionData = preload("res://scripts/data/game_session.gd")
 const REQUIRED_EVENTS := [
 	"ui_hover", "ui_confirm", "ui_cancel", "achievement_pop",
 	"footstep_wet", "footstep_concrete", "footstep_marble", "footstep_grass",
@@ -25,6 +26,7 @@ func _initialize() -> void:
 	stage.queue_free()
 	await process_frame
 
+	GameSessionData.force_opening_once = true
 	var opening = OpeningScene.instantiate()
 	root.add_child(opening)
 	await process_frame

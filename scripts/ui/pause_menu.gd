@@ -1,5 +1,7 @@
 extends Control
 
+const GameSessionData = preload("res://scripts/data/game_session.gd")
+
 const PAUSE_BACKGROUND: Texture2D = preload("res://assets/backgrounds/safe_house/memory_classroom.png")
 const PANEL_TARGET_POSITION := Vector2(330.0, 82.0)
 const PANEL_START_POSITION := Vector2(330.0, -620.0)
@@ -18,6 +20,7 @@ var dev_overlay_button: Button
 var drop_time := 0.0
 
 func _ready() -> void:
+	GameSessionData.initialize()
 	process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	mouse_filter = Control.MOUSE_FILTER_STOP
 	anchors_preset = Control.PRESET_FULL_RECT
@@ -180,6 +183,7 @@ func _on_window_size_selected(index: int) -> void:
 		return
 	DisplayServer.window_set_size(WINDOW_SIZES[index])
 	DisplayServer.window_set_position((DisplayServer.screen_get_size() - WINDOW_SIZES[index]) / 2)
+	GameSessionData.save_settings(WINDOW_SIZES[index], volume_slider.value)
 
 func _on_volume_changed(value: float) -> void:
 	var bus := AudioServer.get_bus_index("Master")
@@ -187,6 +191,7 @@ func _on_volume_changed(value: float) -> void:
 		AudioServer.set_bus_volume_db(bus, -80.0)
 	else:
 		AudioServer.set_bus_volume_db(bus, linear_to_db(value / 100.0))
+	GameSessionData.save_settings(DisplayServer.window_get_size(), value)
 
 
 func _host_development_mode() -> bool:

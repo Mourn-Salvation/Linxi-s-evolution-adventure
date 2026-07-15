@@ -1,9 +1,12 @@
 extends SceneTree
 
+const GameSessionData = preload("res://scripts/data/game_session.gd")
+
 const OpeningScene = preload("res://scenes/opening_intro.tscn")
 
 
 func _initialize() -> void:
+	GameSessionData.force_opening_once = true
 	var opening = OpeningScene.instantiate()
 	root.add_child(opening)
 	await process_frame

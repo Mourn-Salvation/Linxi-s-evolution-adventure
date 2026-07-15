@@ -1,5 +1,7 @@
 extends Node
 
+const GameSessionData = preload("res://scripts/data/game_session.gd")
+
 const SAVE_PATH := "user://linxi_progress.json"
 const TEACHING_CROWD_CUTSCENE := "teaching_first_floor_crowd"
 const TEACHING_CROWD_OVERLAY := "TEACHING_FIRST_FLOOR_CROWD"
@@ -13,7 +15,7 @@ func setup(value: Node) -> void:
 
 
 func progress_save_path() -> String:
-	return host.save_path_override if not host.save_path_override.is_empty() else SAVE_PATH
+	return host.save_path_override if not host.save_path_override.is_empty() else GameSessionData.active_save_path()
 
 
 func load_level_data() -> void:

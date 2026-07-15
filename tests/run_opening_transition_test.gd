@@ -1,6 +1,9 @@
 extends SceneTree
 
+const GameSessionData = preload("res://scripts/data/game_session.gd")
+
 func _initialize() -> void:
+	GameSessionData.force_opening_once = true
 	change_scene_to_file("res://scenes/opening_intro.tscn")
 	await process_frame
 	await process_frame

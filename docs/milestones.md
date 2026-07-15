@@ -77,6 +77,8 @@
 
 Current implementation now connects the entire Stage 1 route through data-driven levels. The roof encounter, daytime playground return, Bone-Blade Twin boss, teaching-building lobby and second floor, Classroom 503 twins conversation, school-front-gate exit, and UI shelter are implemented. They still require one uninterrupted human pacing/readability playthrough before Stage 1 is accepted as complete.
 
+The executable now distinguishes first-time and returning players. A first-time profile receives the authored opening cinematic directly. Once that opening has completed, later launches enter a title menu with New Game, Load Game, Save Files, Settings, and Exit. Three save slots isolate committed Linxi/story progress; the previous single-save format migrates non-destructively into Slot 1.
+
 ### Accepted Red Night Assets
 
 Do not redo these unless a specific problem is identified:

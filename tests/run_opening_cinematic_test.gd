@@ -1,8 +1,11 @@
 extends SceneTree
 
+const GameSessionData = preload("res://scripts/data/game_session.gd")
+
 var failures := 0
 
 func _initialize() -> void:
+	GameSessionData.force_opening_once = true
 	var packed: PackedScene = load("res://scenes/opening_intro.tscn")
 	var intro = packed.instantiate()
 	root.add_child(intro)

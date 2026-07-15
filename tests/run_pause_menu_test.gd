@@ -10,8 +10,12 @@ func _initialize() -> void:
 
 	var background: Node = menu.get_node_or_null("Background")
 	var panel: Control = menu.get_node_or_null("Panel") as Control
+	var main_menu_button: Button = menu.get_node_or_null("Panel/MainMenuButton") as Button
+	var main_menu_confirmation: ConfirmationDialog = menu.get_node_or_null("MainMenuConfirmation") as ConfirmationDialog
 	expect(background != null, "pause menu has background image")
 	expect(panel != null, "pause menu has settings panel")
+	expect(main_menu_button != null and main_menu_button.text == "To Main Menu", "pause menu exposes the main-menu action")
+	expect(main_menu_confirmation != null, "main-menu action requires confirmation")
 	if panel != null:
 		expect(panel.position.y < 0.0, "pause menu panel starts above screen")
 
@@ -19,6 +23,9 @@ func _initialize() -> void:
 
 	if panel != null:
 		expect(panel.position.distance_to(Vector2(330.0, 82.0)) < 1.0, "pause menu panel drops to target position")
+	if main_menu_button != null and main_menu_confirmation != null:
+		main_menu_button.pressed.emit()
+		expect(main_menu_confirmation.visible, "main-menu confirmation opens before leaving gameplay")
 
 	menu.queue_free()
 	await process_frame

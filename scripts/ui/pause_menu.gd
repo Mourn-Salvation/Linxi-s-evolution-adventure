@@ -3,6 +3,7 @@ extends Control
 const GameSessionData = preload("res://scripts/data/game_session.gd")
 
 const PAUSE_BACKGROUND: Texture2D = preload("res://assets/backgrounds/safe_house/memory_classroom.png")
+const TITLE_MENU_SCENE := "res://scenes/title_menu.tscn"
 const PANEL_TARGET_POSITION := Vector2(330.0, 82.0)
 const PANEL_START_POSITION := Vector2(330.0, -620.0)
 const PANEL_SIZE := Vector2(620.0, 556.0)
@@ -17,6 +18,7 @@ var volume_slider: HSlider
 var window_options: OptionButton
 var panel: Panel
 var dev_overlay_button: Button
+var main_menu_confirmation: ConfirmationDialog
 var drop_time := 0.0
 
 func _ready() -> void:
@@ -118,17 +120,27 @@ func _build_ui() -> void:
 	resume_button.text = "Resume"
 	resume_button.offset_left = 42.0
 	resume_button.offset_top = 452.0
-	resume_button.offset_right = 182.0
+	resume_button.offset_right = 166.0
 	resume_button.offset_bottom = 498.0
 	resume_button.pressed.connect(_resume_game)
 	panel.add_child(resume_button)
 
+	var main_menu_button := Button.new()
+	main_menu_button.name = "MainMenuButton"
+	main_menu_button.text = "To Main Menu"
+	main_menu_button.offset_left = 176.0
+	main_menu_button.offset_top = 452.0
+	main_menu_button.offset_right = 302.0
+	main_menu_button.offset_bottom = 498.0
+	main_menu_button.pressed.connect(_request_main_menu)
+	panel.add_child(main_menu_button)
+
 	dev_overlay_button = Button.new()
 	dev_overlay_button.name = "DevOverlayButton"
 	dev_overlay_button.text = "Dev Overlay"
-	dev_overlay_button.offset_left = 238.0
+	dev_overlay_button.offset_left = 312.0
 	dev_overlay_button.offset_top = 452.0
-	dev_overlay_button.offset_right = 382.0
+	dev_overlay_button.offset_right = 428.0
 	dev_overlay_button.offset_bottom = 498.0
 	dev_overlay_button.visible = _host_development_mode()
 	dev_overlay_button.pressed.connect(_toggle_dev_overlay)
@@ -137,12 +149,21 @@ func _build_ui() -> void:
 	var exit_button := Button.new()
 	exit_button.name = "ExitButton"
 	exit_button.text = "Exit Game"
-	exit_button.offset_left = 418.0
+	exit_button.offset_left = 438.0
 	exit_button.offset_top = 452.0
 	exit_button.offset_right = 565.0
 	exit_button.offset_bottom = 498.0
 	exit_button.pressed.connect(_exit_game)
 	panel.add_child(exit_button)
+
+	main_menu_confirmation = ConfirmationDialog.new()
+	main_menu_confirmation.name = "MainMenuConfirmation"
+	main_menu_confirmation.title = "Return to Main Menu"
+	main_menu_confirmation.dialog_text = "Return to the main menu? Progress since the last committed map transition or shelter will be discarded."
+	main_menu_confirmation.ok_button_text = "Main Menu"
+	main_menu_confirmation.cancel_button_text = "Stay"
+	main_menu_confirmation.confirmed.connect(_return_to_main_menu)
+	add_child(main_menu_confirmation)
 
 	var footer := Label.new()
 	footer.text = "Esc: Resume"
@@ -207,6 +228,20 @@ func _toggle_dev_overlay() -> void:
 	if host != null and host.has_method("toggle_dev_placement_overlay"):
 		host.toggle_dev_placement_overlay()
 	_resume_game()
+
+
+func _request_main_menu() -> void:
+	main_menu_confirmation.popup_centered(Vector2i(560, 210))
+
+
+func _return_to_main_menu() -> void:
+	var host := get_parent()
+	if host != null:
+		var encounter := host.get_node_or_null("Components/Encounter")
+		if encounter != null and encounter.has_method("discard_provisional_progress"):
+			encounter.discard_provisional_progress()
+	get_tree().paused = false
+	get_tree().change_scene_to_file(TITLE_MENU_SCENE)
 
 
 func _resume_game() -> void:

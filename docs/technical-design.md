@@ -180,7 +180,7 @@
 
 ## Save Point Model
 
-- **Memory Settings:** pause/settings menu. It pauses simulation and supports window size, master volume, key binding review, resume, and exit game. It is not a save point.
+- **Memory Settings:** pause/settings menu. It pauses simulation and supports window size, master volume, key binding review, resume, return to the main menu, and exit game. Returning to the main menu requires confirmation and discards only progress since the last committed map transition or shelter; it is not a save point.
 - **Map Switch:** route confirmation checkpoint. Saves the target route and allowed Linxi/story progression, including current HP and currently carried undigested prey/body presentation, then loads the next map. Normal map switches remain return-allowed inside the same stage and do not refill HP.
 - **Shelter Page:** local post-encounter save point and stage gate. Appears after a completed encounter or authored story checkpoint. Entering a shelter refills Linxi's HP. Supports status/archive/training/equipment pages and can offer the last chance to return before the next stage.
 - **Safe House:** larger between-stage hub. Supports mission selection, archives, training, status, equipment, and character conversations. It is a permanent no-return commit when moving into the next stage.

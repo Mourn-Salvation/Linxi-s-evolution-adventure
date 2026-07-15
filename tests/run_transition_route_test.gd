@@ -65,14 +65,20 @@ func _initialize() -> void:
 	expect(shelter.occupied_vore_capacity == 2, "UI shelter preserves occupied prey capacity")
 	expect(shelter.contained_route_loads["BELLY"] == 2, "UI shelter preserves body expansion loads")
 	expect(is_equal_approx(shelter.digest_progress, 1.25), "UI shelter preserves partial digestion")
-	expect(shelter.stations.size() == 6, "UI shelter exposes the six currently available stations")
+	expect(shelter.stations.size() == 7, "UI shelter exposes the seven currently available stations")
 	var shelter_station_ids: Array[String] = []
 	for station in shelter.stations:
 		shelter_station_ids.append(String(station.get("id", "")))
 	expect("character" not in shelter_station_ids, "Character Area stays hidden until a companion joins Linxi")
+	expect("achievements" in shelter_station_ids, "physical trophy exposes the Achievements station")
 	var mission_station: Dictionary = shelter.stations[0]
 	expect(String(mission_station.get("id", "")) == "mission" and mission_station.has("texture"), "Mission Map uses a physical blackboard prop")
 	expect(Vector2(mission_station.get("display_size", Vector2.ZERO)).is_equal_approx(Vector2(275.5, 180.5)), "Mission Map uses the approved 95% display scale")
+	var achievements_station: Dictionary = shelter.stations[5]
+	var settings_station: Dictionary = shelter.stations[6]
+	expect(Vector2(achievements_station.get("screen_position", Vector2.ZERO)).is_equal_approx(Vector2(400, 460)), "Achievements trophy sits on the marked middle desk")
+	expect(Vector2(settings_station.get("screen_position", Vector2.ZERO)).is_equal_approx(Vector2(140, 607)), "Settings book sits on the marked front-left desk")
+	expect(achievements_station.has("texture") and settings_station.has("texture"), "trophy and book use physical prop textures")
 	shelter.queue_free()
 	await process_frame
 

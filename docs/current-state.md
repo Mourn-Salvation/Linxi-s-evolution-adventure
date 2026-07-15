@@ -24,7 +24,7 @@ Verified against the Godot 4.6.2 runtime on 2026-07-13. This is the first docume
 - Three-stage directional claw combat, hit reaction, attack-direction lock, ordinary and heavy attacks, Bone-Blade Twin boss behavior, disposable handgun/knife weapons.
 - Weight/biomass separation, capacity, Vore, multi-prey G-mode intake, partial digestion, carried prey across map transitions, provisional mission progression, checkpoint retry.
 - Map-driven enemies, items, transitions, visual resources, dialogue choices, objective HUD, boss HUD, achievements, audio routing, and development placement overlay.
-- Mouse-driven UI shelter with mission, archive, training, status, equipment, and settings stations. Character Area is dormant and completely hidden until a companion joins Linxi. Shelter functions are migrating from code-drawn signs to separately generated physical classroom props; Mission Map is the first production prop and is pinned to the left side of the blackboard with a red hover outline.
+- Mouse-driven UI shelter with mission, archive, training, status, equipment, achievements, and settings stations. Character Area is dormant and completely hidden until a companion joins Linxi. Shelter functions are migrating from code-drawn signs to separately generated physical classroom props: Mission Map is pinned to the left blackboard, the Achievements trophy stands on the middle-left desk, and the Settings book rests on the front-left desk. Each physical prop uses its own texture bounds and red hover outline.
 - Android touch input with a virtual joystick and enlarged action buttons.
 
 ## Deliberately Deferred

@@ -217,6 +217,8 @@ Exact `res://assets/...` paths found in scripts, scenes, and resources.
 | assets/backgrounds/safe_house/memory_classroom.png | scripts/safe_house.gd, scripts/ui/pause_menu.gd |
 | assets/backgrounds/safe_house/memory_classroom_empty_v2.png | scripts/safe_house.gd |
 | assets/ui/shelter/mission_map_city.png | scripts/safe_house.gd |
+| assets/ui/shelter/achievement_trophy.png | scripts/safe_house.gd |
+| assets/ui/shelter/settings_book.png | scripts/safe_house.gd |
 | assets/cutscenes/red_night/classroom_chase.png | resources/effects/red_night_effect_visual_data.tres |
 | assets/cutscenes/red_night/teaching_first_floor_zombie_gathering_v2_daytime_converge.png | resources/effects/red_night_effect_visual_data.tres |
 | assets/effects/combat/claw_slash/red/left_00.png | resources/effects/red_night_effect_visual_data.tres |

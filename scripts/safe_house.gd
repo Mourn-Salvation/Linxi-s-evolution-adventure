@@ -5,6 +5,8 @@ const GameSessionData = preload("res://scripts/data/game_session.gd")
 const BALANCE = preload("res://resources/balance/default_balance.tres")
 const MEMORY_CLASSROOM_BACKGROUND: Texture2D = preload("res://assets/backgrounds/safe_house/memory_classroom_empty_v2.png")
 const MISSION_MAP_TEXTURE: Texture2D = preload("res://assets/ui/shelter/mission_map_city.png")
+const ACHIEVEMENT_TROPHY_TEXTURE: Texture2D = preload("res://assets/ui/shelter/achievement_trophy.png")
+const SETTINGS_BOOK_TEXTURE: Texture2D = preload("res://assets/ui/shelter/settings_book.png")
 const PauseMenuScript = preload("res://scripts/ui/pause_menu.gd")
 
 const GROUND_ORIGIN := Vector2(100.0, 300.0)
@@ -29,6 +31,7 @@ var occupied_vore_capacity := 0
 var contained_prey_weight := 0.0
 var digest_progress := 0.0
 var enemy_contained := false
+var story_flags: Dictionary = {}
 var contained_route_loads := {"BELLY": 0, "CHEST": 0, "LOWER_BELLY": 0, "GROIN": 0}
 
 var stations: Array[Dictionary] = [
@@ -37,7 +40,8 @@ var stations: Array[Dictionary] = [
 	{"id": "training", "name": "Training Area", "position": Vector2(650, 55), "color": Color("d46c62")},
 	{"id": "status", "name": "Status Station", "position": Vector2(825, 190), "color": Color("76c58a")},
 	{"id": "equipment", "name": "Equipment Table", "position": Vector2(1000, 55), "color": Color("9d82ce")},
-	{"id": "settings", "name": "Settings", "position": Vector2(90, 205), "color": Color("7f8b97")},
+	{"id": "achievements", "name": "Achievements", "screen_position": Vector2(400, 460), "display_size": Vector2(76, 100), "texture": ACHIEVEMENT_TROPHY_TEXTURE},
+	{"id": "settings", "name": "Settings", "screen_position": Vector2(140, 607), "display_size": Vector2(100, 92), "texture": SETTINGS_BOOK_TEXTURE},
 ]
 
 @onready var hint_label: Label = $HUD/Hint
@@ -110,6 +114,7 @@ func open_station(index: int) -> void:
 		"training": show_training()
 		"status": show_status()
 		"equipment": show_equipment()
+		"achievements": show_achievements()
 		"character": show_character()
 		"settings": show_settings()
 
@@ -147,6 +152,15 @@ func show_equipment() -> void:
 	panel_title.text = "EQUIPMENT TABLE"
 	panel_body.text = "BODY ARSENAL\nClaws: active permanent weapon.\nTail, waist bone blades, and voice attacks unlock through story progression.\n\nHUMAN WEAPONS\nGuns and knives are temporary mission pickups. Linxi never reloads them: empty guns are dropped, and knives are thrown once."
 	panel_footer.text = "Body attacks will use directional WASD + J commands as they unlock."
+
+
+func show_achievements() -> void:
+	panel_title.text = "ACHIEVEMENTS"
+	if bool(story_flags.get("red_night_claws_unlocked_by_vial", false)):
+		panel_body.text = "UNLOCKED\nWHAT'S INSIDE THE VIAL\n\nDrink the blue virus stock solution and survive what wakes inside."
+	else:
+		panel_body.text = "LOCKED RECORD\n\nContinue Linxi's story to uncover the first biological achievement."
+	panel_footer.text = "Achievement records expand as Linxi evolves."
 
 func show_character() -> void:
 	panel_title.text = "MIRA - FIELD OPERATOR"
@@ -210,6 +224,8 @@ func load_progress() -> void:
 	contained_prey_weight = maxf(float(data.get("contained_prey_weight", 0.0)), 0.0)
 	digest_progress = maxf(float(data.get("digest_progress", 0.0)), 0.0)
 	enemy_contained = bool(data.get("enemy_contained", false)) and occupied_vore_capacity > 0
+	if data.get("story_flags", {}) is Dictionary:
+		story_flags = Dictionary(data.get("story_flags", {})).duplicate(true)
 	var saved_loads = data.get("contained_route_loads", {})
 	if saved_loads is Dictionary:
 		for region in contained_route_loads:

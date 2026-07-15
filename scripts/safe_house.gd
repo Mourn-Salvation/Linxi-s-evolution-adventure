@@ -3,7 +3,8 @@ extends Node2D
 const GameSessionData = preload("res://scripts/data/game_session.gd")
 
 const BALANCE = preload("res://resources/balance/default_balance.tres")
-const MEMORY_CLASSROOM_BACKGROUND: Texture2D = preload("res://assets/backgrounds/safe_house/memory_classroom.png")
+const MEMORY_CLASSROOM_BACKGROUND: Texture2D = preload("res://assets/backgrounds/safe_house/memory_classroom_empty_v2.png")
+const MISSION_MAP_TEXTURE: Texture2D = preload("res://assets/ui/shelter/mission_map_city.png")
 const PauseMenuScript = preload("res://scripts/ui/pause_menu.gd")
 
 const GROUND_ORIGIN := Vector2(100.0, 300.0)
@@ -31,12 +32,11 @@ var enemy_contained := false
 var contained_route_loads := {"BELLY": 0, "CHEST": 0, "LOWER_BELLY": 0, "GROIN": 0}
 
 var stations: Array[Dictionary] = [
-	{"id": "mission", "name": "Mission Board", "position": Vector2(260, 55), "color": Color("d7a84b")},
+	{"id": "mission", "name": "Mission Map", "screen_position": Vector2(540, 304), "display_size": Vector2(290, 190), "texture": MISSION_MAP_TEXTURE},
 	{"id": "archive", "name": "Archive Terminal", "position": Vector2(475, 190), "color": Color("58a9c9")},
 	{"id": "training", "name": "Training Area", "position": Vector2(650, 55), "color": Color("d46c62")},
 	{"id": "status", "name": "Status Station", "position": Vector2(825, 190), "color": Color("76c58a")},
 	{"id": "equipment", "name": "Equipment Table", "position": Vector2(1000, 55), "color": Color("9d82ce")},
-	{"id": "character", "name": "Character Area", "position": Vector2(1070, 205), "color": Color("d693b5")},
 	{"id": "settings", "name": "Settings", "position": Vector2(90, 205), "color": Color("7f8b97")},
 ]
 
@@ -87,8 +87,15 @@ func station_at_screen_position(mouse_position: Vector2) -> int:
 	return -1
 
 func station_screen_rect(station: Dictionary) -> Rect2:
-	var center := project_ground(Vector2(station["position"])) + Vector2(0.0, -42.0)
-	return Rect2(center - SIGN_SIZE * 0.5, SIGN_SIZE)
+	var center := station_screen_center(station)
+	var size: Vector2 = Vector2(station.get("display_size", SIGN_SIZE))
+	return Rect2(center - size * 0.5, size)
+
+
+func station_screen_center(station: Dictionary) -> Vector2:
+	if station.has("screen_position"):
+		return Vector2(station["screen_position"])
+	return project_ground(Vector2(station["position"])) + Vector2(0.0, -42.0)
 
 func open_station(index: int) -> void:
 	active_station = String(stations[index]["id"])
@@ -235,7 +242,11 @@ func _draw() -> void:
 	draw_texture_rect(MEMORY_CLASSROOM_BACKGROUND, Rect2(Vector2.ZERO, viewport), false, Color.WHITE)
 	draw_rect(Rect2(Vector2.ZERO, viewport), Color(0.18, 0.11, 0.06, 0.16), true)
 	var drawables: Array[Dictionary] = []
-	for index in range(stations.size()): drawables.append({"depth": Vector2(stations[index]["position"]).y, "kind": "station", "position": project_ground(stations[index]["position"]), "index": index})
+	for index in range(stations.size()):
+		var station: Dictionary = stations[index]
+		var depth := float(Vector2(station.get("position", Vector2.ZERO)).y)
+		var draw_position := station_screen_center(station) if station.has("texture") else project_ground(Vector2(station["position"]))
+		drawables.append({"depth": depth, "kind": "station", "position": draw_position, "index": index})
 	drawables.sort_custom(func(a: Dictionary, b: Dictionary) -> bool: return float(a["depth"]) < float(b["depth"]))
 	for entry in drawables:
 		draw_station(entry["position"], int(entry["index"]))
@@ -243,6 +254,9 @@ func _draw() -> void:
 func draw_station(at: Vector2, index: int) -> void:
 	var station: Dictionary = stations[index]
 	var highlighted := index == hovered_station or (panel_open and String(station["id"]) == active_station)
+	if station.has("texture"):
+		draw_physical_station(at, station, highlighted)
+		return
 	var color: Color = station["color"]
 	if highlighted: color = color.lightened(0.25)
 	draw_set_transform(at)
@@ -254,3 +268,15 @@ func draw_station(at: Vector2, index: int) -> void:
 	draw_string(ThemeDB.fallback_font, Vector2(-60, -34), String(station["name"]), HORIZONTAL_ALIGNMENT_CENTER, 120, 15, Color.WHITE)
 	if highlighted: draw_string(ThemeDB.fallback_font, Vector2(-45, 25), "CLICK", HORIZONTAL_ALIGNMENT_CENTER, 90, 13, Color("ffe99a"))
 	draw_set_transform(Vector2.ZERO)
+
+
+func draw_physical_station(at: Vector2, station: Dictionary, highlighted: bool) -> void:
+	var texture: Texture2D = station["texture"] as Texture2D
+	if texture == null:
+		return
+	var size: Vector2 = Vector2(station.get("display_size", texture.get_size()))
+	var rect := Rect2(at - size * 0.5, size)
+	if highlighted:
+		for offset in [Vector2(-3, -3), Vector2(0, -3), Vector2(3, -3), Vector2(-3, 0), Vector2(3, 0), Vector2(-3, 3), Vector2(0, 3), Vector2(3, 3)]:
+			draw_texture_rect(texture, Rect2(rect.position + offset, rect.size), false, Color(1.0, 0.04, 0.08, 0.95))
+	draw_texture_rect(texture, rect, false, Color.WHITE)

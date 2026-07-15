@@ -49,7 +49,7 @@ Folder-level view of production assets. This intentionally summarizes folders in
 | audio | assets/audio/sfx/vore/prey_scream_monster | 9 | animal_scream0.wav, animal_scream1.wav, animal_scream2.wav, monster_scream0.wav |
 | audio | assets/audio/sfx/vore/swallow | 7 | SwallowD.wav, SwallowE.wav, SwallowF.wav, SwallowG.wav |
 | backgrounds | assets/backgrounds/red_night | 44 | dormitory_lobby_staircase.png, dormitory_lobby_staircase_v2_spacious.png, dormitory_lobby_switchback_21x9_v1.png, dormitory_second_floor_full_panorama_left_v1.png |
-| backgrounds | assets/backgrounds/safe_house | 1 | memory_classroom.png |
+| backgrounds | assets/backgrounds/safe_house | 2 | memory_classroom.png, memory_classroom_empty_v2.png |
 | cutscenes | assets/cutscenes/red_night | 3 | classroom_chase.png, teaching_first_floor_zombie_gathering_v1.png, teaching_first_floor_zombie_gathering_v2_daytime_converge.png |
 | effects | assets/effects/combat/claw_slash/red | 12 | left_00.png, left_01.png, left_02.png, left_03.png |
 | effects | assets/effects/combat/claw_slash/silver | 12 | left_00.png, left_01.png, left_02.png, left_03.png |
@@ -215,6 +215,8 @@ Exact `res://assets/...` paths found in scripts, scenes, and resources.
 | assets/backgrounds/red_night/teaching_building_first_floor_outdoor_v6_right_stairs_preview.png | resources/maps/red_night_teaching_lobby_visual_data.tres |
 | assets/backgrounds/red_night/teaching_building_second_floor_unified_v1.png | resources/maps/red_night_teaching_building_visual_data.tres |
 | assets/backgrounds/safe_house/memory_classroom.png | scripts/safe_house.gd, scripts/ui/pause_menu.gd |
+| assets/backgrounds/safe_house/memory_classroom_empty_v2.png | scripts/safe_house.gd |
+| assets/ui/shelter/mission_map_city.png | scripts/safe_house.gd |
 | assets/cutscenes/red_night/classroom_chase.png | resources/effects/red_night_effect_visual_data.tres |
 | assets/cutscenes/red_night/teaching_first_floor_zombie_gathering_v2_daytime_converge.png | resources/effects/red_night_effect_visual_data.tres |
 | assets/effects/combat/claw_slash/red/left_00.png | resources/effects/red_night_effect_visual_data.tres |

@@ -111,7 +111,7 @@ Do not redo these unless a specific problem is identified:
 
 - Permanent player/story progress is separated from provisional encounter state.
 - Confirmed map switches carry Linxi's HP, temporary weapon, undigested prey, digestion, body presentation, and story progress without permanently saving repeatable enemy depletion.
-- The UI shelter refills HP, commits the stage boundary, and exposes mission, archive, training, status, equipment, character, and settings stations.
+- The UI shelter refills HP, commits the stage boundary, and exposes mission, archive, training, status, equipment, and settings stations. Character Area remains hidden until the story introduces a companion.
 - Defeat retry reloads the committed area-entry checkpoint without committing the failed attempt.
 - Memory Settings pauses gameplay and supports window size, volume, key binding review, resume, development overlay access, and exit.
 

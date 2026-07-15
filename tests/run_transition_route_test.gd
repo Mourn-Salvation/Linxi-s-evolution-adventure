@@ -72,6 +72,7 @@ func _initialize() -> void:
 	expect("character" not in shelter_station_ids, "Character Area stays hidden until a companion joins Linxi")
 	var mission_station: Dictionary = shelter.stations[0]
 	expect(String(mission_station.get("id", "")) == "mission" and mission_station.has("texture"), "Mission Map uses a physical blackboard prop")
+	expect(Vector2(mission_station.get("display_size", Vector2.ZERO)).is_equal_approx(Vector2(275.5, 180.5)), "Mission Map uses the approved 95% display scale")
 	shelter.queue_free()
 	await process_frame
 

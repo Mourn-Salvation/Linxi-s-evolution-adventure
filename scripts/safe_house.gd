@@ -32,7 +32,7 @@ var enemy_contained := false
 var contained_route_loads := {"BELLY": 0, "CHEST": 0, "LOWER_BELLY": 0, "GROIN": 0}
 
 var stations: Array[Dictionary] = [
-	{"id": "mission", "name": "Mission Map", "screen_position": Vector2(540, 304), "display_size": Vector2(290, 190), "texture": MISSION_MAP_TEXTURE},
+	{"id": "mission", "name": "Mission Map", "screen_position": Vector2(540, 304), "display_size": Vector2(275.5, 180.5), "texture": MISSION_MAP_TEXTURE},
 	{"id": "archive", "name": "Archive Terminal", "position": Vector2(475, 190), "color": Color("58a9c9")},
 	{"id": "training", "name": "Training Area", "position": Vector2(650, 55), "color": Color("d46c62")},
 	{"id": "status", "name": "Status Station", "position": Vector2(825, 190), "color": Color("76c58a")},
